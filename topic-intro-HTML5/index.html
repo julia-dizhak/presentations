@@ -1,0 +1,775 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Introduction to HTML5</h1>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>HTML class</h2>
+    <p>Julia Dizhak</p>
+		<img src="pictures/cover1.jpg" alt="moneypark">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Agenda</h2>
+		<ol>
+			<li> Intro to the web development process</li>
+      <li> Start with base HTML template</li>
+      <li> Types of HTML tags</li>
+			<li> A brief history of markup</li>
+			<li> Design of HTML5</li>
+		</ol>
+	</div></section>
+	<section class="slide cover intro-html" id="Picture01"><div>
+		  <h2>HyperText Markup Language</h2>
+      <p>HTML is the standard markup language used to create Web pages</p>
+		  <img src="pictures/free-html.jpg" alt="html">
+	  </div></section>
+	<section class="slide cover intro-rocket" id="Picture1"><div>
+		  <h2>Journey to the development process</h2>
+		  <img src="pictures/rocket.jpg" alt="rocket">
+	  </div></section>
+	<section class="slide intro-design">
+    <div>
+		  <h2>Graphic design</h2>
+		  <img src="pictures/design.png" alt="design">
+	  </div>
+  </section>
+	<section class="slide intro-fr">
+    <div>
+		  <h2>Front End Development</h2>
+      <p><mark class="important">Front end development</mark> is the development of those elements of a website that the customer sees and interacts with directly</p>
+	    <img src="pictures/html-css-js.jpg" alt="frontend">
+    </div>
+  </section>
+	<section class="slide">
+    <div>
+		  <h2>Front End for MoneyPark</h2>
+		  <img src="pictures/frontend.png" alt="frontend">
+	  </div>
+  </section>
+	<section class="slide intro-back">
+    <div>
+		  <h2>Back End Development</h2>
+      <p><mark class="important">Back end development</mark> responsible for logic of the project (  deals with dynamic content)</p>
+		  <img src="pictures/back.jpg" alt="back-end">
+	  </div>
+  </section>
+	<section class="slide">
+    <div>
+		  <h2>House <a href="http://www.designdetector.com/tips/3DBorderDemo2.html">house</a></h2>
+      <img src="pictures/house.jpg" alt="tree">
+	  </div>
+  </section>
+	<section class="slide intro-tree">
+    <div>
+		  <h2>Lets Start with simple structure</h2>
+      <a href="https://moneypark.ch/en/mortgage/">moneypark mortgage homepage</a>
+		  <img src="pictures/tree.png" alt="tree">
+	  </div>
+  </section>
+	<section class="slide cover intro-tag" id="Picture001">
+    <div>
+		  <h2>Tag - the basic word in HTML</h2>
+		  <img src="pictures/tag.jpg" alt="tag">
+	  </div>
+  </section>
+	<section class="slide intro-attributes">
+   <div>
+		<h2>Attributes</h2>
+		<p>Each tag can also have <mark class="important">attributes</mark> with values</p>
+    <p>Attributes appear inside the opening tag and their values sit inside the quotation marks.</p>
+    <p>Some tags can't use without attributes</p>
+    <p>Attributes come in name/value pairs like: <mark class="important">name="value"</mark></p>
+    <p>Attribute class: <mark class="important">class="value"</mark></p>
+    <p>Attribute id: <mark class="important">id="value"</mark></p>
+	 </div>
+  </section>
+	<section class="slide intro-structure">
+    <div>
+		  <h2>HTML-CSS-DOM </h2>
+		  <img src="pictures/dom.png" alt="dom">
+	  </div>
+  </section>
+	<section class="slide history-support">
+    <div>
+      <h2>DOM</h2>
+      <p class="text1"> standart convention for </p>
+      <p class="text2"> representing and interacting with elements in HTML</p>
+	  </div>
+  </section>
+
+	<section class="slide intro-structure">
+    <div>
+		  <h2>Tree like Structure </h2>
+		  <img class="tree" src="pictures/tree1.png" alt="tree">
+      <img src="pictures/div1.jpg" alt="">
+	  </div>
+  </section>
+	<section class="slide intro-structure">
+    <div>
+		  <h2>Tree </h2>
+		   <img src="pictures/strusture.png" alt="structure">
+	  </div>
+  </section>
+	<section class="slide intro-st">
+    <div>
+		  <h2>How page looks like without CSS</h2>
+      <p>The document written in HTML defines the structure and content of the page. To define the style you have to use another language <mark class="important">CSS</mark></p>
+		  <img src="pictures/without-styles.jpg" alt="structure">
+      <img src="pictures/tree-img.jpg" alt="structure">
+	  </div>
+  </section>
+	<section class="slide cover" id="Picture0001">
+    <div>
+		  <img src="pictures/css.jpg" alt="css">
+	  </div>
+  </section>
+	<section class="slide">
+    <div>
+      <h2>Moneypark without CSS</h2>
+		  <img src="pictures/mmp-css.jpg" alt="css">
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>The base HTML template</h2>
+		<pre>
+			<code>&lt;!Doctype&gt;</code>
+      <code>&lt;html&gt;</code>
+      <code>    &lt;head&gt;</code>
+      <code>        &lt;title&gt; HTML &lt;/title&gt; </code>
+      <code>    &lt;/head&gt;</code>
+      <code>    &lt;body&gt;</code>
+      <code>        ...</code>
+      <code>    &lt;/body&gt;</code>
+      <code>&lt;/html&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide intro-body">
+   <div>
+		  <h2>The base HTML template like a Human </h2>
+		  <img class="img" src="pictures/htmlbody.jpg" alt="html">
+	  </div>
+  </section>
+	<section class="slide intro-empty">
+   <div>
+		  <h2>How HTML base template looks in browser </h2>
+		  <img class="img" src="pictures/empty.jpg" alt="html">
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>!Doctype</h2>
+		<pre>
+			<code>&lt;!Doctype&gt;</code>
+      <code>    document type declaration</code>
+      <code>    used to let the browser know</code>
+      <code>    what version of HTML you are using</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>Tag html</h2>
+		<pre>
+			<code>&lt;html&gt;</code>
+			<code>    the root element that specifies of the document is HTML</code>
+      <code>    the openning tag immediately follows</code>
+      <code>    the <mark class="important">DOCTYPE</mark> declaration</code>
+      <code>    the closing tag is the last thing in the document</code>
+      <code>    the html element must contain the <mark class="important">head</mark> and the <mark class="important">body</mark></code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>Tag head</h2>
+		<pre>
+			<code>&lt;head&gt;</code>
+			<code>   the header of HTML where information </code>
+      <code>   about the document placed</code>
+			<code>&lt;/head&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide ">
+   <div>
+		<h2>Tag title</h2>
+		<pre>
+			<code>&lt;title&gt;</code>
+			<code>    defines  the title of page</code>
+      <code>    you must have a title element to produce</code>
+      <code>    a valid document</code>
+      <code>    and it must be placed within the head element</code>
+			<code>&lt;/title&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide intro-title">
+   <div>
+		  <h2>Title in browser tab </h2>
+		  <img class="img" src="pictures/title.png" alt="html">
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>Tag body</h2>
+		<pre>
+			<code>&lt;body&gt;</code>
+			<code>    the main body of HTMl document</code>
+      <code>    where all of content is placed</code>
+      <code>    it should be used just once</code>
+      <code>    it must start immediately after the closing tag <mark class="important">/head</mark></code>
+      <code>    and end directly before the closing <mark class="important">/html</mark></code>
+			<code>&lt;/body&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>Tags</h2>
+		<img src="pictures/div.jpg" alt="">
+		<pre>
+			<code>&lt;div&gt; &lt;/div&gt;</code>
+			<code>&lt;h2&gt; &lt;/h2&gt;</code>
+      <code>&lt;strong&gt; &lt;/strong&gt;</code>
+      <code>&lt;p&gt; &lt;/p&gt;</code>
+      <code>&lt;br&gt;</code>
+      <code>&lt;a&gt; &lt;/a&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>Tag div - structure</h2>
+		<pre>
+			<code>&lt;div&gt;</code>
+			<code>    defines a block of HTML</code>
+      <code>    or division</code>
+      <code>    or a section in an HTML document</code>
+      <code>    <mark class="important">The tag is used to group block-elements</mark></code>
+      <code>    <mark class="important">to format them with CSS</mark></code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>From h1 to h6 - headings</h2>
+    <p>Heading are defined with the &lt;h1&gt; to  &lt;h6&gt; tags</p>
+		<pre>
+			<code><mark class="important">&lt;h1&gt;</mark> defines the most important heading</code>
+      <code>    ... </code>
+			<code><mark class="important">&lt;h6&gt;</mark> defines the least important heading</code>
+      <code>h1 headings should be main headings,</code>
+      <code>    followed by h2 headings</code>
+      <code>        then the less important h3, and so on.</code>
+		</pre>
+	  </div>
+  </section>
+  <section class="slide">
+     <div>
+  		<h2>Tag p - text</h2>
+  		<pre>
+  			<code>&lt;p&gt;</code>
+  			<code>    element defines a paragraph</code>
+  			<code>&lt;/p&gt;</code>
+  		</pre>
+      <p>Browsers automatically add an empty line before and after a paragraph.</p>
+  	  </div>
+    </section>
+	<section class="slide">
+   <div>
+		<h2>Tag strong - format text in the document</h2>
+		<pre>
+			<code>&lt;strong&gt;</code>
+			<code>    It defines important text</code>
+			<code>&lt;/strong&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>Break line</h2>
+		<pre>
+			<code>&lt;br&gt;</code>
+			<code>    defines a line break</code>
+      <code>use if you want a new line without starting a new paragraph</code>
+		</pre>
+    <p>The &lt;br&gt; element is an empty HTML element. It has no end tag.</p>
+	  </div>
+  </section>
+
+	<section class="slide intro-attributes">
+   <div>
+		<h2>Attributes</h2>
+		<p>Each Tag can also have attributes with values</p>
+    <p>Attributes appear inside the opening tag and their values sit inside the quotation marks.</p>
+    <p>Some tags can't use without attributes</p>
+    <p>Attributes come in name/value pairs like: <mark class="important">name="value"</mark></p>
+	 </div>
+  </section>
+	<section class="slide intro-a">
+   <div>
+		<h2>Tag a - link</h2>
+		<pre>
+			<code>&lt;a href="http://www.moneypark.ch"&gt;</code>
+			<code>  MoneyPark</code>
+			<code>&lt;/a&gt;</code>
+		</pre>
+    <p>The &lt;a&gt; tag defines a hyperlink, which is used to link from one page to another.</p>
+    <p>The required attribute of the  <mark class="important">&lt;a&gt;</mark> element is the  <mark class="important">"href"</mark> attribute, which indicates the link's destination - address.</p>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>Tag img</h2>
+    <p>The <mark class="important">&lt;img&gt;</mark> tag defines an image</p>
+    <p>The <mark class="important">&lt;img&gt;</mark>tag has two required attributes: <mark class="important">"src"</mark> and <mark class="important">"alt"</mark>.</p>
+		<pre>
+			<code>&lt;img src="pictures/moneypark-logo.png" alt="MoneyPark" &gt;</code>
+			<code>    <mark class="important">"src"</mark> - specifies the URL of the image</code>
+			<code>    <mark class="important">"alt"</mark> - specifies an alternate text for an image, </code>
+      <code>    if the image cannot be displayed.</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>Tag ul - unordered list </h2>
+		<pre>
+			<code>&lt;ul&gt;</code>
+			<code>    &lt;li&gt; first line item &lt;/li&gt;</code>
+      <code>    &lt;li&gt; second line item </code>
+      <code>        &lt;ul&gt;</code>
+      <code>           &lt;li&gt; first nested line item &lt;/li&gt;</code>
+      <code>        &lt;/ul&gt;</code>
+      <code>    &lt;/li&gt; </code>
+      <code>    &lt;li&gt; third line item &lt;/li&gt;</code>
+			<code>&lt;/ul&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>In browser unordered list looks like: </h2>
+    <ul>
+      <li> first line item</li>
+      <li> second line item
+          <ul>
+            <li> first nested line item</li>
+          </ul>
+      </li>
+      <li> third line item</li>
+    </ul>
+	  </div>
+  </section>
+
+	<section class="slide">
+   <div>
+		<h2>Tag ol - ordered list </h2>
+		<pre>
+			<code>&lt;ol&gt;</code>
+			<code>    &lt;li&gt; first line item &lt;/li&gt;</code>
+      <code>    &lt;li&gt; second line item </code>
+      <code>        &lt;ul&gt;</code>
+      <code>           &lt;li&gt; first nested line item &lt;/li&gt;</code>
+      <code>        &lt;/ul&gt;</code>
+      <code>    &lt;/li&gt; </code>
+      <code>    &lt;li&gt; third line item &lt;/li&gt;</code>
+			<code>&lt;/ol&gt;</code>
+		</pre>
+	  </div>
+  </section>
+	<section class="slide">
+   <div>
+		<h2>In browser ordered list looks like: </h2>
+    <ol>
+      <li> first line item</li>
+      <li> second line item
+          <ol>
+            <li> first nested line item</li>
+            <li> second nested line item</li>
+          </ol>
+      </li>
+      <li> third line item
+          <ul>
+            <li> first second nested line item</li>
+            <li> second second nested line item</li>
+          </ul>
+      </li>
+      <li> fourth line item </li>
+    </ol>
+	  </div>
+  </section>
+	<section class="slide intro-pr">
+   <div>
+		<h2>The progress tag - represents the progress of a task</h2>
+    <img class="img" alt="HTML5" src="pictures/progress.jpg">
+	  </div>
+  </section>
+	<section class="slide intro-sel">
+   <div>
+		<h2>The select tag - create a drop-down list with four options</h2>
+    <img class="img" alt="HTML5" src="pictures/select.jpg">
+	  </div>
+  </section>
+	<section class="slide intro-sel">
+   <div>
+		<h2>The datalist tag - an input element with pre-defined values in a datalist: </h2>
+    <img class="img" alt="HTML5" src="pictures/datalist.jpg">
+	  </div>
+  </section>
+
+
+  <section id="tag" class="slide cover tags-one">
+    <div>
+  		<h2>More HTML tags</h2>
+  		<img alt="HTML5" src="pictures/type-tags.jpg">
+  	</div>
+  </section>
+  <section id="tag1" class="slide cover">
+    <div>
+  		<img alt="HTML5" src="pictures/type.jpg">
+  	</div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Tags type</h2>
+			<ul>
+        <li> Meta information</li>
+				<li> Structure</li>
+        <li> Head</li>
+        <li> Text</li>
+        <li> Buit-in</li>
+        <li> Interactive</li>
+			</ul>
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>HTML meta tags</h2>
+      <pre>
+          <code>&lt;base&gt; &lt;link&gt;</code>
+      		<code><mark>&lt;meta&gt;</mark> &lt;noscript&gt; &lt;script&gt;</code>
+      		<code>&lt;style&gt; &lt;title&gt;</code>
+      </pre>
+      <p>The &lt;meta&gt; tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable.</p>
+      <p> Meta elements used to specify page description, keywords, author of the document, last modified, and other metadata.</p>
+  	</div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Structure tags</h2>
+      <pre>
+          <code>&lt;html&gt; &lt;head&gt;</code>
+      		<code><mark>&lt;div&gt;</mark> &lt;body&gt; &lt;span&gt;</code>
+      		<code><mark>&lt;article&gt;</mark> <mark>&lt;aside&gt;</mark> <mark>&lt;section&gt;</mark> <mark>&lt;nav&gt;</mark></code>
+      </pre>
+      <p class="note">Structure tag - element which define the structure of the document </p>
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Header</h2>
+      <pre>
+          <code>&lt;header&gt;</code>
+      		<code>    Used to contain the header content of a site</code>
+      		<code>&lt;header&gt;</code>
+      </pre>
+  	</div>
+  </section>
+  <section class="slide">
+      <div>
+        <h2>Footer</h2>
+        <pre>
+            <code>&lt;footer&gt;</code>
+        		<code>     Contains the footer content of a site.</code>
+        		<code>&lt;footer&gt;</code>
+        </pre>
+    	</div>
+  </section>
+  <section class="slide">
+      <div>
+        <h2>Nav</h2>
+        <pre>
+            <code>&lt;nav&gt;</code>
+        		<code>     Contains the navigation menu,</code>
+            <code>     or other navigation functionality for the page.</code>
+        		<code>&lt;nav&gt;</code>
+        </pre>
+    	</div>
+  </section>
+  <section class="slide">
+      <div>
+        <h2>Aside</h2>
+        <pre>
+            <code>&lt;aside&gt;</code>
+        		<code>     Defines a block of content that is related  </code>
+            <code>     to the main content</code>
+            <code>     around it, but not central to the flow of it</code>
+        		<code>&lt;aside&gt;</code>
+        </pre>
+    	</div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Heading tags</h2>
+      <pre>
+          <code>&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;</code>
+      		<code><mark>&lt;hgroup&gt;</mark></code>
+      </pre>
+      <p class="note">Heading tag - element which define the head of part document </p>
+      <p><mark class="important">&lt;h1&gt;</mark> defines the most important heading </p>
+      <p><mark class="important">&lt;h6&gt;</mark> defines the least important heading</p>
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Text tags</h2>
+      <pre>
+          <code>&lt;a&gt; &lt;abbr&gt; &lt;b&gt;</code>
+      		<code>&lt;cite&gt; &lt;code&gt; &lt;command&gt;</code>
+      		<code>&lt;del&gt; &lt;dfn&gt; &lt;em&gt; <mark>&lt;i&gt;</mark> <mark>&lt;input&gt;</mark></code>
+      		<code>&lt;ins&gt; <mark>&lt;kbd&gt;</mark> &lt;keygen&gt; &lt;label&gt; &lt;map&gt; &lt;mark&gt; &lt;meter&gt;</code>
+      		<code>&lt;output&gt; &lt;progress&gt; <mark>&lt;q&gt;</mark> <mark class="important">…</mark></code>
+      		</pre>
+      <p class="note">Text tag - content element </p>
+  	</div>
+  </section>
+  <section class="slide tags-embeded">
+    <div>
+      <h2>Embeded tags (third-party content)</h2>
+      <pre>
+          <code>&lt;img&gt; &lt;iframe&gt; &lt;embed&gt; &lt;math&gt; &lt;object&gt;</code>
+      		<code><mark>&lt;canvas&gt;</mark> &lt;audio&gt; &lt;svg&gt; &lt;video&gt;</code>
+      </pre>
+
+      <pre>
+          <code>&lt;iframe&gt; -  a nested browsing context</code>
+      		<code>&lt;canvas&gt; - represents a bitmap area that scripts can be used</code>
+          <code>    to render graphics, graphs, game graphics on the fly.</code>
+          <code>&lt;audio&gt; - represents a sound , or an audio stream</code>
+          <code>&lt;svg&gt; - defines an embedded vectorial image </code>
+          <code>&lt;video&gt; - a video, with the necessary interface to play it.</code>
+      </pre>
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>SVG</h2>
+      <p><a href="http://jsfiddle.net/hyperandroid/Lgz2p/embedded/">Example svg</a></p>
+  	</div>
+  </section>
+  <section class="slide int-video">
+    <div>
+  		<h2>Video</h2>
+      <img class ="img" src="pictures/tag-video.jpg" alt="">
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Interactive</h2>
+      <pre>
+          <code><mark>&lt;a&gt;</mark> &lt;button&gt; &lt;input&gt; &lt;label&gt; &lt;menu&gt;</code>
+      		<code><mark>&lt;img&gt;</mark> &lt;iframe&gt;</code>
+          <code>&lt;select&gt; &lt;textarea&gt; <mark>&lt;video&gt;</mark></code>
+      </pre>
+      <p class="note">Interactive tag - element designed to interact with user </p>
+  	</div>
+  </section>
+
+  <section class="slide cover" id="Picture2"><div>
+  		<img src="pictures/html6.jpg" alt="">
+  	</div>
+    </section>
+  <section class="slide history-tim">
+    <div>
+  		<p> <strong>The HyperTextMarkup Language </strong> was created by <b>Sir Tim Berners-Lee</b> <img src="pictures/tim-berners-lee-001.jpg" alt="Tim Berners Lee">
+      In 1991 he wrote a document called <em>“HTML Tags”</em> and proposed two dozen elements that could be used for writing web pages.</p>
+  	</div>
+  </section>
+  <section class="slide history-note">
+    <div>
+      <h2>The timeline of HTML</h2>
+			<ul>
+        <li> 1991 - “HTML Tags” by <em> Sir Tim Berners-Lee </em></li>
+			</ul>
+      <ul>
+				<li> 1995 - HTML 2.0 by <em>IETF</em></li>
+        <li> 1997 - HTML 3.2 and HTML 4.0</li>
+        <li> 1998 - HTML 4.0 (revised) by <em>IETF</em></li>
+      </ul>
+			<ul>
+        <li> 1999 - HTML 4.01 by <em>W3C</em>, <a href="http://www.w3.org">http://www.w3.org</a></li>
+			</ul>
+  	</div>
+  </section>
+	<section class="slide shout history-xhtml">
+    <div>
+		  <h2>XHTML</h2>
+      <p>Extensible</p>
+	  </div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2> XHTML Timeline</h2>
+			<ul>
+        <li> 2000 - XHTML 1.0</li>
+				<li> 2001 - XHTML 1.1</li>
+        <li> 2002 - XHTML 2.0</li>
+			</ul>
+      <h2> XHTML Features</h2>
+  			<ul>
+          <li> strict rules</li>
+  			</ul>
+  	</div>
+  </section>
+  <section class="slide history-moz">
+    <div>
+      <h2>WHATWG</h2>
+      <p><span>Mozila Foundation</span> <img src="pictures/mozila.jpg" alt=""></p>
+      <p><span>Apple</span> <img src="pictures/apple.jpg" alt=""></p>
+      <p><span>Google</span> <img src="pictures/google.jpg" alt=""></p>
+      <p><span>Opera</span> <img src="pictures/opera.jpg" alt=""></p>
+  	</div>
+  </section>
+	<section class="slide history-whatwg">
+    <div>
+      <h3>2004</h3>
+      <h2>WHATWG</h2>
+      <p>The Web Hypertext Application Technology Working Group</p>
+	  </div>
+  </section>
+	<section class="slide cover" id="picture33"><div>
+		<img src="pictures/HTML5.jpg" alt="">
+	</div>
+</section>
+  <section class="slide history-org">
+    <div>
+      <h2>Workign groups</h2>
+      <p><mark class="important">IETF</mark> (the Internet Engineering Task Force)</p>
+      <p><mark class="important">W3C</mark> (the World Wide Web Consortium)</p>
+      <p><mark class="important">WHATWG</mark> (The Web Hypertext Application Technology Working Group)</p>
+      <p>One goal is</p>
+      <p><mark class="important">make the Internet work better by producing high quality, relevant technical documents that influence the way people design, use, and manage the Internet</mark></p>
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>How standarts are made ?</h2>
+      <p>Why do we have an <code>&lt;img&gt;</code> element? </p>
+      <p>Why we use <code>&lt;div&gt;</code> element? </p>
+      <p>Why we use <code>&lt;p&gt;</code> element? </p>
+      <p>...</p>
+  </section>
+  <section class="slide">
+    <div>
+      <h2>Smart people</h2>
+      <img src="pictures/jokes2.jpg" alt="">
+  </section>
+  <section class="slide">
+    <div>
+      <h2>I’d like to proposal a new optional html tag</h2>
+      <img src="pictures/message.jpg" alt="">
+  </section>
+
+  <section class="slide ">
+    <div>
+      <h2>What is the current state of <strong>HTML5</strong>? </h2>
+			<ul>
+        <li> 2012 - W3C Candidate Recommendation</li>
+				<li> 2022 - W3C Recommendation</li>
+      </ul>
+  	</div>
+  </section>
+	<section class="slide history-support">
+    <div>
+      <h2>Most HTML5 features work today</h2>
+      <p class="text1"> * in progressive browsers</p>
+      <p class="text2"> (except Internet Explorer)</p>
+      <img class="img" src="pictures/internet_explorer_7_logo.jpg" alt="Internet Explorer">
+	  </div>
+  </section>
+	<section class="slide history-support">
+    <div>
+      <h2>Things you should know about HTML5</h2>
+      <ul>
+        <li>It's easy to get started</li>
+        <li>It already works</li>
+        <li>It's not one big thing</li>
+      </ul>
+	  </div>
+  </section>
+
+  <section class="slide">
+    <div>
+  		<h2>Interactive Classes</h2>
+      <ul>
+      			<li> <a target="_blank" href="http://www.codecademy.com">codecademy.com</a></li>
+      </ul>
+      <img class="img" src="pictures/codeacademy.jpg" alt="">
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+  		<h2>Interactive Classes from Udacity (Google invested ...)</h2>
+      <ul>
+      			<li> <a target="_blank" href="https://www.udacity.com/course/ud304">Intro to Html and Css</a></li>
+            <li> a lot of examples and exercises</li>
+      </ul>
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+  		<h2>Books</h2>
+      <ul>
+            <li> <a target="_blank" href="http://www.amazon.com/HTML-CSS-Design-Build-Websites/dp/1118008189/ref=sr_1_3?ie=UTF8&qid=1421401192&sr=8-3&keywords=john+duckett&pebp=1421401204499&peasin=1118008189">HTML and CSS: Design and Build Websites</a> by John Duckett</li>
+      			<li> <a target="_blank" href="http://www.amazon.com/HTML-CSS-Parts-Animal-Guide/dp/0596157606/ref=sr_1_1?ie=UTF8&qid=1421277269&sr=8-1&keywords=HTML+%26+CSS%3A+The+Good+Parts&pebp=1421277273232&peasin=596157606">HTML & CSS: The Good Parts (Animal Guide)</a> by Ben Henick</li>
+            <li> <a target="_blank" href="http://www.amazon.com/HTML5-Up-Running-Mark-Pilgrim/dp/0596806027?ie=UTF8&tag=diveintomark-20&creativeASIN=0596806027">HTML5: Up and Running</a> by Mark Pilgrim</li>
+      			<li> <a target="_blank" href="http://www.amazon.com/HTML5-Pocket-Reference-OReilly/dp/1449363350/ref=sr_1_1?ie=UTF8&qid=1421277017&sr=8-1&keywords=HTML5+Pocket+Reference&pebp=1421277029729&peasin=1449363350">HTML5 Pocket Reference </a>by Jennifer Niederst Robbins </li>
+      </ul>
+  	</div>
+  </section>
+  <section class="slide apart">
+    <div>
+  		<h2>Publishing house: A Book Apart</h2>
+      <p>
+        <a href="http://www.amazon.com/HTML5-Web-Designers-Jeremy-Keith/dp/0984442502/ref=sr_1_3?ie=UTF8&qid=1421277362&sr=8-3&keywords=a+list+apart&pebp=1421277376458&peasin=984442502" target="_blank">HTML5 for Web Designers </a> by Jeremy Keith</p>
+      <p>
+        <a href="http://www.abookapart.com/" target="_blank">abookapart.com</a></p>
+
+      <img class="img" src="pictures/apart.png" alt="">
+  	</div>
+  </section>
+  <section class="slide">
+      <div>
+  		<h2>Blog</h2>
+      <ul>
+      			<li> Specification: <a target="_blank" href="http://www.w3.org/TR/html5/">w3.org/TR/html5</a></li>
+      			<li> HTML5 Doctor: <a target="_blank" href="http://html5doctor.com/">html5doctor.com</a></li>
+      			<li> Jeremy Keith: <a target="_blank" href="https://adactio.com/">adactio.com</a></li>
+            <li> Mozilla: <a target="_blank" href="https://hacks.mozilla.org/">hacks.mozilla.org</a></li>
+      		</ul>
+  	</div>
+  </section>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
