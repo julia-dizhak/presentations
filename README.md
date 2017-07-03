@@ -1,4 +1,4 @@
-# presentations
+# Presentations
 Presentations for topics related to frontend by shower engine
 
 # Presentations skills
@@ -33,7 +33,7 @@ Presentations for topics related to frontend by shower engine
 <p>Finally, I’ll ...</p>
 <p>If you have any questions, please feel free to interrupt</p>
 
-# Main body:
+# main body:
 <p>Let’s move on to … / take a look at ...</p>
 <p>This leads me to my next point, which is ...</p>
 <p>Earlier I mentioned ...</p>
@@ -57,7 +57,7 @@ Presentations for topics related to frontend by shower engine
 <p>Does anyone has any comments?</p>
 <p>How does this relate to you own particular context?</p>
 
-# Closing:
+# closing:
 <p>Right, that brings me nearly to the end of my presentation.</p>
 <p>Just to summarize the main points again, …</p>
 <p>So, to summarize, we looked at 4 main points. I began by telling about… Then I talked about … After that I explained how… Finally I …</p>
