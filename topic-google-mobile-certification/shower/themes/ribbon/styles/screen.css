@@ -660,6 +660,13 @@ a {
     color: #4285f4;
 }
 
+.footer {
+    position: absolute;
+    bottom: 20px;
+    font-weight: bold;
+    right: 20px;
+    font-size: 18px;
+}
 
 .intro-angular p {
   margin: 0 0 10px 0;
