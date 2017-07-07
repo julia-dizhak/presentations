@@ -116,10 +116,83 @@
 
 	<section class="slide intro-mvc">
 		<div>
-			<h2></h2>
-			<p></p>
-	   </div>
+			<h2>Tools to get started</h2>
+			<p><a href="https://support.google.com/partners/answer/7336687?hl=en&ref_topic=7327827">Learn how to use the Chrome DevTools</a> Network panel to understand why a page loads slowly in this step-by-step tutorial.</p>
+			<ul>
+				<li> Disable Cache</li>
+				<li> Emulate network throttling (variety of connectivity conditions)</li>
+				<li>
+					Analyze requests
+					<ul>
+						<li> Part A: Find render-blocking block/scripts</li>
+						<li> Part B: Find large requests</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</section>
+	<section class="slide agenda">
+		<div>
+			<h2>Targets to focus on</h2>
+			<table class="nice-table borders spaced-table">
+			  <thead>
+				<tr>
+				  <th>Main Element</th>
+				  <th>Target Request Range</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td>JS</td>
+				  <td>&lt;20 (not including pixels)</td>
+				</tr>
+				<tr>
+				  <td>CSS</td>
+				  <td>&lt;5</td>
+				</tr>
+				<tr>
+				  <td>Images</td>
+				  <td>&lt;30</td>
+				</tr>
+				<tr>
+				  <td>Font</td>
+				  <td>0-3</td>
+				</tr>
+				<tr>
+				  <td><strong>Total</strong></td>
+				  <td><strong>100</strong></td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</section>
+	<section class="slide intro-mvc">
+		<div>
+			<h2>The critical rendering path</h2>
+			<p>Optimizing the critical rendering path refers to prioritizing the display of content that relates to the current user action.</p>
+			<p style="margin:0">To deliver the fastest possible time to first render, we need to minimize three variables:</p>
+			<ul>
+				<li> The number of critical resources.</li>
+				<li> The critical path length.</li>
+				<li> The number of critical bytes.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide intro-mvc">
+		<div>
+			<h2>Optimizing the critical rendering path</h2>
+
+			<ul>
+				<li> Optimize content efficiency</li>
+				<li> Eliminating unnecessary downloads</li>
+				<li> Optimizing encoding and transfer size (Compression)</li>
+				<li> Image optimization</li>
+				<li> Web font optimization</li>
+				<li> HTTP Caching</li>
+			</ul>
+		</div>
+	</section>
+
 
 	<section class="slide agenda">
 		<div>
