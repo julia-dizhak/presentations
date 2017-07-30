@@ -1,6 +1,3 @@
-# Presentations
-Presentations for topics related to frontend by shower engine
-
 # Presentations skills
 
 # opening/main body/closing
@@ -48,7 +45,7 @@ Presentations for topics related to frontend by shower engine
 <p>To put it simply, ...</p>
 <p>So, for me the main issue here is ...</p>
 <p>I think, there are 3 questions to focus on ...</p>
-<p>I would like to stress / emphasise that</p>
+<p>I would like to stress / emphasize that</p>
 
 <p>as you can see on this slide</p>
 <p>I’d like to draw your attention</p>
