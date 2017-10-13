@@ -6,11 +6,13 @@
 ## Slides representing <a href="https://julia-dizhak.github.io/presentations/topic-angularJS-1x/" target="_blank">AngularJS 1.x</a>
 
 ## Slides about <a href="https://julia-dizhak.github.io/presentations/topic-google-mobile-certification/" target="_blank">Google mobile certification</a> program for mobile site developers
+
         
 # Presentations skills: opening / main body / closing
 
-## Opening
+## opening / main body / closing
 
+### Opening
 <p>Ok, let’s get started. Good morning everyone and welcome to</p>
 <p>Before I begin, I’d like to thank … for inviting me here today</p>
 <p>On behalf of … I’d like to welcome you here to our office</p>
@@ -39,7 +41,7 @@
 <p>Finally, I’ll ...</p>
 <p>If you have any questions, please feel free to interrupt</p>
 
-## Main body:
+### Main body:
 <p>Let’s move on to … / take a look at ...</p>
 <p>This leads me to my next point, which is ...</p>
 <p>Earlier I mentioned ...</p>
@@ -63,7 +65,7 @@
 <p>Does anyone has any comments?</p>
 <p>How does this relate to you own particular context?</p>
 
-## Closing:
+### Closing:
 <p>Right, that brings me nearly to the end of my presentation.</p>
 <p>Just to summarize the main points again, …</p>
 <p>So, to summarize, we looked at 4 main points. I began by telling about… Then I talked about … After that I explained how… Finally I …</p>
