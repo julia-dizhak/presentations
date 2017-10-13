@@ -1,3 +1,12 @@
+# Presentations
+<p>by shower presentation engine <a href="https://github.com/shower/shower" target="_blank">https://shwr.me/</a></p>
+
+## <a href="https://julia-dizhak.github.io/presentations/topic-intro-HTML5/" target="_blank">Introduction to HTML5</a>
+
+## Slides representing <a href="https://julia-dizhak.github.io/presentations/topic-angularJS-1x/" target="_blank">AngularJS 1.x</a>
+
+## Slides about <a href="https://julia-dizhak.github.io/presentations/topic-google-mobile-certification/" target="_blank">Google mobile certification</a> program for mobile site developers
+        
 # Presentations skills: opening / main body / closing
 
 ## Opening
