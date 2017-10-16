@@ -244,191 +244,52 @@
 	</section>
 
 
-
+	<section class="slide intro-angular">
+		<div>
+			<h2>The history of JS in Moneypark</h2>
+			<p></p>
+			<ul>
+				<li> jquery versions are 1.8.3, 1.9, 2.1</li>
+				<li> backbonejs</li>
+				<li> angular version is 1.4.7</li>
+				<li> new framework ?</li>
+				<li> ES6 features populate with babel (in a plan )</li>
+				<li> typescript (in a plan)</li>
+			</ul>
+		</div>
+	</section>
 	<section class="slide intro-angular">
 		<div>
 			<h2>AngularJS 1.x</h2>
 			<div class="text">
-
+				<p><mark class="important">AngularJS</mark> is a Javascript MVC framework, written entirely in JavaScript.</p>
+				<p>It was created by Google, they put a lot of attention to build nice/properly architecture and maintainable web applications</p>
 			</div>
 			<div class="picture">
-
+<img src="http://i1-news.softpedia-static.com/images/fitted/340x180/google-releases-guide-on-how-to-migrate-from-angularjs-1-x-to-2-x.jpg" alt="">
 			</div>
-			<p><mark class="important">AngularJS</mark> is a Javascript MVC framework, written entirely in JavaScript.</p>
-			<p>It was created by Google, they put a lot of attention to build nice/properly architecture and maintainable web applications</p>
-			<img src="http://i1-news.softpedia-static.com/images/fitted/340x180/google-releases-guide-on-how-to-migrate-from-angularjs-1-x-to-2-x.jpg" alt="">
 		</div>
 	</section>
-	<section class="slide intro-angular-2">
+    <section class="slide node">
 		<div>
 			<h2>Why angular?</h2>
-			<p>AngularJS works with the long-established technologies of the web (HTML, CSS, and JavaScript) to make the development of web apps easier and faster than ever before</p>
-			<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAU9AAAAJGIyYzU1MzY3LWU0YTktNDUyZC1hN2IzLTMyMzQ0ZThjZTUxOA.png" alt="">
-		</div>
-	</section>
-	<section class="slide intro-mvc">
-		<div>
-			<h2>MVC</h2>
-			<p><mark class="important">Model View Controller</mark> is a software design pattern that separates representation from user interaction.
-				Model consists of application data and functions that interact with it, while the view presents this data to the user; the controller operates between the two.</p>
-	  </div>
-	</section>
-	<section class="slide directives">
-		<div>
-			<h2>Directives</h2>
-			<p>Directives could be custom HTML <mark class="important">elements and attributes, and class names, as well as comments</mark> in AngularJS.</p>
-			<p>This is a method of creating new HTML elements that they have own custom functionality.</p>
-			<pre>
-				<code>&lt;html ng-app&gt;</code>
-			</pre>
-			<p>Only one ng-app directive can be used per HTML document</p>
-		</div>
-	</section>
-	<section class="slide directive-doc">
-		<div>
-			<h2>Built-in directives</h2>
-			<p>Docs <a target="_blank" href="https://docs.angularjs.org/api/ng/directive">https://docs.angularjs.org/api/ng/directive</a></p>
-			<p>The most common and widely used are </p>
-			<ul>
-				<li> ng-show/ng-hide</li>
-				<li> ng-click</li>
-				<li> ng-repeat (working with array </li>
-				<li> ng-src</li>
-				<li> ng-init</li>
-				<li> ng-class</li>
-				<li> ng-submit</li>
-				<li> ng-if</li>
-				<li> ng-model</li>
-			</ul>
-	  </div>
-	</section>
-
-	<section class="slide model">
-		<div>
-			<h2>ng-model</h2>
-			<p>With the ng-model directive you can bind the value of an input field to a variable created in AngularJS</p>
-			<p><a target="_blank" href="https://docs.angularjs.org/api/ng/directive/ngModel">https://docs.angularjs.org/api/ng/directive/ngModel</a></p>
-			<pre>
-				<code>&lt;input ng-model="name" placeholder="Your name”&gt;</code>
-				<code>&lt;h1&gt;Hello {{ name }}&lt;/h1&gt;</code>
-			</pre>
-			<p>As soon as we changed the model called name expression in html will be also changed</p>
-			<p><a target="_blank" href="https://plnkr.co/edit/zXs6O41XLSXAdlDS45AR?p=preview">Edit in Plunker</a></p>
+			<div class="text">
+				<p>AngularJS works with the long-established technologies of the web (HTML, CSS, and JavaScript) to make the development of web apps easier and faster than ever before</p>
+			</div>
+			<div class="picture">
+				<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAU9AAAAJGIyYzU1MzY3LWU0YTktNDUyZC1hN2IzLTMyMzQ0ZThjZTUxOA.png" alt="">
+			</div>
 		</div>
 	</section>
 	<section class="slide">
 		<div>
-			<h2>Two-way Data Binding</h2>
-			<p>Ng-model is a key to a concept named as Two-way data binding</p>
-			<p>2 way in this context means that if the view changes the value, the model observes the change.
-				And if the model changes the value, the view update with the change.</p>
-
-		</div>
-	</section>
-
-	<section class="slide model">
-		<div>
-			<h2>Expressions</h2>
-			<p>Expressions which allow to insert dynamic values into HTML</p>
-			<pre>
-				<code>&lt;html ng-app&gt;</code>
-				<code>  &lt;body&gt;</code>
-				<code>    &lt;div&gt; {{ 4 + 6 }} &lt;/div&gt;</code>
-				<code>    &lt;div&gt; {{ “Angular” + “JS” }} &lt;/div&gt;</code>
-				<code>    &lt;div&gt; {{ numberOfRooms() }} &lt;/div&gt;</code>
-				<code>  &lt;/body&gt;</code>
-				<code>&lt;/html&gt;</code>
-			</pre>
-			<p><a target="_blank" href="https://plnkr.co/edit/TKFYR94WfM6140mXSYN6?p=preview>Edit in Plunker">Edit in Plunker</a></p>
-		</div>
-	</section>
-
-	<section class="slide">
-		<div>
-			<h2>Modules and ng-app</h2>
+			<h2>Angular styleguide</h2>
 			<p>In AngularJS, applications are structured in <mark class="important">modules</mark></p>
-			<p>You can define a new module very easily thanks to the function “module’ and then assign inside html template</p>
-			<pre>
-				<code>var app = angular.module(’myApp’,  [ ] );</code>
-				<code>&lt;html ng-app=“myApp"&gt;</code>
-			</pre>
+			<p>We are using angular conventions, style guide from https://github.com/johnpapa/angular-styleguide</p>
 	  </div>
 	</section>
 
-	<section class="slide ctrl">
-		<div>
-			<h2>Controllers</h2>
-			<p>Declaring the <mark class="important">ng-controller</mark> attribute on a DOM element says that all of the elements inside of it belong to the controller and will be managed</p>
-			<p>The controller function takes one or more arguments.
-				$scope object is available on the element and the controller</p>
-			<pre>
-				<code>{{ name }}  - not managed by controller </code>
-				<code>&lt;div ng-controller=‘MyController'&gt;</code>
-				<code>  &lt;input ng-model="name" placeholder="Your name"&gt;</code>
-				<code>  &lt;h1&gt;Hello {{ name }}&lt;/h1&gt;</code>
-				<code>&lt;/div&gt;</code>
-			</pre>
-			<p><a target="_blank" href="https://plnkr.co/edit/kBG2Renmsnurgz1IvBXB?p=preview">Edit</a></p>
-	  </div>
-	</section>
-
-	<section class="slide">
-		<div>
-			<h2>Scope</h2>
-			<p>The $scope object is simply a JavaScript object whose properties are all available to the view and with which the controller can interact. </p>
-			<p>$scope will be the bridge by which we’ll communicate from the controller to the view.</p>
-	  </div>
-	</section>
-
-
-	<section class="slide custom">
-		<div>
-			<h2>How to define directive?</h2>
-			<p>Directives allow you to write better HTML</p>
-			<pre>
-				<code>&lt;product-title&gt;&lt;/product-title&gt;</code>
-				<code>app.directive('productTitle', function() {</code>
-				<code>return {</code>
-				<code>  restrict: 'E',</code>
-				<code>  templateUrl: 'includes/product_title.html'</code>
-				<code>};</code>
-				<code>});</code>
-			</pre>
-	  </div>
-	</section>
-
-	<section class="slide directive-doc">
-		<div>
-			<h2>Filters</h2>
-			<p>change the way your expressions are displayed </p>
-			<p>Usage: {{ expression | filter }} </p>
-			<p>Angular comes with a collection of filters that can change the way your data are displayed <a href="https://docs.angularjs.org/api/ng/filter">https://docs.angularjs.org/api/ng/filter</a></p>
-
-			<ul>
-				<li> currency</li>
-				<li> uppercase / lowercase</li>
-				<li> date</li>
-				<li> limitTo </li>
-				<li> orderBy</li>
-			</ul>
-			<p>You can create you own filter</p>
-	  </div>
-	</section>
-	<section class="slide filter">
-		<div>
-			<h2>Filter date</h2>
-			<p><a target="_blank" href="https://docs.angularjs.org/api/ng/filter/date">https://docs.angularjs.org/api/ng/filter/date</a></p>
-			<p>Formats date to a string based on the requested format.</p>
-			<pre>
-				<code>&lt;span&gt;{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}&lt;/span&gt;</code>
-				<code>10/29/2010 @ 5:40AM</code>
-			</pre>
-			<a target="_blank" href="https://plnkr.co/edit/HJCAxEXBcae5AKmkB9Gl?p=preview">Edit in Plunker</a>
-		</div>
-	</section>
-
-
-	<section class="slide">
+		<section class="slide">
 		<div>
 			<h2>Everything you need to build SPA by AngularJS</h2>
 			<ul>
@@ -494,53 +355,64 @@
 	</section>
 
 
+	<section class="slide node">
+		<div>
+			<h2>Linters</h2>
+			<div class="text">
+				<ul>
+					<li> JS quality: use ESLint with configuration https://github.com/standard/eslint-config-standard to confirm the quality of code </li>
+					<li> Scss linter - csslint</li>
+				</ul>
+			</div>
+			<div class="picture">
+
+			</div>
+		</div>
+	</section>
 
 
-
-
-
-  <section class="slide">
-    <div>
-  		<h2>Interactive Classes</h2>
-		<p><a target="_blank" href="https://www.codeschool.com/">codeschool.com</a></p>
-		<ul>
-			<li> <a target="_blank" href="https://www.codeschool.com/courses/shaping-up-with-angular-js">Shaping up with Angularjs </a></li>
-			<li><a target="_blank" href="https://www.codeschool.com/courses/staying-sharp-with-angular-js"> Staying sharp with Angularjs</a></li>
-			<li><a target="_blank" href="https://www.codeschool.com/courses/accelerating-through-angular-2"> Accelerating through Angular2</a></li>
-		</ul>
-  	</div>
-  </section>
-  <section class="slide">
-    <div>
-  		<h2>Additional resources </h2>
-		<ul>
-			<li> <a target="_blank" href="https://docs.angularjs.org/api"> docs api</a></li>
-            <li><a target="_blank" href="https://egghead.io/"> egghead video</a></li>
-			<li><a target="_blank" href="https://thinkster.io/topics/angular"> thinkster</a></li>
-      </ul>
-  	</div>
-  </section>
 	<section class="slide">
-    <div>
-  		<h2>Meetup in Zurich </h2>
-		<ul>
-			<li> <a target="_blank" href="https://www.meetup.com/AngularJS-ZRH/"> AngularJS-ZRH</a></li>
-      </ul>
-  	</div>
-  </section>
-  <section class="slide">
-    <div>
-  		<h2>Books</h2>
-		<ul>
-			<li>
-				<a target="_blank" href="https://www.ng-book.com/">Ng-book by Ari Lerner</a>
-			</li>
-			<li>
-				...
-			</li>
-		</ul>
-  	</div>
-  </section>
+		<div>
+			<h2>Interactive Classes</h2>
+			<p><a target="_blank" href="https://www.codeschool.com/">codeschool.com</a></p>
+			<ul>
+				<li> <a target="_blank" href="https://www.codeschool.com/courses/shaping-up-with-angular-js">Shaping up with Angularjs </a></li>
+				<li><a target="_blank" href="https://www.codeschool.com/courses/staying-sharp-with-angular-js"> Staying sharp with Angularjs</a></li>
+				<li><a target="_blank" href="https://www.codeschool.com/courses/accelerating-through-angular-2"> Accelerating through Angular2</a></li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Additional resources </h2>
+			<ul>
+				<li> <a target="_blank" href="https://docs.angularjs.org/api"> docs api</a></li>
+				<li><a target="_blank" href="https://egghead.io/"> egghead video</a></li>
+				<li><a target="_blank" href="https://thinkster.io/topics/angular"> thinkster</a></li>
+		  </ul>
+		</div>
+	</section>
+		<section class="slide">
+		<div>
+			<h2>Meetup in Zurich </h2>
+			<ul>
+				<li> <a target="_blank" href="https://www.meetup.com/AngularJS-ZRH/"> AngularJS-ZRH</a></li>
+		  </ul>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Books</h2>
+			<ul>
+				<li>
+					<a target="_blank" href="https://www.ng-book.com/">Ng-book by Ari Lerner</a>
+				</li>
+				<li>
+					...
+				</li>
+			</ul>
+		</div>
+	</section>
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
