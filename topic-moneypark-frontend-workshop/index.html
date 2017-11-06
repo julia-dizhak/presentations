@@ -42,29 +42,10 @@
 		<h2>Agenda</h2>
 		<ol>
 			<li> Architecture</li>
-			<li>
-				Build tools
-				<ol>
-					<li> nodeJS, npm (in a plan migrate to yarn)</li>
-					<li> bower</li>
-					<li> Gulp</li>
-				</ol>
-			</li>
-			<li>
-				Structure 0f templates
-				<ol>
-					<li> semantic markup and accessible markup</li>
-					<li> internationalization</li>
-					<li> strings rendering</li>
-				</ol>
-			</li>
-			<li> JS
-				<ol>
-					<!--<li>Behavior JS </li>-->
-				</ol>
-			</li>
-			<li> AnglarJS 1.x</li>
-			<!--<li> Few words about reactJS and what is difference between Angular and ReactJS</li>-->
+			<li> Build tools: nodeJS, npm (in a plan migrate to yarn), bower, gulp </li>
+			<li> Structure of templates: semantic markup and accessible markup, internationalization, strings rendering</li>
+			<li> JS</li>
+			<li> AngularJS1.x</li>
 		</ol>
 		</div>
 	</section>
@@ -77,6 +58,7 @@
 			<p>On most websites whenever you click a link, the page reloads.</p>
 			<p>In a single page application, clicking a link keeps you on the same page, but replaces a part of it with the new content.</p>
 			<p>Examples are things like Mailing systems where you stay on the same page but it just grabs data from pre-loaded stuff.</p>
+			<p>Build SPA within ngRoute module, ngRoute, uiRoute, $routeProvider</p>
 	  </div>
 	</section>
 
@@ -237,17 +219,10 @@
 		<div>
 			<h2>Internationalization (localization)</h2>
 			<p>Switzerland - support 4 languages</p>
-			<p>Tools</p>
+			<p>Strings rendering - trans, blocktrans, context (django specific)</p>
+			<p><a href="https://langusta.moneypark.ch/">Langusta moneypark translation tool</a></p>
 	  </div>
 	</section>
-	<section class="slide custom">
-		<div>
-			<h2>Strings rendering</h2>
-			<p>trans, blocktrans, context (django specific)</p>
-			<p>How we work with strings? <a href="https://langusta.moneypark.ch/#/projects">langusta project</a></p>
-	  </div>
-	</section>
-
 
 	<section class="slide intro-angular">
 		<div>
@@ -267,98 +242,15 @@
 		<div>
 			<h2>AngularJS 1.x</h2>
 			<div class="text">
-				<p><mark class="important">AngularJS</mark> is a Javascript MVC framework, written entirely in JavaScript.</p>
-				<p>It was created by Google, they put a lot of attention to build nice/properly architecture and maintainable web applications</p>
-			</div>
-			<div class="picture">
-<img src="http://i1-news.softpedia-static.com/images/fitted/340x180/google-releases-guide-on-how-to-migrate-from-angularjs-1-x-to-2-x.jpg" alt="">
-			</div>
-		</div>
-	</section>
-    <section class="slide node">
-		<div>
-			<h2>Why angular?</h2>
-			<div class="text">
 				<p>AngularJS works with the long-established technologies of the web (HTML, CSS, and JavaScript) to make the development of web apps easier and faster than ever before</p>
+				<p>We are using angular conventions, <a href="https://github.com/johnpapa/angular-styleguide">style guide from from John Papa</a></p>
+				<p></p>
 			</div>
 			<div class="picture">
 				<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAU9AAAAJGIyYzU1MzY3LWU0YTktNDUyZC1hN2IzLTMyMzQ0ZThjZTUxOA.png" alt="">
 			</div>
 		</div>
 	</section>
-	<section class="slide">
-		<div>
-			<h2>Angular styleguide</h2>
-			<p>In AngularJS, applications are structured in <mark class="important">modules</mark></p>
-			<p>We are using angular conventions, style guide from https://github.com/johnpapa/angular-styleguide</p>
-	  </div>
-	</section>
-
-		<section class="slide">
-		<div>
-			<h2>Everything you need to build SPA by AngularJS</h2>
-			<ul>
-				<li> Creates the page that will hold the structure of the application</li>
-				<li> Bind the page to a specific AngularJS module</li>
-				<li> Select where the views will be included with ngView</li>
-				<li> Writes the different views</li>
-				<li> Binds the view and the routes</li>
-			</ul>
-	  </div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>ngRoute</h2>
-			<p>The ngRoute module helps your application to become a Single Page Application.</p>
-			<p>If you want to navigate to different pages in your application, but you also want the application to be a SPA, with no page reloading, you can use the ngRoute module.</p>
-			<p><a target="_blank" href="http://www.w3schools.com/angular/tryit.asp?filename=try_ng_routing">example</a></p>
-	  </div>
-	</section>
-	<section class="slide spa-1">
-		<div>
-			<h2>What do we need?</h2>
-			<p>To make your applications ready for routing, you must include the AngularJS Route module:</p>
-			<pre>
-				<code>&lt;script src="//apis.com/angular/angular-route.js"&gt;&lt;/script&gt;</code>
-			</pre>
-			<p>Then you must add the ngRoute as a dependency in the application module:</p>
-			<pre>
-				<code>var app = angular.module("myApp", ["ngRoute”]);</code>
-			</pre>
-	  </div>
-	</section>
-	<section class="slide spa-2">
-		<div>
-			<h2>$routeProvider</h2>
-			<p>Now your application has access to the route module, which provides the $routeProvider</p>
-			<p>Use the $routeProvider to configure different routes in your application:</p>
-			<pre>
-				<code>app.config(function($routeProvider) {</code>
-				<code>$routeProvider</code>
-				<code>.when("/", {</code>
-				<code>templateUrl : "main.htm"</code>
-				<code>})</code>
-				<code>.when("/red", {</code>
-				<code>templateUrl : "red.htm"</code>
-				<code>})</code>
-			</pre>
-			<a target="_blank" href="http://www.w3schools.com/angular/tryit.asp?filename=try_ng_routing">full example</a>
-	  </div>
-	</section>
-	<section class="slide spa-3">
-		<div>
-			<h2>Where does it go?</h2>
-			<p>Your application needs a container to put the content provided by the routing.</p>
-			<p>This container is the ng-view directive</p>
-			<pre>
-				<code>&lt;div ng-view&gt; &lt;/div&gt;</code>
-				<code>&lt;ng-view&gt; &lt;/ng-view&gt;</code>
-				<code>&lt;div class="ng-view"&gt; &lt;/div&gt;</code>
-			</pre>
-			<p>Applications can only have one ng-view directive, and this will be the placeholder for all views provided by the route.</p>
-	  </div>
-	</section>
-
 
 	<section class="slide node">
 		<div>
@@ -375,53 +267,16 @@
 		</div>
 	</section>
 
-
 	<section class="slide">
 		<div>
-			<h2>Interactive Classes</h2>
-			<p><a target="_blank" href="https://www.codeschool.com/">codeschool.com</a></p>
+			<h2>Meetups in Zurich </h2>
 			<ul>
-				<li> <a target="_blank" href="https://www.codeschool.com/courses/shaping-up-with-angular-js">Shaping up with Angularjs </a></li>
-				<li><a target="_blank" href="https://www.codeschool.com/courses/staying-sharp-with-angular-js"> Staying sharp with Angularjs</a></li>
-				<li><a target="_blank" href="https://www.codeschool.com/courses/accelerating-through-angular-2"> Accelerating through Angular2</a></li>
-			</ul>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Additional resources </h2>
-			<ul>
-				<li> <a target="_blank" href="https://docs.angularjs.org/api"> docs api</a></li>
-				<li><a target="_blank" href="https://egghead.io/"> egghead video</a></li>
-				<li><a target="_blank" href="https://thinkster.io/topics/angular"> thinkster</a></li>
+				<li> <a href="https://www.meetup.com/Web-Zurich/">Web Zurich meetup</a></li>
+				<li> <a href="https://www.meetup.com/AngularZRH/">Angular Zurich</a></li>
+				<li> <a href="https://www.meetup.com/Zurich-ReactJS-Meetup/">Zurich ReactJS</a></li>
 		  </ul>
 		</div>
 	</section>
-		<section class="slide">
-		<div>
-			<h2>Meetup in Zurich </h2>
-			<ul>
-				<li> <a target="_blank" href="https://www.meetup.com/AngularJS-ZRH/"> AngularJS-ZRH</a></li>
-		  </ul>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Books</h2>
-			<ul>
-				<li>
-					<a target="_blank" href="https://www.ng-book.com/">Ng-book by Ari Lerner</a>
-				</li>
-				<li>
-					...
-				</li>
-			</ul>
-		</div>
-	</section>
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
 </body>

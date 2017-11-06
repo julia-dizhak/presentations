@@ -2,12 +2,18 @@
 <p>by shower presentation engine <a href="https://github.com/shower/shower" target="_blank">https://shwr.me/</a></p>
 
 ## <a href="https://julia-dizhak.github.io/presentations/topic-intro-HTML5/" target="_blank">Introduction to HTML5</a>
+<br>
 
 ## Slides representing <a href="https://julia-dizhak.github.io/presentations/topic-angularJS-1x/" target="_blank">AngularJS 1.x</a>
+<br>
 
 ## Slides about <a href="https://julia-dizhak.github.io/presentations/topic-google-mobile-certification/" target="_blank">Google mobile certification</a> program for mobile site developers
+<br>
 
-        
+## <a href="https://julia-dizhak.github.io/presentations/topic-moneypark-frontend-workshop/" target="_blank">Frontend build tools for moneypark</a>
+<br>
+
+<br>
 # Presentations skills: opening / main body / closing
 
 ## opening / main body / closing
