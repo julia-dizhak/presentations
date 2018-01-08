@@ -1,8 +1,9 @@
 # Presentations
-<p>by shower presentation engine <a href="https://github.com/shower/shower" target="_blank">https://shwr.me/</a></p>
+<p>created by shower presentation engine <a href="https://github.com/shower/shower" target="_blank">https://shwr.me/</a></p>
 
-## <a href="https://julia-dizhak.github.io/presentations/topic-intro-HTML5/" target="_blank">Introduction to HTML5</a>
-<br>
+## [Introduction to HTML5](https://julia-dizhak.github.io/presentations/topic-intro-HTML5/)
+
+## [Yarn package manager](https://julia-dizhak.github.io/presentations/yarn/)
 
 ## Slides representing <a href="https://julia-dizhak.github.io/presentations/topic-angularJS-1x/" target="_blank">AngularJS 1.x</a>
 <br>

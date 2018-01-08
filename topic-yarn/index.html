@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Front-end workshop</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Yarn package manager</h1>
+	</header>
+	<section class="slide cover" id="Cover">
+		<div>
+			<h2>Yarn package manager</h2>
+			<p>by Julia Dizhak</p>
+			<img src="pictures/cover1.jpg" alt="moneypark">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Serious citations from real web-online life.</h2>
+			<br>
+			<figure>
+				<blockquote>
+					<p>If your business is online - your value depends on Front-end engineering.</p>
+				</blockquote>
+				<figcaption></figcaption>
+			</figure>
+			<br>
+			<figure>
+				<blockquote>
+					<p>Every gorgeous design is brought to life by Front-end engineers.</p>
+				</blockquote>
+				<figcaption></figcaption>
+			</figure>
+		</div>
+	</section>
+	<section class="slide agenda">
+		<div>
+		<h2>Agenda</h2>
+		<ol>
+			<li> Architecture</li>
+			<li> Build tools: nodeJS, npm (in a plan migrate to yarn), bower, gulp </li>
+			<li> Structure of templates: semantic markup and accessible markup, internationalization, strings rendering</li>
+			<li> JS</li>
+			<li> AngularJS1.x</li>
+		</ol>
+		</div>
+	</section>
+
+	<section class="slide spa">
+		<div>
+			<h2>Single Page Application</h2>
+			<br>
+			<p><mark>SPA</mark> is a webpage that always keeps you on the same page.</p>
+			<p>On most websites whenever you click a link, the page reloads.</p>
+			<p>In a single page application, clicking a link keeps you on the same page, but replaces a part of it with the new content.</p>
+			<p>Examples are things like Mailing systems where you stay on the same page but it just grabs data from pre-loaded stuff.</p>
+			<p>Build SPA within ngRoute module, ngRoute, uiRoute, $routeProvider</p>
+	  </div>
+	</section>
+
+	<section class="slide node">
+		<div>
+			<h2>Node</h2>
+			<div class="text">
+				<p><mark class="important">Node.js</mark> a JavaScript runtime environment.</p>
+				<ul>
+					<li>&nbsp;<a href="http://nodejs.org/">Main website</a></li>
+					<li>&nbsp;<a href="http://nodejs.org/api/">documentation</a></li>
+					<li>&nbsp;<a href="https://twitter.com/nodejs">twitter</a></li>
+					<li>&nbsp;<a href="http://www.youtube.com/watch?v=jo_B4LTHi3I">An intro to node.js</a> by Ryan Dahl</li>
+					<li>&nbsp;<a href="https://github.com/creationix/nvm">Node Version Manager</a> - Simple bash script to manage multiple active node.js versions</li>
+				</ul>
+			</div>
+			<div class="picture">
+				<img src="https://openfin.co/wp-content/uploads/2015/05/nodejs_logo.png" alt="">
+			</div>
+		</div>
+	</section>
+	<section class="slide node">
+		<div>
+			<h2>NPM</h2>
+			<div class="text">
+				<p><mark class="important">Node Package Manager</mark> is a package manager that allows you to install JavaScript libraries that run on node.js.</p>
+				<p>Package manager is command line interface.</p>
+				<pre>
+					<code>npm init . -> create package.json</code>
+					<code>npm install gulp (-g)</code>
+				</pre>
+			</div>
+			<div class="picture">
+				<img src="https://www.supnig.com/media/pictures/npmnodejs.jpg" alt="">
+			</div>
+
+		</div>
+	</section>
+	<section class="slide bower">
+		<div>
+			<h2>Bower</h2>
+			<div class="text">
+				<p><mark class="important">Bower</mark> is a package manager for JavaScript and CSS libraries that run in the browser</p>
+				<ul>
+					<li> Less Work, More Awesome</li>
+					<li>&nbsp;<a href="https://bower.io/search/">bower components</a></li>
+				</ul>
+				<pre>
+					<code>bower init . -> create bower.json</code>
+					<code>bower install jquery --save</code>
+					<code>bower update</code>
+				</pre>
+			</div>
+			<div class="picture">
+				<img src="http://devstickers.com/assets/img/pro/207l.png" alt="">
+			</div>
+		</div>
+	</section>
+	<section class="slide gulp">
+		<div>
+			<h2>Gulp</h2>
+			<div class="text">
+				<p><mark class="important">Gulp</mark> is a JavaScript task runner, designed to automate (run) common tasks.</p>
+				<p>A demonstration how to use and install Gulp, <a href="https://github.com/julia-dizhak/gulpStreamingBuildSystem">the streaming build system</a>.</p>
+			</div>
+			<div class="picture">
+				<img src="https://phpocean.com/assets/images/source-images/pics-articles/3b425b86461959aa86264bb9e4347f1f.jpg" alt="">
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Anatomy of gulpfile</h2>
+			<pre>
+				<code> task(string, function)</code>
+				<code> .src(string || array)</code>
+				<code> .watch(string, array) </code>
+				<code> .dest(string)</code>
+				<code> .parallel() and .series()</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Example of gulp.task</h2>
+			<pre>
+				<code>gulp.task('css-compile', function () {</code>
+				<code>return gulp.src('<mark>mmp/static/scss/**/*.scss</mark>')</code>
+				<code>  .pipe(debug({title: ‘unicorn:'}))</code>
+				<code>  .<mark>pipe</mark>(<mark>autoprefixer</mark>({ browsers: ['last 5 versions', ...] }))</code>
+				<code>  .pipe(cleanCss({ compatibility: 'i18'}))</code>
+				<code>  .pipe(rename(function (path) { path.basename += ".min”; }))</code>
+				<code>  .pipe(<mark>gulp.dest(config.paths.css)</mark>);</code>
+				<code>});</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Gulp npm packages</h2>
+			<pre>
+				<code> js compile --> json + 'gulp-concat', 'gulp-uglify' </code>
+				<code> css compile --> 'gulp-sass’, 'gulp-autoprefixer'</code>
+				<code> image compile --> 'gulp-imagemin’, 'gulp-responsive'</code>
+				<code> svg compile --> 'gulp-svgmin' </code>
+				<code> sprites --> 'gulp.spritesmith'</code>
+				<code> fonts compile: use api from external resource</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Using Yarn and Webpack: in a plan</h2>
+			<p>If you go to <a href="https://bower.io/">bower.io</a> you will see the message <mark>“while bower is maintained, we recommend using Yarn and Webpack for front-end projects"</mark></p>
+		</div>
+	</section>
+	<section class="slide yarn">
+		<div>
+			<h2>Yarn</h2>
+			<div class="text">
+				<p><mark class="important"><a href="https://github.com/yarnpkg/yarn/"></a>Yarn</mark> is a fast, reliable, and secure alternative npm client.</p>
+				<p><a href="https://yarnpkg.com/en/">Benefits:</a></p>
+				<ul>
+					<li> ultra fast</li>
+					<li> mega secure (can work offline)</li>
+					<li> super reliable (manage our dependencies more reliably)</li>
+				</ul>
+			</div>
+			<div class="picture">
+				<img src="https://yarnpkg.com/assets/og_image.png" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="slide custom">
+		<div>
+			<h2>Structure of HTML templates</h2>
+			<p>build by django</p>
+			<br>
+			<h3>Semantic markup</h3>
+			<p>html5 semantic elements: main, section, article, header, footer, nav, aside, figure, fig caption, ... </p>
+			<p>accessible markup</p>
+	  </div>
+	</section>
+	<section class="slide custom">
+		<div>
+			<h2>Accessible markup (in a plan)</h2>
+			<p>Accessibility refers to the design of products, devices, services for people with disabilities</p>
+			<p>The concept of accessible design ensures both</p>
+			<ul>
+				<li> direct access</li>
+				<li> indirect access meaning compatibility with a persons assistive technology (for example screen readers)</li>
+			</ul>
+	  </div>
+	</section>
+	<section class="slide custom">
+		<div>
+			<h2>Internationalization (localization)</h2>
+			<p>Switzerland - support 4 languages</p>
+			<p>Strings rendering - trans, blocktrans, context (django specific)</p>
+			<p><a href="https://langusta.moneypark.ch/">Langusta moneypark translation tool</a></p>
+	  </div>
+	</section>
+
+	<section class="slide intro-angular">
+		<div>
+			<h2>The history of JS in Moneypark</h2>
+			<p></p>
+			<ul>
+				<li> jquery versions are 1.8.3, 1.9, 2.1</li>
+				<li> backbonejs</li>
+				<li> angular version is 1.4.7</li>
+				<li> new framework ?</li>
+				<li> ES6 features populate with babel (in a plan )</li>
+				<li> typescript (in a plan)</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide intro-angular">
+		<div>
+			<h2>AngularJS 1.x</h2>
+			<div class="text">
+				<p>AngularJS works with the long-established technologies of the web (HTML, CSS, and JavaScript) to make the development of web apps easier and faster than ever before</p>
+				<p>We are using angular conventions, <a href="https://github.com/johnpapa/angular-styleguide">style guide from from John Papa</a></p>
+				<p></p>
+			</div>
+			<div class="picture">
+				<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAU9AAAAJGIyYzU1MzY3LWU0YTktNDUyZC1hN2IzLTMyMzQ0ZThjZTUxOA.png" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="slide node">
+		<div>
+			<h2>Linters</h2>
+			<div class="text">
+				<ul>
+					<li> JS quality: use ESLint with configuration https://github.com/standard/eslint-config-standard to confirm the quality of code </li>
+					<li> Scss linter - csslint</li>
+				</ul>
+			</div>
+			<div class="picture">
+
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Meetups in Zurich </h2>
+			<ul>
+				<li> <a href="https://www.meetup.com/Web-Zurich/">Web Zurich meetup</a></li>
+				<li> <a href="https://www.meetup.com/AngularZRH/">Angular Zurich</a></li>
+				<li> <a href="https://www.meetup.com/Zurich-ReactJS-Meetup/">Zurich ReactJS</a></li>
+		  </ul>
+		</div>
+	</section>
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
