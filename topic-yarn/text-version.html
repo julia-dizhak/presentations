@@ -5,9 +5,16 @@
     <title>Yarn packagae manage</title>
 
     <style>
+        body {
+            font: 400 100%/150% 'Helvetica Neue',Helvetica,Arial,sans-serif;
+            color: #505143;
+        }
         .container {
             width: 980px;
             margin: auto;
+        }
+        h1 {
+            line-height: 180%;
         }
     </style>
 </head>
@@ -22,20 +29,86 @@
     </article>
 
     <article class="slide">
-        <h2>Slide 1: yarn (an npm alternative)</h2>
+        <h2>slide 1: yarn (an npm alternative)</h2>
         <p>Hi guys, today, I’m going to talk to you about new package manager for Js.
             The product is called Yarn - a fast, reliable and secure alternative (for) npm client.</p>
 
     </article>
 
     <article>
+        <h2>slide 2: yarn build by facebook</h2>
+        <p>
+            The package manager developed (and used) by Facebook, in collaboration with Google, Exponent, and Tilde.
+            Yarn provides a number of benefits (which I fully cover later) including
+            auto generation of lock files,
+            quicker package downloads,
+            the ability to download packages offline.
+        </p>
+        <p>
+            In Js community, engineers share hundreds of thousands of pieces of code so we can avoid rewriting basic
+            components, libraries, or frameworks of our own. Each piece of code may in turn depend on other piece of
+            code, and these dependencies are managed by package managers.
+        </p>
+        <p>
+            The most popular Js package manager is the npm client, which provides access (found statistics on January
+            2017) to more than 350,000 packages. In fact, it is the largest package registry in the world. More than 5
+            million engineers use the npm registry, which sees up to 5 billion downloads every month. Every week roughly
+            160 people publish their first package in the registry.
+        </p>
+        <p>
+            Yarn package manager uses and saves compatible with npm registry and have separate one. You can go on the
+            official website https://yarnpkg.com/en/packages and search for packages you would like to install (So far I
+            didn’t have problem, to be honest).
+        </p>
+        <p>
+            So what does it mean?
+            <br>
+            It means that you can start using yarn very easily with existing projects. Because it puts dependencies in
+            node_modules, just like npm, so all your tooling should work the same. If you already have yarn installed,
+            for installing dependencies using yarn you can type from console “yarn" or “yarn install"
+            It’s reads from the package.json file, so it should work on any project that’s already using npm.
+        </p>
+    </article>
+
+    <article>
+        <h2>slide 3: Yarn > NPM (what was the problems with a NPM?)</h2>
+        <p>
+            NPM is amazing, is awesome tool but has a problems.
+            Community used the npm client successfully for years, but as the size of codebase and the number of
+            engineers grew, npm ran into problems with consistency, security and performance.
+        </p>
+        <p>
+            By default NPM is not 100% deterministic. What does it mean? You can't guarantee that the same dependencies
+            will be installed the same exact way across every machine in your team.
+            Even if you use npm-shrinkwrap (which is lock dependencies file) you can’t guaranteed to produce the same
+            output on another computer.
+        </p>
+        <p>
+            The second problem, the amount of time which needs take to pull dependencies in.
+        </p>
+        <p>
+            And some security concerns (problems) with the way the npm client executes code from some of dependencies
+            automatically.
+        </p>
+        <p>
+            Actually what I want to add, that since yarn was realized, the npm start to fix their problem. So as far you
+            have competitors ...
+
+            (March 2016. How one developer just broke Node, Babel and thousands of projects in 11 lines of Js.
+            https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/)
+
+            (first the scaling npm then own product)
+            You can fix this by using Yarn.
+        </p>
+    </article>
+
+    <article>
         <h2></h2>
     </article>
 
-     <article>
+    <article>
         <h2></h2>
     </article>
-
 
 </div>
 </body>

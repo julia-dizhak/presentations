@@ -1,18 +1,15 @@
 # Presentations
 <p>created by shower presentation engine <a href="https://github.com/shower/shower" target="_blank">https://shwr.me/</a></p>
 
-## [Introduction to HTML5](https://julia-dizhak.github.io/presentations/topic-intro-HTML5/)
+## [Slides: Introduction to HTML5](https://julia-dizhak.github.io/presentations/topic-intro-HTML5/)
 
-## [Yarn package manager](https://julia-dizhak.github.io/presentations/yarn/)
+## [SLides: AngularJS 1.x](https://julia-dizhak.github.io/presentations/topic-angularJS-1x/)
 
-## Slides representing <a href="https://julia-dizhak.github.io/presentations/topic-angularJS-1x/" target="_blank">AngularJS 1.x</a>
-<br>
+## [Slides: Google mobile certification program for mobile site developers](https://julia-dizhak.github.io/presentations/topic-google-mobile-certification/)
 
-## Slides about <a href="https://julia-dizhak.github.io/presentations/topic-google-mobile-certification/" target="_blank">Google mobile certification</a> program for mobile site developers
-<br>
+## [Slides: Frontend build tools for moneypark](https://julia-dizhak.github.io/presentations/topic-moneypark-frontend-workshop/)
 
-## <a href="https://julia-dizhak.github.io/presentations/topic-moneypark-frontend-workshop/" target="_blank">Frontend build tools for moneypark</a>
-<br>
+## [Slides: Yarn package manager](https://julia-dizhak.github.io/presentations/topic-yarn/)
 
 <br>
 # Presentations skills: opening / main body / closing
