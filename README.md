@@ -1,20 +1,19 @@
 # Presentations
 <p>created by shower presentation engine <a href="https://github.com/shower/shower" target="_blank">https://shwr.me/</a></p>
 
-## [Slides: Introduction to HTML5](https://julia-dizhak.github.io/presentations/topic-intro-HTML5/)
+## [slides: Introduction to HTML5](https://julia-dizhak.github.io/presentations/topic-intro-HTML5/)
 
-## [SLides: AngularJS 1.x](https://julia-dizhak.github.io/presentations/topic-angularJS-1x/)
+## [sLides: AngularJS 1.x](https://julia-dizhak.github.io/presentations/topic-angularJS-1x/)
 
-## [Slides: Google mobile certification program for mobile site developers](https://julia-dizhak.github.io/presentations/topic-google-mobile-certification/)
+## [slides: Google mobile certification program for mobile site developers](https://julia-dizhak.github.io/presentations/topic-google-mobile-certification/)
 
-## [Slides: Frontend build tools for moneypark](https://julia-dizhak.github.io/presentations/topic-moneypark-frontend-workshop/)
+## [slides: Frontend build tools](https://julia-dizhak.github.io/presentations/topic-moneypark-frontend-workshop/)
 
-## [Slides: Yarn package manager](https://julia-dizhak.github.io/presentations/topic-yarn/)
+## [slides: Yarn package manager](https://julia-dizhak.github.io/presentations/topic-yarn/)
 
 <br>
-# Presentations skills: opening / main body / closing
 
-## opening / main body / closing
+## Presentations skills: opening / main body / closing
 
 ### Opening
 <p>Ok, let’s get started. Good morning everyone and welcome to</p>
