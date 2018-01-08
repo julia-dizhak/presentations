@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yarn packagae manage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarn packager manage</title>
 
     <style>
         body {
@@ -15,6 +16,10 @@
             margin: auto;
         }
 
+        p {
+            font-size: 1.1em;
+        }
+
         h1 {
             line-height: 180%;
         }
@@ -22,7 +27,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Yarn packagae manager as NPM replacement: what and why ? (presentation, talk 5 minutes)</h1>
+    <h1>Yarn packager manager as NPM replacement: what and why ? (presentation, talk 5 minutes)</h1>
     <article>
         <h2>Related questions</h2>
         <ul>
@@ -136,9 +141,114 @@
     </article>
 
     <article>
-        <h2></h2>
+        <h2>slide 5: yarn.lock</h2>
+
+        <p>To install Yarn, you need open up the terminal. And from terminal installation is simple. You can install
+            yarn (by using other package manager which is npm) by typing on terminal</p>
+        <code>
+            "npm i -g yarn” or
+            "npm install yarn —global” which will install package globally.
+        </code>
+        <p>
+            So after we can run yarn from any directory we would like.
+            So very simple, right?
+        </p>
+        <p>
+            If you check (Let’s check out the git status ) to see what changed. You will see that Yarn added this
+            yarn.lock file. What’s that about?
+        </p>
+        <p>
+            In order to get consistent installs across machines, Yarn needs more information that the dependencies you
+            configure in your package.json. Yarn needs to store exactly which versions of each dependency were
+            installed.
+        </p>
+        <p>
+            To do this Yarn uses a yarn.lock file in the root of your project.
+            These lock files look like this: …
+        </p>
+        <p>
+            The yarn.lock file lists every dependency and the exact version of that dependency that was installed. This
+            is what lets Yarn be reliable (secure, safe) (reproducible ?) and deterministic (The same dependencies will
+            be installed the same exact way across every machine regardless of install order). When Yarn install form
+            yarn.lock file, it install exact same code everywhere.
+        </p>
+        <p>
+            And if you add the file
+            Let’s add this to source control (git), so that team can get the same dependencies that I have.
+        </p>
     </article>
 
+    <article>
+        <h2>slide 6: yarn docs usage.</h2>
+        <p>It will be nice to see yarn usage in action so we can better understand some of the benefits yarn provides.
+            Like speed and offline.
+            You can easily try it on your machine. (If you will have any problem, please let me know).</p>
+        <p>Normally, to install package we would use smth like <code> npm install package_name —save</code> but with
+            yarn the syntax is a little different</p>
+        <p>
+            Add package
+
+            to install package with yarn 0 we can do it by typing “yarn add package_name”. "yarn add ..." is equivalent
+            of npm install
+            “yarn add react"
+            you can also specify exact version to install “yarn add react@16.2.0“
+            You noticed that we don’t need typed —save (—save-dev) when we install new package (yarn add automatically)
+            Same things goes to uninstall (remove) packages
+        </p>
+        <p>
+            So 2 files were modified package.json and yarn.lock.
+            Package was added as a dependency in package.json
+            Package 1 and 2 were both added to the yarn.lock file. That’s because package 1 depends on package 2. Every
+            dependency and all of the dependency's dependencies get added to the yarn.lock file
+        </p>
+
+        <p>
+
+            devDependecies
+            yarn why gulp
+        </p>
+
+    </article>
+
+    <article>
+        <h2>slide 7: resources.</h2>
+        <ul>
+            <li>https://yarnpkg.com/en/ official web site of package manager</li>
+            <li>blog post from facebook https://code.facebook.com/posts/1840075619545360</li>
+            <li>https://dev.to/bugsnag/replacing-npm-with-yarn</li>
+        </ul>
+        <p>
+            I hope that helps to get up and running with yarn and helping to understand why you would want to use it
+            over existing package managers such as npm.
+            If you have any questions feel free to reach out me on slack or ..
+            Have a nice day.
+        </p>
+        <p>
+            Conclusion:
+
+            From now please use yarn package manager, in case you need to install any new dependencies in package.json.
+            The yarn will be install automatically as soon as you fetch last changes from master and run command "make
+            assets” or you can run "npm run install_yarn”.
+            When you want to use another package, please run command yarn add [package-name] to install it.
+            As I told, you don’t have to add “- - save” feature flag as it was in npm, package.json will be update
+            automatically.
+            Yarn usage doc https://yarnpkg.com/en/docs/usage.
+        </p>
+        <p>Originally, I also wanted to remove bower_components and bower.json
+            (https://bower.io/blog/2017/how-to-migrate-away-from-bower/), and manage all packages from one place (There
+            is exist project called "bower away", https://github.com/sheerun/bower-away).</p>
+
+        <p>
+            If you check https://bower.io/, you will see the notification "While Bower is maintained, we recommend using
+            Yarn and Webpack for front-end projects ..."
+
+            But without Webpack we need to make as public folder node_modules (Vasyl and Anton doesn't like this idea).
+
+            So next step will be migrated to Webpack (task is created https://tracker.moneypark.ch/issues/12985).
+             
+            Let me know if you have any questions.
+        </p>
+    </article>
 </div>
 </body>
 </html>
