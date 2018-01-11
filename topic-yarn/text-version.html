@@ -210,7 +210,7 @@
 
     </article>
 
-    <article>
+    <>
         <h2>slide 7: resources.</h2>
         <ul>
             <li>https://yarnpkg.com/en/ official web site of package manager</li>
@@ -234,18 +234,25 @@
             automatically.
             Yarn usage doc https://yarnpkg.com/en/docs/usage.
         </p>
-        <p>Originally, I also wanted to remove bower_components and bower.json
+
+        <p>Originally, I also wanted to remove bower_components and bower.json and use only one js package manager.
             (https://bower.io/blog/2017/how-to-migrate-away-from-bower/), and manage all packages from one place (There
             is exist project called "bower away", https://github.com/sheerun/bower-away).</p>
 
         <p>
-            If you check https://bower.io/, you will see the notification "While Bower is maintained, we recommend using
-            Yarn and Webpack for front-end projects ..."
+            And if you check https://bower.io/, you will see the notification "While Bower is maintained, we recommend using
+            Yarn and Webpack for front-end projects ..."</p>
 
-            But without Webpack we need to make as public folder node_modules (Vasyl and Anton doesn't like this idea).
+        <p>It's not really easy to make it in our current development situation.
+            Because we are using js sources/files directly in html templates and grab from staticfiles.
+            If we install package by yarn, that package will be inside node_modules which is outside of static files.
+        </p>
 
+        <p>We can fix the problem after switching to webpack solution of module bundler.</p>
+
+        <p>
+            Without Webpack we need to make as public folder node_modules (Vasyl and Anton doesn't like this idea).
             So next step will be migrated to Webpack (task is created https://tracker.moneypark.ch/issues/12985).
-             
             Let me know if you have any questions.
         </p>
     </article>
