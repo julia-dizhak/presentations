@@ -18,25 +18,6 @@
 			<img src="pictures/cover1.jpg" alt="moneypark">
 		</div>
 	</section>
-	<section class="slide">
-		<div>
-			<h2>Serious citations from real web-online life.</h2>
-			<br>
-			<figure>
-				<blockquote>
-					<p>If your business is online - your value depends on Front-end engineering.</p>
-				</blockquote>
-				<figcaption></figcaption>
-			</figure>
-			<br>
-			<figure>
-				<blockquote>
-					<p>Every gorgeous design is brought to life by Front-end engineers.</p>
-				</blockquote>
-				<figcaption></figcaption>
-			</figure>
-		</div>
-	</section>
 
 	<section class="slide node">
 		<div>
@@ -53,55 +34,11 @@
 		</div>
 	</section>
 
-	<section class="slide gulp">
-		<div>
-			<h2>Gulp</h2>
-			<div class="text">
-				<p><mark class="important">Gulp</mark> is a JavaScript task runner, designed to automate (run) common tasks.</p>
-				<p>A demonstration how to use and install Gulp, <a href="https://github.com/julia-dizhak/gulpStreamingBuildSystem">the streaming build system</a>.</p>
-			</div>
-			<div class="picture">
-				<img src="https://phpocean.com/assets/images/source-images/pics-articles/3b425b86461959aa86264bb9e4347f1f.jpg" alt="">
-			</div>
-		</div>
-	</section>
 	<section class="slide">
 		<div>
-			<h2>Anatomy of gulpfile</h2>
-			<pre>
-				<code> task(string, function)</code>
-				<code> .src(string || array)</code>
-				<code> .watch(string, array) </code>
-				<code> .dest(string)</code>
-				<code> .parallel() and .series()</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Example of gulp.task</h2>
-			<pre>
-				<code>gulp.task('css-compile', function () {</code>
-				<code>return gulp.src('<mark>mmp/static/scss/**/*.scss</mark>')</code>
-				<code>  .pipe(debug({title: ‘unicorn:'}))</code>
-				<code>  .<mark>pipe</mark>(<mark>autoprefixer</mark>({ browsers: ['last 5 versions', ...] }))</code>
-				<code>  .pipe(cleanCss({ compatibility: 'i18'}))</code>
-				<code>  .pipe(rename(function (path) { path.basename += ".min”; }))</code>
-				<code>  .pipe(<mark>gulp.dest(config.paths.css)</mark>);</code>
-				<code>});</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Gulp npm packages</h2>
+			<h2>...</h2>
 			<pre>
 				<code> js compile --> json + 'gulp-concat', 'gulp-uglify' </code>
-				<code> css compile --> 'gulp-sass’, 'gulp-autoprefixer'</code>
-				<code> image compile --> 'gulp-imagemin’, 'gulp-responsive'</code>
-				<code> svg compile --> 'gulp-svgmin' </code>
-				<code> sprites --> 'gulp.spritesmith'</code>
-				<code> fonts compile: use api from external resource</code>
 			</pre>
 		</div>
 	</section>
@@ -129,80 +66,7 @@
 			</div>
 		</div>
 	</section>
-
-	<section class="slide custom">
-		<div>
-			<h2>Structure of HTML templates</h2>
-			<p>build by django</p>
-			<br>
-			<h3>Semantic markup</h3>
-			<p>html5 semantic elements: main, section, article, header, footer, nav, aside, figure, fig caption, ... </p>
-			<p>accessible markup</p>
-	  </div>
-	</section>
-	<section class="slide custom">
-		<div>
-			<h2>Accessible markup (in a plan)</h2>
-			<p>Accessibility refers to the design of products, devices, services for people with disabilities</p>
-			<p>The concept of accessible design ensures both</p>
-			<ul>
-				<li> direct access</li>
-				<li> indirect access meaning compatibility with a persons assistive technology (for example screen readers)</li>
-			</ul>
-	  </div>
-	</section>
-	<section class="slide custom">
-		<div>
-			<h2>Internationalization (localization)</h2>
-			<p>Switzerland - support 4 languages</p>
-			<p>Strings rendering - trans, blocktrans, context (django specific)</p>
-			<p><a href="https://langusta.moneypark.ch/">Langusta moneypark translation tool</a></p>
-	  </div>
-	</section>
-
-	<section class="slide intro-angular">
-		<div>
-			<h2>The history of JS in Moneypark</h2>
-			<p></p>
-			<ul>
-				<li> jquery versions are 1.8.3, 1.9, 2.1</li>
-				<li> backbonejs</li>
-				<li> angular version is 1.4.7</li>
-				<li> new framework ?</li>
-				<li> ES6 features populate with babel (in a plan )</li>
-				<li> typescript (in a plan)</li>
-			</ul>
-		</div>
-	</section>
-	<section class="slide intro-angular">
-		<div>
-			<h2>AngularJS 1.x</h2>
-			<div class="text">
-				<p>AngularJS works with the long-established technologies of the web (HTML, CSS, and JavaScript) to make the development of web apps easier and faster than ever before</p>
-				<p>We are using angular conventions, <a href="https://github.com/johnpapa/angular-styleguide">style guide from from John Papa</a></p>
-				<p></p>
-			</div>
-			<div class="picture">
-				<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAU9AAAAJGIyYzU1MzY3LWU0YTktNDUyZC1hN2IzLTMyMzQ0ZThjZTUxOA.png" alt="">
-			</div>
-		</div>
-	</section>
-
-	<section class="slide node">
-		<div>
-			<h2>Linters</h2>
-			<div class="text">
-				<ul>
-					<li> JS quality: use ESLint with configuration https://github.com/standard/eslint-config-standard to confirm the quality of code </li>
-					<li> Scss linter - csslint</li>
-				</ul>
-			</div>
-			<div class="picture">
-
-			</div>
-		</div>
-	</section>
-
+	
 	<section class="slide">
 		<div>
 			<h2>Meetups in Zurich </h2>
