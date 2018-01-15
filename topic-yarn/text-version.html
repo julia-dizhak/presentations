@@ -76,6 +76,13 @@
         <p>
             pip how many packages?
         </p>
+
+        <p>
+            For yarn package manager
+            you can go on the
+            official website https://yarnpkg.com/en/packages and search for packages you would like to install (So far I
+            didn’t have problem, to be honest).
+        </p>
     </article>
 
     <article>
@@ -89,9 +96,9 @@
         <p>
             By default NPM is not 100% deterministic. What does it mean? You can't guarantee that the same dependencies
             will be installed the same exact way across every machine in your team.
-            Even if you use npm-shrinkwrap (which is lock dependencies file) you can’t guaranteed to produce the same
+            Even if you use npm-shrinkwrap.json (which is lock dependencies file) you can’t guaranteed to produce the same
             output on another computer.
-            Also it's not default
+            Also npm-shrinkwrap.json is not in a default configuration.
         </p>
 
         <p>
@@ -103,13 +110,6 @@
             automatically.
         </p>
         <p>
-            Actually what I want to add, that since yarn was realized, the npm start to fix their problem. So as far you
-            have competitors ...
-
-            (March 2016. How one developer just broke Node, Babel and thousands of projects in 11 lines of Js.
-            https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/)
-
-            (first the scaling npm then own product)
             You can fix this by using Yarn.
         </p>
     </article>
@@ -118,27 +118,27 @@
         <h2>slide 4: Yarn benefits: double the speed, offline mirror, deterministic</h2>
 
         <p>
-            Yarn package manager uses and saves compatible with npm registry and have separate one. You can go on the
-            official website https://yarnpkg.com/en/packages and search for packages you would like to install (So far I
-            didn’t have problem, to be honest).
+            Yarn package manager uses and saves compatible with npm registry and have separate one.
+            (Yarn is a new package manager that replaces the existing workflow for the npm client and save compatible
+            with the npm registry).
         </p>
+
         <p>
             So what does it mean?
             <br>
             It means that you can start using yarn very easily with existing projects. Because it puts dependencies in
-            node_modules, just like npm, so all your tooling should work the same. If you already have yarn installed,
-            for installing dependencies using yarn you can type from console “yarn" or “yarn install"
-            It’s reads from the package.json file, so it should work on any project that’s already using npm.
+            node_modules, just like npm, so all your tooling should work the same (If you already have yarn installed ...)
         </p>
 
-        <p>
-            Yarn is a new package manager that replaces the existing workflow for the npm client and save compatible
-            with the npm registry. It has the same feature set as existing workflows while operating faster, more
-            securely, and more reliably.
-        </p>
+        <p> It has the same feature set as existing workflows while operating faster, more
+            securely, and more reliably.</p>
+
+
         <p>Ultra fast (serious speeds benefits). Yarn caches every package it downloads so it never needs to download it
             again. It also parallelizes operations to maximize resource utilization so install times are faster than
-            ever.</p>
+            ever.
+        </p>
+
         <p>
             yarn cache list
 
@@ -150,20 +150,24 @@
         <p>
             If you have already downloaded the packages, you will able to install these packages offline. You can remove
             node_modues and disconnect from internet and you will see. </p>
+
         <p>
             Mega Secure. Yarn uses checksums to verify the integrity of every installed package before its code is
             executed.
         </p>
+
         <p>
             Super Reliable. Using a detailed lockfile format, and a deterministic algorithm for installs, Yarn is able
             to guarantee that an install that worked on one system will work exactly the same way on any other system.
         </p>
+
     </article>
 
     <article>
         <h2>slide 5: yarn.lock</h2>
 
-        <p>To install Yarn, you need open up the terminal. And from terminal installation is simple. You can install
+        <p>To install Yarn, you need open up the terminal. And from terminal installation is simple.
+            You can install
             yarn (by using other package manager which is npm) by typing on terminal</p>
         <code>
             "npm i -g yarn” or
@@ -174,8 +178,9 @@
             So very simple, right?
         </p>
         <p>
+            (When you install yarn ...)
             If you check (Let’s check out the git status ) to see what changed. You will see that Yarn added this
-            yarn.lock file. What’s that about?
+            yarn.lock file. What’s that about? This is actually what makes yarn "super reliable".
         </p>
         <p>
             In order to get consistent installs across machines, Yarn needs more information that the dependencies you
@@ -183,14 +188,14 @@
             installed.
         </p>
         <p>
-            To do this Yarn uses a yarn.lock file in the root of your project.
-            These lock files look like this: …
+            (To do this Yarn uses a yarn.lock file in the root of your project.
+            These lock files look like this: …)
         </p>
         <p>
-            The yarn.lock file lists every dependency and the exact version of that dependency that was installed. This
+            The yarn.lock file lists every dependency and the exact version of that dependency that was installed.( This
             is what lets Yarn be reliable (secure, safe) (reproducible ?) and deterministic (The same dependencies will
             be installed the same exact way across every machine regardless of install order). When Yarn install form
-            yarn.lock file, it install exact same code everywhere.
+            yarn.lock file, it install exact same code everywhere.)
         </p>
         <p>
             And if you add the file
@@ -200,9 +205,16 @@
 
     <article>
         <h2>slide 6: yarn docs usage.</h2>
+
+        <p>
+            For installing dependencies using yarn you can type from console “yarn" or “yarn install"
+            It’s reads from the package.json file, so it should work on any project that’s already using npm.
+        </p>
+
         <p>It will be nice to see yarn usage in action so we can better understand some of the benefits yarn provides.
             Like speed and offline.
             You can easily try it on your machine. (If you will have any problem, please let me know).</p>
+
         <p>Normally, to install package we would use smth like <code> npm install package_name —save</code> but with
             yarn the syntax is a little different</p>
         <p>
@@ -227,10 +239,9 @@
             devDependecies
             yarn why gulp
         </p>
-
     </article>
 
-    <>
+     <article>
         <h2>slide 7: resources.</h2>
         <ul>
             <li>https://yarnpkg.com/en/ official web site of package manager</li>
@@ -274,6 +285,15 @@
             Without Webpack we need to make as public folder node_modules (Vasyl and Anton doesn't like this idea).
             So next step will be migrated to Webpack (task is created https://tracker.moneypark.ch/issues/12985).
             Let me know if you have any questions.
+        </p>
+
+        <p>
+             Actually what I want to add, that since yarn was realized, the npm start to fix their problem. So as far you
+            have competitors ...
+
+            (March 2016. How one developer just broke Node, Babel and thousands of projects in 11 lines of Js.
+            https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/)
+
         </p>
     </article>
 </div>
