@@ -31,15 +31,17 @@
     <article>
         <h2>Related questions</h2>
         <ul>
-            <li>node, npm</li>
+            <li>Node.js is a js runtime environment</li>
+            <li>Npm is a package manager that allows you to install JS libraries that run on Node.js</li>
         </ul>
     </article>
 
     <article class="slide">
         <h2>slide 1: yarn (an npm alternative)</h2>
-        <p>Hi guys, today, I’m going to talk to you about new package manager for Js.
-            The product is called Yarn - a fast, reliable and secure alternative for npm client.</p>
-
+        <p>
+            Hi guys, today, I’m going to talk to you about new package manager for JS.
+            The product is called Yarn - a fast, reliable and secure alternative for npm client.
+        </p>
     </article>
 
     <article>
@@ -52,28 +54,27 @@
             the ability to download packages offline.
         </p>
         <p>
-            In Js community, engineers share hundreds of thousands of pieces of code so we can avoid rewriting basic
+            In JS community, engineers share hundreds of thousands of pieces of code so we can avoid rewriting basic
             components, libraries, or frameworks of our own. Each piece of code may in turn depend on other piece of
             code, and these dependencies are managed by package managers.
         </p>
         <p>
-            The most popular Js package manager is the npm client, which provides access (found statistics on January
+            The most popular JS package manager is the npm client, which provides access (found statistics on January
             2017) to more than 350,000 packages. In fact, it is the largest package registry in the world. More than 5
-            million engineers use the npm registry, which sees up to 5 billion downloads every month. Every week roughly
+            million engineers use the npm registry, which sees up to 6 billion downloads every month. Every week roughly
             160 people publish their first package in the registry.
         </p>
+
         <p>
-            Yarn package manager uses and saves compatible with npm registry and have separate one. You can go on the
-            official website https://yarnpkg.com/en/packages and search for packages you would like to install (So far I
-            didn’t have problem, to be honest).
+            There is project https://npm-stat.com/ where you can check statistics
+
+            https://www.npmjs.com/package/yarn statistics
+
+            http://blog.npmjs.org/post/143451680695/how-many-npm-users-are-there
         </p>
+
         <p>
-            So what does it mean?
-            <br>
-            It means that you can start using yarn very easily with existing projects. Because it puts dependencies in
-            node_modules, just like npm, so all your tooling should work the same. If you already have yarn installed,
-            for installing dependencies using yarn you can type from console “yarn" or “yarn install"
-            It’s reads from the package.json file, so it should work on any project that’s already using npm.
+            pip how many packages?
         </p>
     </article>
 
@@ -84,15 +85,19 @@
             Community used the npm client successfully for years, but as the size of codebase and the number of
             engineers grew, npm ran into problems with consistency, security and performance.
         </p>
+
         <p>
             By default NPM is not 100% deterministic. What does it mean? You can't guarantee that the same dependencies
             will be installed the same exact way across every machine in your team.
             Even if you use npm-shrinkwrap (which is lock dependencies file) you can’t guaranteed to produce the same
             output on another computer.
+            Also it's not default
         </p>
+
         <p>
             The second problem, the amount of time which needs take to pull dependencies in.
         </p>
+
         <p>
             And some security concerns (problems) with the way the npm client executes code from some of dependencies
             automatically.
@@ -111,6 +116,21 @@
 
     <article>
         <h2>slide 4: Yarn benefits: double the speed, offline mirror, deterministic</h2>
+
+        <p>
+            Yarn package manager uses and saves compatible with npm registry and have separate one. You can go on the
+            official website https://yarnpkg.com/en/packages and search for packages you would like to install (So far I
+            didn’t have problem, to be honest).
+        </p>
+        <p>
+            So what does it mean?
+            <br>
+            It means that you can start using yarn very easily with existing projects. Because it puts dependencies in
+            node_modules, just like npm, so all your tooling should work the same. If you already have yarn installed,
+            for installing dependencies using yarn you can type from console “yarn" or “yarn install"
+            It’s reads from the package.json file, so it should work on any project that’s already using npm.
+        </p>
+
         <p>
             Yarn is a new package manager that replaces the existing workflow for the npm client and save compatible
             with the npm registry. It has the same feature set as existing workflows while operating faster, more
