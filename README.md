@@ -12,6 +12,8 @@
 
 ## [slides: Yarn package manager](https://julia-dizhak.github.io/presentations/topic-yarn/)
 
+## [slides: React](https://julia-dizhak.github.io/presentations/topic-react/)
+
 <br>
 
 ## Presentations skills: [opening / main body / closing]
