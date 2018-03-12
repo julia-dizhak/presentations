@@ -696,37 +696,17 @@ a {
 }
 
 
-.filter h2 {
-    margin: -20px 0 20px 0;
-}
-.filter p {
-    margin: 0 0 20px 0;
+
+.slide .center {
+    text-align: center;
 }
 
-.spa h2 {
-  font-size: 40px;
-  margin: -40px 0 0;
+.slide .center .code {
+    font-weight: bold;
+    font-size: 160px;
 }
-.spa p {
-  margin: 0 0 10px 0;
+.slide .center .yarn {
+    color: #2188b6;
+    font-size: 130px;
+    font-weight: bold;
 }
-.spa-1 p {
-  margin: 0 0 10px 0;
-}
-.spa-2 h2 {
-    margin: -80px 0 0;
-}
-.spa-2 p {
-    font-size: 18px;
-    margin: 0 0 10px 0;
-}
-.spa-2 pre {
-    margin: 0 0 10px 0;
-}
-.spa-3 p {
-    margin: 0 0 10px 0;
-}
-.spa-3 pre {
-    margin: 0 0 10px 0;
-}
-

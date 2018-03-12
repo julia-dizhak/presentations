@@ -1,4 +1,5 @@
-# Presentations
+# Presentations and slides
+
 <p>created by shower presentation engine <a href="https://github.com/shower/shower" target="_blank">https://shwr.me/</a></p>
 
 ## [slides: Introduction to HTML5](https://julia-dizhak.github.io/presentations/topic-intro-HTML5/)
@@ -13,7 +14,7 @@
 
 <br>
 
-## Presentations skills: opening / main body / closing
+## Presentations skills: [opening / main body / closing]
 
 ### Opening
 <p>Ok, let’s get started. Good morning everyone and welcome to</p>
@@ -44,6 +45,7 @@
 <p>Finally, I’ll ...</p>
 <p>If you have any questions, please feel free to interrupt</p>
 
+
 ### Main body:
 <p>Let’s move on to … / take a look at ...</p>
 <p>This leads me to my next point, which is ...</p>
@@ -67,6 +69,7 @@
 <p>Are there any questions so far?</p>
 <p>Does anyone has any comments?</p>
 <p>How does this relate to you own particular context?</p>
+
 
 ### Closing:
 <p>Right, that brings me nearly to the end of my presentation.</p>
