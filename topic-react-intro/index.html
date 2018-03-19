@@ -83,9 +83,9 @@
 					<li> It's a js library for building UI created and maintained by Facebook</li>
 					<li> React can be used to:
 						<ol>
-							<li> Build a widget</li>
-							<li> Add a reusable component (header, footer, etc.)</li>
-							<li> Build the entire front-end experience (like Facebook)</li>
+							<li> build a widget</li>
+							<li> add a reusable component (header, footer, etc.)</li>
+							<li> build the entire front-end experience (like Facebook)</li>
 						</ol>
 					</li>
 					<li> Around it people built whole universe with Redux (the most popular flux implementation)</li>
@@ -99,8 +99,8 @@
 			<h2>React Component</h2>
 			<div class="slide-content-left">
 				<ol>
-					<li> Everything is/can be a component</li>
-					<li> A React component merges view and logic</li>
+					<li> everything is/can be a component</li>
+					<li> a React component merges view and logic</li>
 				</ol>
 			</div>
 			<figure>
@@ -125,9 +125,77 @@
 		</div>
 	</section>
 
+	<section class="slide">
+		<div>
+			<h2>Virtual dom</h2>
+			<figure>
+				<img src="pictures/intro1/slide10.png" alt="virtual dom">
+			</figure>
+		</div>
+	</section>
+	<section class="slide diff-algorithm">
+		<div>
+			<h2>Diff algorithm</h2>
+			<p>React diff algorithm is used to compute minimum sets of mutation:</p>
+			<textarea style="resize:none; width: 100%; height: 250px">
+				1) <div className="first"><span>a span</span></div>
+				2) <div className="second"><p>a paragraph</p></div>
+
+				Change node
+				1) Remount a new: <p className="first"><span>a span</span></p>
+				
+				First to second
+				1) Replace attribute: className="first" by className="second"
+				2) Replace node: <span>a span</span> by <p>a paragraph</p>
+				
+				Add/remove node:
+				1) Remove node: <div className="second"><p>a paragraph</p></div></textarea>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Diff algorithm</h2>
+			<img src="pictures/intro1/slide11.png" alt="Diff Algorithm">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Data flow</h2>
+			<ol>
+				<li> React implements a one-way data flow. This means that data is passed from the top-down, through props, from the top component to its children, so on and so forth;
+					<br>
+					<!--<pre>
+						<code style="margin:0; padding:0;">
+							...
+							// A simple component flowing down the props
+							<Component property1="value" property2=”anotherValue">
+							...
+						</code>
+					</pre>-->
+				</li>
+				<li> Instead of React components talking to each other, React components cooperate through the parent;</li>
+			</ol>
+		</div>
+	</section>
 	<section class="slide run-specific-file">
 		<div>
-			<h2>How ui looks like?</h2>
+			<h2>Data flow</h2>
+			<div class="slide-content-left">
+				<ol>
+					<li> Lets say we want to develop something like this:</li>
+					<li> First of all let separate it to the components: whole widget, Grid, Grid Record, Grid Action cell, Filter</li>
+					<li> Components hierarchy: Whole widget -> Grid -> Grid Record -> </br>Grid Record Action -> Filter</li>
+				</ol>
+			</div>
+			<figure class="data-flow">
+				<img src="pictures/intro1/slide12.png" alt="Data flow">
+			</figure>
+		</div>
+	</section>
+
+	<section class="slide run-specific-file">
+		<div>
+			<h2>How UI looks like?</h2>
 			<div class="slide-content-left">
 				<p></p>
 				<ol>
@@ -163,69 +231,6 @@
 
 	
 
-	
-
-	
-
-	<section class="slide forget-img">
-		<h2>Virtual dom</h2>
-		<figure>
-			<img src="pictures/slide10.png" alt="virtual dom">
-		</figure>
-	</section>
-
-	<section class="slide diff-algorithm">
-		<h2>Diff Algorithm</h2>
-		<p>React diff algorithm is used to compute minimum sets of mutation:</p>
-		<textarea>1) <div className="first"><span>A Span</span></div>
-2) <div className="second"><p>A Paragraph</p></div>
-Change node
-	1) Remount a new: <p className="first"><span>A Span</span></p>
-First to second
-	1) Replace attribute: className="first" by className="second"
-	2) Replace node: <span>A Span</span> by <p>A Paragraph</p>
-Add/remove node:
-	1) Remove node: <div className="second"><p>A Paragraph</p></div></textarea>
-	</section>
-
-	<section class="slide">
-		<h2>Diff Algorithm</h2>
-		<img src="pictures/slide11.png" alt="Diff Algorithm">
-	</section>
-
-	<section class="slide">
-		<h2>Data flow</h2>
-		<ol>
-			<li>ReactJS implements a one-way data flow. This means that data is passed from the top-down, through props, from the top component to its children, so on and so forth.
-			<xmp>...
-// A simple component flowing down the props
-<Component property1="value" property2=”anotherValue"/>
-...
-			</xmp>
-			</li>
-			<li>Instead of React components talking to each other, React components cooperate through the parent</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<figure class="data-flow">
-			<img src="pictures/slide12.png" alt="Data flow">
-		</figure>
-		<h2>Data flow</h2>
-		<ol>
-			<li>Lets say we want to develop something like this:</li>
-			<li>First of all let separate it to the components:
-				<ol>
-					<li>Whole widget</li>
-					<li>Grid</li>
-					<li>Grid Record</li>
-					<li>Grid Action cell</li>
-					<li>Filter</li>
-				</ol>
-			</li>
-			<li>Components hierarchy: Whole widget -> Grid -> Grid Record -> </br>Grid Record Action -> Filter</li>
-		</ol>
-	</section>
 
 	<section class="slide">
 		<h2>JSX</h2>
