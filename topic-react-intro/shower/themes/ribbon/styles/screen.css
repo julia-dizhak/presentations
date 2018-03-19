@@ -621,92 +621,9 @@ a {
     font-size: 20px;
 }
 
-.node p {
-    margin: 0 0 10px 0;
+.run-specific-file .slide-content-left {
+    float: left;
 }
-.node img {
-    width: 80%;
-}
-
-.bower p {
-    margin: 0 0 10px 0;
-}
-.bower img {
-    width: 80%;
-}
-
-.gulp p {
-     margin: 0 0 10px 0;
-}
-.gulp img {
-    width: 100%;
-}
-
-.yarn p {
-    margin: 0 0 10px 0;
-}
-.yarn img {
-    width: 80%;
-}
-
-.intro-angular p {
-  margin: 0 0 10px 0;
-}
-.intro-angular img {
-  display: block;
-  margin: auto;
-}
-
-.intro-angular-2 h2 {
-    margin: -80px 0 10px 0;
-}
-
-.directives p {
-    margin: 0 0 20px 0;
-}
-
-.directive-doc h2 {
-    margin: -80px 0 10px 0;
-}
-.directive-doc p {
-    margin: 0;
-}
-
-
-.model h2 {
-    margin: 0 0 10px 0;
-}
-.model p {
-    margin: 0 0 10px 0;
-}
-.model pre {
-    margin: 0 0 10px 0;
-}
-
-.ctrl h2 {
-    margin: -60px 0 10px 0;
-}
-.ctrl p {
-    font-size: 18px;
-    margin: 0 0 10px 0;
-}
-
-.custom p {
-     margin: 0 0 10px 0;
-}
-
-
-
-.slide .center {
-    text-align: center;
-}
-
-.slide .center .code {
-    font-weight: bold;
-    font-size: 160px;
-}
-.slide .center .yarn {
-    color: #2188b6;
-    font-size: 130px;
-    font-weight: bold;
+.run-specific-file figure {
+    float: right;
 }

@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>React.js: Why and What? Intro</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Why React?</h1>
+	</header>
+	<section class="slide cover" id="Cover">
+		<div>
+			<h2>React.js? Why and What?</h2>
+			<p>a presentation by Julia Dizhak</p>
+			<p>March, 2018</p>
+			<img src="pictures/cover1.jpg" alt="moneypark">
+		</div>
+	</section>
+
+	<section class="slide yarn">
+		<div>
+			<h2>Agenda</h2>
+			<div class="text">
+				<ol>
+					<li> Why React.js?</li>
+					<li> React.js concepts</li>
+					<li> JSX and Lifecycles</li>
+				</ol>
+			</div>
+			<!--<div class="picture">-->
+				<!--<img src="https://yarnpkg.com/assets/og_image.png" alt="">-->
+			<!--</div>-->
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>The most popular frameworks / libraries</br> on the market:</h2>
+			<ol>
+				<li> Angular2 (Angular1)</li>
+				<li> React.JS</li>
+				<li> Vue.js</li>
+				<li> Ember.JS</li>
+			</ol>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div>
+			<h2>Who wins? (data end 2017)</h2>
+			<img src="pictures/intro1/slide3.png" alt="comparison">
+		</div>
+		
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Framework or library?</h2>
+			<ol>
+				<li>What is framework?
+					<ol>
+						<li> makes app more structured</li>
+						<li> provides with instruments you need (and you don’t need)</li>
+						<li> follows some architecture pattern (MVC, MVVM, MVP…)</li>
+					</ol>
+				</li>
+				<li>What is library?
+					<ol>
+						<li> gives one instrument to solve specific problem</li>
+						<li> solves specific problem =)</li>
+						<li> nothing else =)</li>
+					</ol>
+				</li>
+				<li>React.js is framework or library?</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide run-specific-file">
+		<div>
+			<h2>JSX vs Html</h2>
+			<div class="slide-content-left">
+				<p>How UI looks like?</p>
+				<ol>
+					<li> HTML</li>
+					<li> CSS</li>
+					<li> JS</li>
+				</ol>
+			</div>	
+			<figure>
+				<img src="pictures/intro1/slide5.png" alt="JSX vs Html">
+			</figure>
+		</div>
+	</section>
+
+	<section class="slide run-specific-file">
+		<div class="slide-content-left">
+			<h2>JSX vs Html</h2>
+			<p>How React.js looks like?</p>
+			<ol>
+				<li>JS + JSX</li>
+				<li>CSS</li>
+				<li>JS</li>
+			</ol>
+		</div>
+		<figure>
+			<img src="pictures/slide6.png" alt="JSX vs Html">
+		</figure>
+	</section>
+
+	<section class="slide karma-run">
+		<h2>What is react.js?</h2>
+		<ol>
+			<li>It's a JavaScript library for building UI created and maintained by Facebook</li>
+			<li>ReactJS can be used to:
+				<ol>
+					<li>Build a widget</li>
+					<li>Add a reusable component (header, footer, etc.)</li>
+					<li>Build the entire front-end experience (like Facebook)</li>
+				</ol>
+			</li>
+			<li>Around it people built whole universe with Redux (the most popular flux implementation)</li>
+			<li>There’re dozens of libs like: React-boostrap, react material design, react sliders, scrollers, grids, react animations and so on</li>
+		</ol>
+	</section>
+
+	<section class="slide component-view">
+		<div class="slide-content-left">
+			<h2>React Component</h2>
+			<ol>
+				<li>Everything is/can be a component</li>
+				<li>A React component merges view and logic</li>
+				<li>UI is state machine, Components are State Processors</li>
+			</ol>
+		</div>
+		<figure>
+			<img src="pictures/slide7.png" alt="React Component">
+		</figure>
+	</section>
+
+	<section class="slide forget-img">
+		<h2>React Component</h2>
+		<figure>
+			<img src="pictures/slide8.png" alt="React Component">
+		</figure>
+	</section>
+
+	<section class="slide forget-img">
+		<h2>React Component</h2>
+		<figure>
+			<img src="pictures/slide9.png" alt="React Component">
+		</figure>
+	</section>
+
+	<section class="slide forget-img">
+		<h2>Virtual dom</h2>
+		<figure>
+			<img src="pictures/slide10.png" alt="virtual dom">
+		</figure>
+	</section>
+
+	<section class="slide diff-algorithm">
+		<h2>Diff Algorithm</h2>
+		<p>React diff algorithm is used to compute minimum sets of mutation:</p>
+		<textarea>1) <div className="first"><span>A Span</span></div>
+2) <div className="second"><p>A Paragraph</p></div>
+Change node
+	1) Remount a new: <p className="first"><span>A Span</span></p>
+First to second
+	1) Replace attribute: className="first" by className="second"
+	2) Replace node: <span>A Span</span> by <p>A Paragraph</p>
+Add/remove node:
+	1) Remove node: <div className="second"><p>A Paragraph</p></div></textarea>
+	</section>
+
+	<section class="slide">
+		<h2>Diff Algorithm</h2>
+		<img src="pictures/slide11.png" alt="Diff Algorithm">
+	</section>
+
+	<section class="slide">
+		<h2>Data flow</h2>
+		<ol>
+			<li>ReactJS implements a one-way data flow. This means that data is passed from the top-down, through props, from the top component to its children, so on and so forth.
+			<xmp>...
+// A simple component flowing down the props
+<Component property1="value" property2=”anotherValue"/>
+...
+			</xmp>
+			</li>
+			<li>Instead of React components talking to each other, React components cooperate through the parent</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<figure class="data-flow">
+			<img src="pictures/slide12.png" alt="Data flow">
+		</figure>
+		<h2>Data flow</h2>
+		<ol>
+			<li>Lets say we want to develop something like this:</li>
+			<li>First of all let separate it to the components:
+				<ol>
+					<li>Whole widget</li>
+					<li>Grid</li>
+					<li>Grid Record</li>
+					<li>Grid Action cell</li>
+					<li>Filter</li>
+				</ol>
+			</li>
+			<li>Components hierarchy: Whole widget -> Grid -> Grid Record -> </br>Grid Record Action -> Filter</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>JSX</h2>
+		<ol>
+			<li>JSX is a JavaScript syntax extension that looks similar to XML</li>
+			<li>XML has the benefit of balanced opening and closing tags. This helps make large trees easier to read than function calls or object literals.</li>
+			<li>After all JSX just makes code more readable and lets define virtualDOM in more convenient way</li>
+			<li>You don't have to use JSX with React. You can just use plain JS. However, we recommend using JSX because it is a concise and familiar syntax for defining tree structures with attributes.</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>JSX can be used:</h2>
+		<div class="double">
+			<div>
+				<p><i><b>To render HTML Tags</b></i></p>
+				<p><img src="pictures/slide13.png" alt="render HTML"></p>
+			</div>
+			<div>
+				<p><i><b>To render React Component</b></i></p>
+				<p><img src="pictures/slide14.png" alt="render React Component"></p>
+			</div>
+		</div>
+		<h2>JSX to JS</h2>
+		<ol>
+			<li>Browser can't interpret JSX it needs to be transformed to JS</li>
+			<li><b>Popular tools</b>: babelify with react preset, webpack with react preloader</li>
+		</ol>
+	</section>
+
+	<section class="slide jsx-expressions">
+		<h2>JSX expressions</h2>
+		<img src="pictures/slide15.jpg" alt="JSX expressions">
+	</section>
+
+	<section class="slide lifecycles">
+		<h2>Component Lifecycles</h2>
+		<p>Render method in a React component needs to be a <b>pure function</b></p>
+		<p>Whole bunch of methods:</p>
+		<img src="pictures/slide16.jpg" alt="Lifecycles">
+	</section>
+
+	<section class="slide lifecycle-process">
+		<h2>Lifecycles</h2>
+		<img src="pictures/slide17.jpg" alt="Lifecycles">
+	</section>
+
+	<section class="slide">
+		<h2>React: Events</h2>
+		<p>Two options:</p>
+		<div class="double">
+			<div>
+				<p>Add listeners to do something in the dom, which is <b>not under react.js control</b>:</p>
+				<p><img src="pictures/slide18.jpg" alt="Events ouside React Component"></p>
+			</div>
+			<div>
+				<p>Event handler <b>in react elements</b>. It works quite close to pure JavaScript, but with JSX.</p>
+				<p><img src="pictures/slide19.jpg" alt="Events in React Component"></p>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide events-list">
+		<h2>List of available events:</h2>
+		<div class="double">
+			<div>
+				<ol>
+					<li>onCopy onCut onPaste</li>
+					<li>onCompositionEnd onCompositionStart onCompositionUpdate</li>
+					<li>onKeyDown onKeyPress onKeyUp</li>
+					<li>onFocus onBlur</li>
+					<li>onChange onInput onSubmit</li>
+					<li>onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave onMouseMove onMouseOut onMouseOver onMouseUp</li>
+				</ol>
+			</div>
+			<div>
+				<ol>
+					<li>onSelect</li>
+					<li>onTouchCancel onTouchEnd onTouchMove onTouchStart</li>
+					<li>onScroll</li>
+					<li>onWheel</li>
+					<li>onLoad onError</li>
+					<li>onAnimationStart onAnimationEnd onAnimationIteration</li>
+					<li>onTransitionEnd</li>
+					<li>onAbort onCanPlay onCanPlayThrough onDurationChange onEmptied onEncrypted onEnded onError onLoadedData onLoadedMetadata</li>
+				</ol>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide thank-you">
+		<h1>to be continued ...</h1>
+	</section>
+
+	...
+
+	<section class="slide node">
+		<div>
+			<h2>...</h2>
+			<div class="text">
+				<p> <mark class="important"></mark> </p>
+			</div>
+			<div>
+				<img src="pictures/1_BCPTI5sT2C9JH76__X2WUg.png" alt="">
+			</div>
+		</div>
+	</section>
+
+	...
+
+	<section class="slide">
+		<div>
+			<h2>Meetups in Zurich </h2>
+			<ul>
+				<li> <a href="https://www.meetup.com/Web-Zurich/">Web Zurich meetup</a></li>
+
+				<li> <a href="https://www.meetup.com/Zurich-ReactJS-Meetup/">Zurich ReactJS</a></li>
+		  </ul>
+		</div>
+	</section>
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
