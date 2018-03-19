@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>React.js: Why and What? Intro</title>
+	<title>React: Why and What? Intro</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -13,7 +13,7 @@
 	</header>
 	<section class="slide cover" id="Cover">
 		<div>
-			<h2>React.js? Why and What?</h2>
+			<h2>React? Why and What?</h2>
 			<p>a presentation by Julia Dizhak</p>
 			<p>March, 2018</p>
 			<img src="pictures/cover1.jpg" alt="moneypark">
@@ -25,14 +25,11 @@
 			<h2>Agenda</h2>
 			<div class="text">
 				<ol>
-					<li> Why React.js?</li>
-					<li> React.js concepts</li>
-					<li> JSX and Lifecycles</li>
+					<li> Why React?</li>
+					<li> React concepts</li>
+					<li> JSX and lifecycles</li>
 				</ol>
 			</div>
-			<!--<div class="picture">-->
-				<!--<img src="https://yarnpkg.com/assets/og_image.png" alt="">-->
-			<!--</div>-->
 		</div>
 	</section>
 	<section class="slide">
@@ -40,9 +37,9 @@
 			<h2>The most popular frameworks / libraries</br> on the market:</h2>
 			<ol>
 				<li> Angular2 (Angular1)</li>
-				<li> React.JS</li>
-				<li> Vue.js</li>
-				<li> Ember.JS</li>
+				<li> React</li>
+				<li> VueJS</li>
+				<li> EmberJS</li>
 			</ol>
 		</div>
 	</section>
@@ -74,16 +71,65 @@
 						<li> nothing else =)</li>
 					</ol>
 				</li>
-				<li>React.js is framework or library?</li>
+				<li>React is framework or library?</li>
 			</ol>
+		</div>
+	</section>
+
+	<section class="slide less-space">
+			<div>
+				<h2>What is React?</h2>
+				<ol>	
+					<li> It's a js library for building UI created and maintained by Facebook</li>
+					<li> React can be used to:
+						<ol>
+							<li> Build a widget</li>
+							<li> Add a reusable component (header, footer, etc.)</li>
+							<li> Build the entire front-end experience (like Facebook)</li>
+						</ol>
+					</li>
+					<li> Around it people built whole universe with Redux (the most popular flux implementation)</li>
+					<li> There’re dozens of libs like: React-boostrap, React material design, React sliders, scrollers, grids, React animations and so on.</li>
+				</ol>
+			</div>	
+	</section>
+
+	<section class="slide run-specific-file">
+		<div>
+			<h2>React Component</h2>
+			<div class="slide-content-left">
+				<ol>
+					<li> Everything is/can be a component</li>
+					<li> A React component merges view and logic</li>
+				</ol>
+			</div>
+			<figure>
+				<img src="pictures/intro1/slide7.png" alt="React Component">
+			</figure>
+		</div>	
+	</section>
+	<section class="slide forget-img">
+		<div>
+			<h2>React Component</h2>
+			<figure>
+				<img src="pictures/intro1/slide8.png" alt="React Component">
+			</figure>
+		</div>
+	</section>
+	<section class="slide forget-img">
+		<div>
+			<h2>React Component</h2>
+			<figure>
+				<img src="pictures/intro1/slide9.png" alt="React Component">
+			</figure>
 		</div>
 	</section>
 
 	<section class="slide run-specific-file">
 		<div>
-			<h2>JSX vs Html</h2>
+			<h2>How ui looks like?</h2>
 			<div class="slide-content-left">
-				<p>How UI looks like?</p>
+				<p></p>
 				<ol>
 					<li> HTML</li>
 					<li> CSS</li>
@@ -97,63 +143,29 @@
 	</section>
 
 	<section class="slide run-specific-file">
-		<div class="slide-content-left">
+		<div>
 			<h2>JSX vs Html</h2>
-			<p>How React.js looks like?</p>
-			<ol>
-				<li>JS + JSX</li>
-				<li>CSS</li>
-				<li>JS</li>
-			</ol>
+			<div class="slide-content-left">
+					<p>How React looks like?</p>
+					<ol>
+						<li> JS + JSX</li>
+						<li> CSS</li>
+						<li> JS</li>
+					</ol>
+			</div>
+			<figure>
+				<img src="pictures/intro1/slide6.png" alt="JSX vs Html">
+			</figure>
 		</div>
-		<figure>
-			<img src="pictures/slide6.png" alt="JSX vs Html">
-		</figure>
 	</section>
 
-	<section class="slide karma-run">
-		<h2>What is react.js?</h2>
-		<ol>
-			<li>It's a JavaScript library for building UI created and maintained by Facebook</li>
-			<li>ReactJS can be used to:
-				<ol>
-					<li>Build a widget</li>
-					<li>Add a reusable component (header, footer, etc.)</li>
-					<li>Build the entire front-end experience (like Facebook)</li>
-				</ol>
-			</li>
-			<li>Around it people built whole universe with Redux (the most popular flux implementation)</li>
-			<li>There’re dozens of libs like: React-boostrap, react material design, react sliders, scrollers, grids, react animations and so on</li>
-		</ol>
-	</section>
+	
 
-	<section class="slide component-view">
-		<div class="slide-content-left">
-			<h2>React Component</h2>
-			<ol>
-				<li>Everything is/can be a component</li>
-				<li>A React component merges view and logic</li>
-				<li>UI is state machine, Components are State Processors</li>
-			</ol>
-		</div>
-		<figure>
-			<img src="pictures/slide7.png" alt="React Component">
-		</figure>
-	</section>
+	
 
-	<section class="slide forget-img">
-		<h2>React Component</h2>
-		<figure>
-			<img src="pictures/slide8.png" alt="React Component">
-		</figure>
-	</section>
+	
 
-	<section class="slide forget-img">
-		<h2>React Component</h2>
-		<figure>
-			<img src="pictures/slide9.png" alt="React Component">
-		</figure>
-	</section>
+	
 
 	<section class="slide forget-img">
 		<h2>Virtual dom</h2>

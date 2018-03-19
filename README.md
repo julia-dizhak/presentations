@@ -12,7 +12,7 @@
 
 ## [slides: Yarn package manager](https://julia-dizhak.github.io/presentations/topic-yarn/)
 
-## [slides: React](https://julia-dizhak.github.io/presentations/topic-react-intro/)
+## [slides: React intro](https://julia-dizhak.github.io/presentations/topic-react-intro/)
 
 <br>
 

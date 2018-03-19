@@ -627,3 +627,7 @@ a {
 .run-specific-file figure {
     float: right;
 }
+
+.less-space > div {
+    padding-top: 50px;
+}
