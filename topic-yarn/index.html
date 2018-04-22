@@ -7,13 +7,14 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
 </head>
+
 <body class="list">
 	<header class="caption">
 		<h1>Yarn package manager</h1>
 	</header>
 	<section class="slide cover" id="Cover">
 		<div>
-			<h2>Yarn is a new package manager for Javascript</h2>
+			<h2>Yarn is a new package manager for Js</h2>
 			<p>a presentation by Julia Dizhak</p>
 			<p>December 18, 2017</p>
 			<img src="pictures/cover1.jpg" alt="moneypark">
@@ -41,20 +42,17 @@
 		</div>
 	</section>
 
-	...
-
 	<section class="slide">
 		<div>
-			<h2>Using Yarn and Webpack: in a plan</h2>
+			<h2>Using Yarn and Webpack instead Bower</h2>
 			<p>If you go to <a href="https://bower.io/">bower.io</a> you will see the message <mark>“while bower is maintained, we recommend using Yarn and Webpack for front-end projects"</mark></p>
 		</div>
 	</section>
-	<section class="slide yarn">
+
+	<section class="slide alternative">
 		<div>
-			<h2>Yarn</h2>
 			<div class="text">
 				<p><mark class="important"><a href="https://github.com/yarnpkg/yarn/"></a>Yarn</mark> is a fast, reliable, and secure alternative npm client.</p>
-				<p><a href="https://yarnpkg.com/en/">Benefits:</a></p>
 				<ul>
 					<li> ultra fast</li>
 					<li> mega secure (can work offline)</li>
@@ -62,14 +60,52 @@
 				</ul>
 			</div>
 			<div class="picture">
-				<img src="https://yarnpkg.com/assets/og_image.png" alt="">
+				<img src="pictures/feature-speed.png" alt="">
+				<img src="pictures/feature-secure.png" alt="">
+				<img src="pictures/feature-reliable.png" alt="">	
 			</div>
 		</div>
 	</section>
 
 	<section class="slide">
 		<div>
-			<h2>Meetups in Zurich </h2>
+			<h2>yarn.lock</h2>
+			<p><img style="width: 50%" src="pictures/lock.png" alt=""></p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Yarn usage</h2>
+			<div>
+				<pre>yarn add [package_name]</pre>
+				<pre>yarn add [package]@[version]</pre>
+				<pre>yarn upgrade [package]</pre>
+				<pre>yarn remove [package]</pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Resources: </h2>
+			<ul>
+				<li> <a href="https://yarnpkg.com/en/">doc</a></li>
+				<li> <a href="https://code.facebook.com/posts/1840075619545360">Yarn: A new package manager for JavaScript (blog article)</a></li>
+				<li> <a href="https://github.com/yarnpkg/yarn/">github</a></li>
+				<li> <a href="https://yarnpkg.com/en/docs/migrating-from-npm">Migrating from npm</a></li>
+				<li> <a href="https://scotch.io/tutorials/yarn-package-manager-an-improvement-over-npm">Yarn: an improvement over npm</a></li>
+			</ul>
+			<div class="picture">
+				<img style="width: 60%; display: block" src="pictures/cat.jpg" alt="">
+			</div>
+
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Meetups in Zurich: </h2>
 			<ul>
 				<li> <a href="https://www.meetup.com/Web-Zurich/">Web Zurich meetup</a></li>
 				<li> <a href="https://www.meetup.com/AngularZRH/">Angular Zurich</a></li>
@@ -77,6 +113,7 @@
 		  </ul>
 		</div>
 	</section>
+
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
 </body>
