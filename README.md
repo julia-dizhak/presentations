@@ -14,6 +14,8 @@
 
 ## [slides: React intro](https://julia-dizhak.github.io/presentations/topic-react-intro/)
 
+## [slides: Jquery intro](https://julia-dizhak.github.io/presentations/topic-jquery/)
+
 <br>
 
 ## Presentations skills: [opening / main body / closing]

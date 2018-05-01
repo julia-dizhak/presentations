@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Front-end workshop</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+
+<body class="list">
+	<header class="caption">
+		<h1>Jquery intro</h1>
+	</header>
+	<section class="slide cover" id="Cover">
+		<div>
+			<h2>jQuery is a fast, small JS library</h2>
+			<p>a presentation by Julia Dizhak</p>
+			<p>May 02, 2018</p>
+			<img src="pictures/cover1.jpg" alt="moneypark">
+		</div>
+	</section>
+
+	<section class="slide node">
+		<div>
+			<h2>jQuery library</h2>
+			<div class="text">
+				<p>It makes things like HTML document traversal and manipulation, event handling, animation, and that works across all browsers</p>
+			</div>
+			<div>
+				<img src="pictures/jquery.png" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div class="center">
+			<h2>Browser supports</h2>
+			<div style="text-align:center">
+				<img style="width:90%" src="pictures/browsers.png" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>What is DOM?</h2>
+			<div style="text-align:center">
+				<img style="width:80%" src="pictures/dom.jpg" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Find an element (selectors)</h2>
+			<div>
+				<div><code>$('*')</code> - find everyting</div>
+				<div><code>$('span')</code> - by tag</div>
+				<div><code>$('#AB-test')</code> - by id</div>
+				<div><code>$('.menu')</code> - by class</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Philosophy: find element, do smth to it</h2>
+			<div>
+				<div><code>$('#container').addClass('isCool)</code></div>
+				<div><code>$('p').removeClass('closed')</code></div>
+				<div><code>$('span').toggleClass('animation')</code></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Show / hide an element</h2>
+			<div>
+				<div><code>$('div').hide()</code></div>
+				<div><code>$('div, p').hide()</code></div>
+				<div><code>$('div').show()</code> - show hidden element</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Get and set the text to an element</h2>
+			<div>
+				<div><code>$('#myDiv').text()</code> - get the text</div>
+				<div><code>$('span').text('Hello Laura')</code> - set the text</div>
+				<div><code>$('#myDiv').html()</code> - get/set inner html</div>
+				<div><code>$('input').val()</code> - used with inputs, get/set value</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Manipulation</h2>
+			<div>
+				<div><code>$('span').wrap('...')</code> - wrap an element</div>
+				<div><code>$('.inner').append('...')</code> - insert inside</div>
+				<div><code>$('.inner').after('...')</code> - insert outside</div>
+				<div><code>$('.container').remove()</code></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Can chain most methods together</h2>
+			<div>
+				<div><code>$('p').addClass('sophisticated)</code></div>
+				<div><code>&nbsp;&nbsp;    .text('Hello Jquery')</code></div>
+				<div><code>&nbsp;&nbsp;    .show()</code></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Resources: </h2>
+			<ul>
+				<li> <a href="http://jquery.com">official website</a></li>
+				<li> <a href="http://docs.jquery.com/">official documentation</a></li>
+				<li> <a href="http://api.jquery.com ">api</a></li>
+				
+			</ul>
+		</div>
+	</section>
+
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
