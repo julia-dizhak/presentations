@@ -1,0 +1,434 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>ES6</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>ES6</h1>
+	</header>
+	<section class="slide cover" id="Cover">
+		<div>
+			<h2>ES6 features or new generation of JS</h2>
+			<p>by Julia Dizhak</p>
+			<img src="pictures/cover1.jpg" alt="moneypark">
+		</div>
+	</section>
+	<section class="slide agenda">
+		<div>
+		<h2>Overview</h2>
+		<ol>
+			<li> Small intro</li>
+			<li>
+				ES6 (Ecmascript)
+				<ol>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+				</ol>
+			</li>
+			<li>
+				
+				<ol>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+				</ol>
+			</li>
+		</ol>
+		</div>
+	</section>
+	<section class="slide intro">
+		<div>
+			<h2>Let and const</h2>
+			<p><mark class="important">forget var</mark></p>
+			<p></p>
+			<img src="" alt="">
+		</div>
+	</section>
+	<section class="slide intro-angular-2">
+		<div>
+			<h2>const</h2>
+			<p>const makes variables immutable</p>
+			<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAU9AAAAJGIyYzU1MzY3LWU0YTktNDUyZC1hN2IzLTMyMzQ0ZThjZTUxOA.png" alt="">
+		</div>
+	</section>
+	<section class="slide intro-mvc">
+		<div>
+			<h2>MVC</h2>
+			<p><mark class="important">Model View Controller</mark> is a software design pattern that separates representation from user interaction.
+				Model consists of application data and functions that interact with it, while the view presents this data to the user; the controller operates between the two.</p>
+	  </div>
+	</section>
+	<section class="slide directives">
+		<div>
+			<h2>Directives</h2>
+			<p>Directives could be custom HTML <mark class="important">elements and attributes, and class names, as well as comments</mark> in AngularJS.</p>
+			<p>This is a method of creating new HTML elements that they have own custom functionality.</p>
+			<pre>
+				<code>&lt;html ng-app&gt;</code>
+			</pre>
+			<p>Only one ng-app directive can be used per HTML document</p>
+		</div>
+	</section>
+	<section class="slide directive-doc">
+		<div>
+			<h2>Built-in directives</h2>
+			<p>Docs <a target="_blank" href="https://docs.angularjs.org/api/ng/directive">https://docs.angularjs.org/api/ng/directive</a></p>
+			<p>The most common and widely used are </p>
+			<ul>
+				<li> ng-show/ng-hide</li>
+				<li> ng-click</li>
+				<li> ng-repeat (working with array </li>
+				<li> ng-src</li>
+				<li> ng-init</li>
+				<li> ng-class</li>
+				<li> ng-submit</li>
+				<li> ng-if</li>
+				<li> ng-model</li>
+			</ul>
+	  </div>
+	</section>
+
+	<section class="slide model">
+		<div>
+			<h2>ng-model</h2>
+			<p>With the ng-model directive you can bind the value of an input field to a variable created in AngularJS</p>
+			<p><a target="_blank" href="https://docs.angularjs.org/api/ng/directive/ngModel">https://docs.angularjs.org/api/ng/directive/ngModel</a></p>
+			<pre>
+				<code>&lt;input ng-model="name" placeholder="Your name”&gt;</code>
+				<code>&lt;h1&gt;Hello {{ name }}&lt;/h1&gt;</code>
+			</pre>
+			<p>As soon as we changed the model called name expression in html will be also changed</p>
+			<p><a target="_blank" href="https://plnkr.co/edit/zXs6O41XLSXAdlDS45AR?p=preview">Edit in Plunker</a></p>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Two-way Data Binding</h2>
+			<p>Ng-model is a key to a concept named as Two-way data binding</p>
+			<p>2 way in this context means that if the view changes the value, the model observes the change.
+				And if the model changes the value, the view update with the change.</p>
+
+		</div>
+	</section>
+
+	<section class="slide model">
+		<div>
+			<h2>Expressions</h2>
+			<p>Expressions which allow to insert dynamic values into HTML</p>
+			<pre>
+				<code>&lt;html ng-app&gt;</code>
+				<code>  &lt;body&gt;</code>
+				<code>    &lt;div&gt; {{ 4 + 6 }} &lt;/div&gt;</code>
+				<code>    &lt;div&gt; {{ “Angular” + “JS” }} &lt;/div&gt;</code>
+				<code>    &lt;div&gt; {{ numberOfRooms() }} &lt;/div&gt;</code>
+				<code>  &lt;/body&gt;</code>
+				<code>&lt;/html&gt;</code>
+			</pre>
+			<p><a target="_blank" href="https://plnkr.co/edit/TKFYR94WfM6140mXSYN6?p=preview>Edit in Plunker">Edit in Plunker</a></p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Modules and ng-app</h2>
+			<p>In AngularJS, applications are structured in <mark class="important">modules</mark></p>
+			<p>You can define a new module very easily thanks to the function “module’ and then assign inside html template</p>
+			<pre>
+				<code>var app = angular.module(’myApp’,  [ ] );</code>
+				<code>&lt;html ng-app=“myApp"&gt;</code>
+			</pre>
+	  </div>
+	</section>
+
+	<section class="slide ctrl">
+		<div>
+			<h2>Controllers</h2>
+			<p>Declaring the <mark class="important">ng-controller</mark> attribute on a DOM element says that all of the elements inside of it belong to the controller and will be managed</p>
+			<p>The controller function takes one or more arguments.
+				$scope object is available on the element and the controller</p>
+			<pre>
+				<code>{{ name }}  - not managed by controller </code>
+				<code>&lt;div ng-controller=‘MyController'&gt;</code>
+				<code>  &lt;input ng-model="name" placeholder="Your name"&gt;</code>
+				<code>  &lt;h1&gt;Hello {{ name }}&lt;/h1&gt;</code>
+				<code>&lt;/div&gt;</code>
+			</pre>
+			<p><a target="_blank" href="https://plnkr.co/edit/kBG2Renmsnurgz1IvBXB?p=preview">Edit</a></p>
+	  </div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Scope</h2>
+			<p>The $scope object is simply a JavaScript object whose properties are all available to the view and with which the controller can interact. </p>
+			<p>$scope will be the bridge by which we’ll communicate from the controller to the view.</p>
+	  </div>
+	</section>
+
+	<section class="slide custom">
+		<div>
+			<h2>Custom directives</h2>
+			<p>Directive is a  HTML annotations that trigger JS behaviors</p>
+			<p>Typically HTML only tells you about structure, it doesn’t tell you what you application does. </p>
+			<p>Directives can also be used for:</p>
+			<ul>
+				<li> expressing complex UI</li>
+				<li> Calling events and registering event handlers</li>
+				<li> reusing common components</li>
+			</ul>
+	  </div>
+	</section>
+	<section class="slide custom">
+		<div>
+			<h2>How to define directive?</h2>
+			<p>Directives allow you to write better HTML</p>
+			<pre>
+				<code>&lt;product-title&gt;&lt;/product-title&gt;</code>
+				<code>app.directive('productTitle', function() {</code>
+				<code>return {</code>
+				<code>  restrict: 'E',</code>
+				<code>  templateUrl: 'includes/product_title.html'</code>
+				<code>};</code>
+				<code>});</code>
+			</pre>
+	  </div>
+	</section>
+
+	<section class="slide directive-doc">
+		<div>
+			<h2>Filters</h2>
+			<p>change the way your expressions are displayed </p>
+			<p>Usage: {{ expression | filter }} </p>
+			<p>Angular comes with a collection of filters that can change the way your data are displayed <a href="https://docs.angularjs.org/api/ng/filter">https://docs.angularjs.org/api/ng/filter</a></p>
+
+			<ul>
+				<li> currency</li>
+				<li> uppercase / lowercase</li>
+				<li> date</li>
+				<li> limitTo </li>
+				<li> orderBy</li>
+			</ul>
+			<p>You can create you own filter</p>
+	  </div>
+	</section>
+	<section class="slide filter">
+		<div>
+			<h2>Filter date</h2>
+			<p><a target="_blank" href="https://docs.angularjs.org/api/ng/filter/date">https://docs.angularjs.org/api/ng/filter/date</a></p>
+			<p>Formats date to a string based on the requested format.</p>
+			<pre>
+				<code>&lt;span&gt;{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}&lt;/span&gt;</code>
+				<code>10/29/2010 @ 5:40AM</code>
+			</pre>
+			<a target="_blank" href="https://plnkr.co/edit/HJCAxEXBcae5AKmkB9Gl?p=preview">Edit in Plunker</a>
+		</div>
+	</section>
+	<section class="slide filter">
+		<div>
+			<h2>Filter uppercase / lowercase</h2>
+			<p><a target="_blank" href="https://docs.angularjs.org/api/ng/filter/uppercase">https://docs.angularjs.org/api/ng/filter/uppercase</a></p>
+			<p>Converts string to uppercase.</p>
+			<pre>
+				<code>user.name = 'Julia Dizhak';</code>
+				<code>&lt;div&gt;{{user.name | uppercase}}&lt;/div&gt;</code>
+				<code>&lt;div&gt;JULIA DIZHAK&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide spa">
+		<div>
+			<h2>SPA</h2>
+			<p>Single Page Application is a webpage that always keeps you on the same page.</p>
+			<p>On most websites whenever you click a link, the page reloads.</p>
+			<p>In a single page application, clicking a link keeps you on the same page, but replaces a part of it with the new content.</p>
+			<p>Examples are things like Mailing systems where you stay on the same page but it just grabs data from pre-loaded stuff.</p>
+	  </div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Everything you need to build SPA by AngularJS</h2>
+			<ul>
+				<li> Creates the page that will hold the structure of the application</li>
+				<li> Bind the page to a specific AngularJS module</li>
+				<li> Select where the views will be included with ngView</li>
+				<li> Writes the different views</li>
+				<li> Binds the view and the routes</li>
+			</ul>
+	  </div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>ngRoute</h2>
+			<p>The ngRoute module helps your application to become a Single Page Application.</p>
+			<p>If you want to navigate to different pages in your application, but you also want the application to be a SPA, with no page reloading, you can use the ngRoute module.</p>
+			<p><a target="_blank" href="http://www.w3schools.com/angular/tryit.asp?filename=try_ng_routing">example</a></p>
+	  </div>
+	</section>
+	<section class="slide spa-1">
+		<div>
+			<h2>What do we need?</h2>
+			<p>To make your applications ready for routing, you must include the AngularJS Route module:</p>
+			<pre>
+				<code>&lt;script src="//apis.com/angular/angular-route.js"&gt;&lt;/script&gt;</code>
+			</pre>
+			<p>Then you must add the ngRoute as a dependency in the application module:</p>
+			<pre>
+				<code>var app = angular.module("myApp", ["ngRoute”]);</code>
+			</pre>
+	  </div>
+	</section>
+	<section class="slide spa-2">
+		<div>
+			<h2>$routeProvider</h2>
+			<p>Now your application has access to the route module, which provides the $routeProvider</p>
+			<p>Use the $routeProvider to configure different routes in your application:</p>
+			<pre>
+				<code>app.config(function($routeProvider) {</code>
+				<code>$routeProvider</code>
+				<code>.when("/", {</code>
+				<code>templateUrl : "main.htm"</code>
+				<code>})</code>
+				<code>.when("/red", {</code>
+				<code>templateUrl : "red.htm"</code>
+				<code>})</code>
+			</pre>
+			<a target="_blank" href="http://www.w3schools.com/angular/tryit.asp?filename=try_ng_routing">full example</a>
+	  </div>
+	</section>
+	<section class="slide spa-3">
+		<div>
+			<h2>Where does it go?</h2>
+			<p>Your application needs a container to put the content provided by the routing.</p>
+			<p>This container is the ng-view directive</p>
+			<pre>
+				<code>&lt;div ng-view&gt; &lt;/div&gt;</code>
+				<code>&lt;ng-view&gt; &lt;/ng-view&gt;</code>
+				<code>&lt;div class="ng-view"&gt; &lt;/div&gt;</code>
+			</pre>
+			<p>Applications can only have one ng-view directive, and this will be the placeholder for all views provided by the route.</p>
+	  </div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Gulp</h2>
+			<p><mark class="important">Gulp</mark> A JavaScript task runner, designed to automate (run) common tasks</p>
+			<img src="https://phpocean.com/assets/images/source-images/pics-articles/3b425b86461959aa86264bb9e4347f1f.jpg" alt="">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>What you can do with gulp?</h2>
+			<pre>
+				<code>gulp.task('css-compile', function () {</code>
+				<code>return gulp.src('<mark>mmp/static/sass/**/*.scss</mark>')</code>
+				<code>  .pipe(debug({title: ‘unicorn:'}))</code>
+				<code>  .<mark>pipe</mark>(<mark>autoprefixer</mark>({ browsers: ['last 5 versions', 'IE 9', 'iOS >= 8'] }))</code>
+				<code>  .pipe(cleanCss({ compatibility: 'i18'}))</code>
+				<code>  .pipe(rename(function (path) { path.basename += ".min”; }))</code>
+				<code>  .pipe(<mark>gulp.dest(config.paths.css)</mark>);</code>
+				<code>});</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide node">
+		<div>
+			<h2>Node.js</h2>
+			<p><mark class="important">Node.js</mark> a JavaScript runtime environment. </p>
+			<img src="https://openfin.co/wp-content/uploads/2015/05/nodejs_logo.png" alt="">
+		</div>
+	</section>
+	<section class="slide node">
+		<div>
+			<h2>NPM</h2>
+			<p><mark class="important">Node Package Manager</mark> is a package manager that allows you to install JavaScript libraries that run on node.js</p>
+			<img src="https://www.supnig.com/media/pictures/npmnodejs.jpg" alt="">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>More technically ...</h2>
+			<p><mark class="important">Node Package Manager</mark> is a package manager that allows you to install JavaScript libraries that run on node.js</p>
+			<pre>
+				<code>npm init . -> create package.json</code>
+				<code>npm install gulp (-g) - installs gulp into node_modules or globally  </code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide node">
+		<div>
+			<h2>Bower</h2>
+			<p><mark class="important">Bower</mark> is a package manager for JavaScript and CSS libraries that run in the browser</p>
+			<p>Package manager for the front-end</p>
+			<img src="http://devstickers.com/assets/img/pro/207l.png" alt="">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>More technically ...</h2>
+			<pre>
+				<code>bower init . -> create bower.json</code>
+				<code>bower install jquery --save</code>
+				<code>bower install angular --save</code>
+			</pre>
+		</div>
+	</section>
+
+  <section class="slide">
+    <div>
+  		<h2>Interactive Classes</h2>
+		<p><a target="_blank" href="https://www.codeschool.com/">codeschool.com</a></p>
+		<ul>
+			<li> <a target="_blank" href="https://www.codeschool.com/courses/shaping-up-with-angular-js">Shaping up with Angularjs </a></li>
+			<li><a target="_blank" href="https://www.codeschool.com/courses/staying-sharp-with-angular-js"> Staying sharp with Angularjs</a></li>
+			<li><a target="_blank" href="https://www.codeschool.com/courses/accelerating-through-angular-2"> Accelerating through Angular2</a></li>
+		</ul>
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+  		<h2>Additional resources </h2>
+		<ul>
+			<li> <a target="_blank" href="https://docs.angularjs.org/api"> docs api</a></li>
+            <li><a target="_blank" href="https://egghead.io/"> egghead video</a></li>
+			<li><a target="_blank" href="https://thinkster.io/topics/angular"> thinkster</a></li>
+      </ul>
+  	</div>
+  </section>
+	<section class="slide">
+    <div>
+  		<h2>Meetup in Zurich </h2>
+		<ul>
+			<li> <a target="_blank" href="https://www.meetup.com/AngularJS-ZRH/"> AngularJS-ZRH</a></li>
+      </ul>
+  	</div>
+  </section>
+  <section class="slide">
+    <div>
+  		<h2>Books</h2>
+		<ul>
+			<li>
+				<a target="_blank" href="https://www.ng-book.com/">Ng-book by Ari Lerner</a>
+			</li>
+			<li>
+				...
+			</li>
+		</ul>
+  	</div>
+  </section>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
