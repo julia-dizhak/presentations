@@ -101,7 +101,7 @@
 						// syntax arrow functions
 						<code>
 							const myFunction = () => { ... } // no parametres
-							item => { ... }, (item) => { ... } 
+							(item) => { ... } or item => { ... } 
 							(item, key) => { ... }        
 						</code>
 					</pre>
@@ -110,18 +110,20 @@
 	</section>
 	<section class="slide code">
 		<div>
-			<h2>map with arrow functions</h2>
+			<h2>.map( ) & =></h2>
 			<div>
 				<pre>
 					<code>
 						const multiply = (number) => {
 							&nbsp;&nbsp;&nbsp;return number * 2;
 						}
-						const multiply = (number) => number * 2;
+						const multiply = (number) => number * 2; 
 						console.log(multiply(16)); // 32
 
-						// map example
-						...
+						// example with .map()
+						list.map(item =>
+						&nbsp;&nbsp;&nbsp; &lt;li  key={item.id}&gt; {item.title} &lt;/li&gt; 
+						});
 					</code>
 				</pre>
 			</div>
@@ -130,11 +132,18 @@
 
 	<section class="slide code-small">
 		<div>
-			<h2>Template strings</h2>
+			<h2>Template literals: template strings</h2>
 			<div>
 				<pre>
 					<code>
-						
+						`string text` // use back stick
+
+						// multiline old variant
+						var message = 'Multiline\nstring';
+
+						// multiline es6
+						const message = `string text line 1
+						string text line 2`;
 					</code>
 				</pre>
 			</div>
@@ -142,17 +151,17 @@
 	</section>
 	<section class="slide code-small">
 			<div>
-				<h2>Template strings</h2>
+				<h2>Template strings: concatenation</h2>
 				<div>
 					<pre>
 						<code>
 							const PATH_BASE = 'https://hn.algolia.com/api/v1',
-							PATH_SEARCH = '/search';
-							PARAM_SEARCH = 'query=';
-							DEFAULT_QUERY = 'es6';
-							// concatenation
-							... fetch(`${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${DEFAULT_QUERY}`)
-							// url -> 
+							&nbsp;&nbsp;&nbsp;PATH_SEARCH = '/search';
+							&nbsp;&nbsp;&nbsp;PARAM_SEARCH = 'query=';
+							&nbsp;&nbsp;&nbsp;DEFAULT_QUERY = 'es6';
+							...
+							fetch(`${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${DEFAULT_QUERY}`)
+							// url -> https://hn.algolia.com/api/v1/search?query=es6
 						</code>
 					</pre>
 				</div>
@@ -164,9 +173,30 @@
 			<div>
 				<pre>
 					<code>
-						let name = 'Julia'; 
-						`Hi ${name}, Did you know that 5 * 3 = ${5*3}?`
-						/* "Hi Julia, Did you know that 5 * 3 = 15?" */
+						let name = 'team'; 
+						`Hi ${name}, Do you know that MoneyPark company age is ${2018-2011}?`
+
+						/* 'Hi team, Do you know that MoneyPark company age is 7?' */
+					</code>
+				</pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide code-small">
+		<div>
+			<h2>Exports & imports</h2>
+			<p style="margin:0">can split code across multiple JS files - modules.</p>
+			<p style="margin:0">To access functionality in another file, you need <mark>export</mark> (to make it available) and <mark>import</mark> (to get access) statements.</p>
+			<br>
+			<div>
+				<pre>
+					<code>
+						// usual example of index.js
+						import React, { Component } from 'react';
+						import { render } from 'react-dom';
+						import { Router, Route } from 'react-router-dom';
+						...
 					</code>
 				</pre>
 			</div>
@@ -174,11 +204,18 @@
 	</section>
 	<section class="slide code-small">
 		<div>
-			<h2>Template strings: multiplelines</h2>
+			<h2>Export</h2>
 			<div>
 				<pre>
 					<code>
-						
+						default => export default ...;
+						named => export const someData ...; 
+
+						// can import default exports like this:
+						import someNameOfYourChoice from './path/to/file.js
+
+						// named exports have to be imported by their name
+						import { someData } from './path/to/file.js'
 					</code>
 				</pre>
 			</div>
@@ -187,10 +224,8 @@
 
 	<section class="slide ctrl">
 		<div>
-			<h2>Controllers</h2>
-			<p>Declaring the <mark class="important">ng-controller</mark> attribute on a DOM element says that all of the elements inside of it belong to the controller and will be managed</p>
-			<p>The controller function takes one or more arguments.
-				$scope object is available on the element and the controller</p>
+			<h2></h2>
+			
 			<pre>
 				<code>{{ name }}  - not managed by controller </code>
 				<code>&lt;div ng-controller=‘MyController'&gt;</code>
@@ -198,17 +233,31 @@
 				<code>  &lt;h1&gt;Hello {{ name }}&lt;/h1&gt;</code>
 				<code>&lt;/div&gt;</code>
 			</pre>
-			<p><a target="_blank" href="https://plnkr.co/edit/kBG2Renmsnurgz1IvBXB?p=preview">Edit</a></p>
+		
 	  </div>
 	</section>
 
 	<section class="slide">
 		<div>
-			<h2>Scope</h2>
-			<p>The $scope object is simply a JavaScript object whose properties are all available to the view and with which the controller can interact. </p>
-			<p>$scope will be the bridge by which we’ll communicate from the controller to the view.</p>
-	  </div>
+			<h2>Resources</h2>
+			<ul>
+				<li> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> docs from mozilla</a></li>
+				<li> <a target="_blank" href=""> </a></li>
+			</ul>
+		</div>
 	</section>
+	<section class="slide">
+		<div>
+			<h2>Interactive classes</h2>
+			<ul>
+				<li> <a target="_blank" href="">udemy</a></li>
+				<li> <a target="_blank" href="https://egghead.io/"> egghead</a></li>
+			</ul>
+		</div>
+    </section>
+		  
+
+
 
 	<section class="slide custom">
 		<div>
@@ -377,72 +426,12 @@
 		</div>
 	</section>
 
-	<section class="slide node">
-		<div>
-			<h2>NPM</h2>
-			<p><mark class="important">Node Package Manager</mark> is a package manager that allows you to install JavaScript libraries that run on node.js</p>
-			<img src="https://www.supnig.com/media/pictures/npmnodejs.jpg" alt="">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>More technically ...</h2>
-			<p><mark class="important">Node Package Manager</mark> is a package manager that allows you to install JavaScript libraries that run on node.js</p>
-			<pre>
-				<code>npm init . -> create package.json</code>
-				<code>npm install gulp (-g) - installs gulp into node_modules or globally  </code>
-			</pre>
-		</div>
-	</section>
+	
 
-	<section class="slide node">
-		<div>
-			<h2>Bower</h2>
-			<p><mark class="important">Bower</mark> is a package manager for JavaScript and CSS libraries that run in the browser</p>
-			<p>Package manager for the front-end</p>
-			<img src="http://devstickers.com/assets/img/pro/207l.png" alt="">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>More technically ...</h2>
-			<pre>
-				<code>bower init . -> create bower.json</code>
-				<code>bower install jquery --save</code>
-				<code>bower install angular --save</code>
-			</pre>
-		</div>
-	</section>
 
-  <section class="slide">
-    <div>
-  		<h2>Interactive Classes</h2>
-		<p><a target="_blank" href="https://www.codeschool.com/">codeschool.com</a></p>
-		<ul>
-			<li> <a target="_blank" href="https://www.codeschool.com/courses/shaping-up-with-angular-js">Shaping up with Angularjs </a></li>
-			<li><a target="_blank" href="https://www.codeschool.com/courses/staying-sharp-with-angular-js"> Staying sharp with Angularjs</a></li>
-			<li><a target="_blank" href="https://www.codeschool.com/courses/accelerating-through-angular-2"> Accelerating through Angular2</a></li>
-		</ul>
-  	</div>
-  </section>
-  <section class="slide">
-    <div>
-  		<h2>Additional resources </h2>
-		<ul>
-			<li> <a target="_blank" href="https://docs.angularjs.org/api"> docs api</a></li>
-            <li><a target="_blank" href="https://egghead.io/"> egghead video</a></li>
-			<li><a target="_blank" href="https://thinkster.io/topics/angular"> thinkster</a></li>
-      </ul>
-  	</div>
-  </section>
-	<section class="slide">
-    <div>
-  		<h2>Meetup in Zurich </h2>
-		<ul>
-			<li> <a target="_blank" href="https://www.meetup.com/AngularJS-ZRH/"> AngularJS-ZRH</a></li>
-      </ul>
-  	</div>
-  </section>
+
+  
+	
   <section class="slide">
     <div>
   		<h2>Books</h2>
