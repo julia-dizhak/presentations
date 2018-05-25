@@ -4,17 +4,21 @@
 
 ## [slides: Introduction to HTML5](https://julia-dizhak.github.io/presentations/topic-intro-HTML5/)
 
+## [slides: Jquery intro](https://julia-dizhak.github.io/presentations/topic-jquery/)
+
 ## [sLides: AngularJS 1.x](https://julia-dizhak.github.io/presentations/topic-angularJS-1x/)
 
 ## [slides: Google mobile certification program for mobile site developers](https://julia-dizhak.github.io/presentations/topic-google-mobile-certification/)
 
-## [slides: Frontend build tools](https://julia-dizhak.github.io/presentations/topic-moneypark-frontend-workshop/)
+## [slides: Front-end build tools](https://julia-dizhak.github.io/presentations/topic-moneypark-frontend-workshop/)
 
 ## [slides: Yarn package manager](https://julia-dizhak.github.io/presentations/topic-yarn/)
 
+## [slides: ES6](https://julia-dizhak.github.io/presentations/topic-es6/)
+
 ## [slides: React intro](https://julia-dizhak.github.io/presentations/topic-react-intro/)
 
-## [slides: Jquery intro](https://julia-dizhak.github.io/presentations/topic-jquery/)
+
 
 <br>
 

@@ -11,139 +11,178 @@
 	<header class="caption">
 		<h1>ES6</h1>
 	</header>
+
 	<section class="slide cover" id="Cover">
 		<div>
-			<h2>ES6 features or new generation of JS</h2>
+			<h2>Next-Gen JS</h2>
 			<p>by Julia Dizhak</p>
 			<img src="pictures/cover1.jpg" alt="moneypark">
 		</div>
 	</section>
+
+	<section class="slide intro">
+		<div>
+			<h2>A history lesson</h2>
+			<p> <mark class="important">1996</mark> - first EcmaScript realise by Brendan Eich</p>
+			<p> <mark class="important">2015</mark> - ES6 released</p>
+		</div>
+	</section>
+	
 	<section class="slide agenda">
 		<div>
 		<h2>Overview</h2>
-		<ol>
-			<li> Small intro</li>
-			<li>
-				ES6 (Ecmascript)
-				<ol>
-					<li> </li>
-					<li> </li>
-					<li> </li>
-				</ol>
-			</li>
-			<li>
-				
-				<ol>
-					<li> </li>
-					<li> </li>
-					<li> </li>
-				</ol>
-			</li>
-		</ol>
+		<ul>
+			<li> Let and const</li>
+			<li> Arrow functions</li>
+			<li> </li>	
+		</ul>
 		</div>
 	</section>
-	<section class="slide intro">
+
+	<section class="slide code">
 		<div>
-			<h2>Let and const</h2>
-			<p><mark class="important">forget var</mark></p>
-			<p></p>
-			<img src="" alt="">
+			<h2>let</h2>
+			<p>Forget about var, becuase <mark class="important">var</mark> is a function scope</p>	
+			<pre>
+				<code>
+					if (true) { 
+					&nbsp;&nbsp;&nbsp;var x = 3; 
+					} 
+					console.log(x); // 3 
+				</code>
+			</pre>	
+			<p><mark class="important">let</mark> is a block scope</p>
+			<div>
+				<pre>
+					<code>
+						if (true) { 
+						&nbsp;&nbsp;&nbsp;let x = 3; 
+						} 
+						console.log(x); // ReferenceError: x is not defined
+					</code>
+			    </pre>
+			</div>
 		</div>
 	</section>
-	<section class="slide intro-angular-2">
+	<section class="slide code">
 		<div>
 			<h2>const</h2>
-			<p>const makes variables immutable</p>
-			<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAU9AAAAJGIyYzU1MzY3LWU0YTktNDUyZC1hN2IzLTMyMzQ0ZThjZTUxOA.png" alt="">
-		</div>
-	</section>
-	<section class="slide intro-mvc">
-		<div>
-			<h2>MVC</h2>
-			<p><mark class="important">Model View Controller</mark> is a software design pattern that separates representation from user interaction.
-				Model consists of application data and functions that interact with it, while the view presents this data to the user; the controller operates between the two.</p>
-	  </div>
-	</section>
-	<section class="slide directives">
-		<div>
-			<h2>Directives</h2>
-			<p>Directives could be custom HTML <mark class="important">elements and attributes, and class names, as well as comments</mark> in AngularJS.</p>
-			<p>This is a method of creating new HTML elements that they have own custom functionality.</p>
-			<pre>
-				<code>&lt;html ng-app&gt;</code>
-			</pre>
-			<p>Only one ng-app directive can be used per HTML document</p>
-		</div>
-	</section>
-	<section class="slide directive-doc">
-		<div>
-			<h2>Built-in directives</h2>
-			<p>Docs <a target="_blank" href="https://docs.angularjs.org/api/ng/directive">https://docs.angularjs.org/api/ng/directive</a></p>
-			<p>The most common and widely used are </p>
-			<ul>
-				<li> ng-show/ng-hide</li>
-				<li> ng-click</li>
-				<li> ng-repeat (working with array </li>
-				<li> ng-src</li>
-				<li> ng-init</li>
-				<li> ng-class</li>
-				<li> ng-submit</li>
-				<li> ng-if</li>
-				<li> ng-model</li>
-			</ul>
-	  </div>
-	</section>
-
-	<section class="slide model">
-		<div>
-			<h2>ng-model</h2>
-			<p>With the ng-model directive you can bind the value of an input field to a variable created in AngularJS</p>
-			<p><a target="_blank" href="https://docs.angularjs.org/api/ng/directive/ngModel">https://docs.angularjs.org/api/ng/directive/ngModel</a></p>
-			<pre>
-				<code>&lt;input ng-model="name" placeholder="Your name”&gt;</code>
-				<code>&lt;h1&gt;Hello {{ name }}&lt;/h1&gt;</code>
-			</pre>
-			<p>As soon as we changed the model called name expression in html will be also changed</p>
-			<p><a target="_blank" href="https://plnkr.co/edit/zXs6O41XLSXAdlDS45AR?p=preview">Edit in Plunker</a></p>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Two-way Data Binding</h2>
-			<p>Ng-model is a key to a concept named as Two-way data binding</p>
-			<p>2 way in this context means that if the view changes the value, the model observes the change.
-				And if the model changes the value, the view update with the change.</p>
-
+			<br>
+			<p><mark class="important">const</mark> makes variables immutable</p>
+			<br>
+			<div>
+				<pre>
+					<code>
+						const obj = { x: 3 }; 
+						obj = 4; // TypeError 
+					</code>
+				</pre>
+			</div>
+			<br>
+			<p>The current best practice for block bindings is to use <mark>const</mark> by default (95%) and 
+				only use <mark>let</mark> when you know a variable’s value needs to change</p>
 		</div>
 	</section>
 
-	<section class="slide model">
+	<section class="slide code-small">
 		<div>
-			<h2>Expressions</h2>
-			<p>Expressions which allow to insert dynamic values into HTML</p>
-			<pre>
-				<code>&lt;html ng-app&gt;</code>
-				<code>  &lt;body&gt;</code>
-				<code>    &lt;div&gt; {{ 4 + 6 }} &lt;/div&gt;</code>
-				<code>    &lt;div&gt; {{ “Angular” + “JS” }} &lt;/div&gt;</code>
-				<code>    &lt;div&gt; {{ numberOfRooms() }} &lt;/div&gt;</code>
-				<code>  &lt;/body&gt;</code>
-				<code>&lt;/html&gt;</code>
-			</pre>
-			<p><a target="_blank" href="https://plnkr.co/edit/TKFYR94WfM6140mXSYN6?p=preview>Edit in Plunker">Edit in Plunker</a></p>
+			<h2>Arrow functions</h2>
+			<div>
+				<pre>
+					<code>
+						// function declaration and function expression
+						function() { ... } 
+						var myFunction = function() { ... } 
+					</code>
+				</pre>
+			</div>
+			<div>
+					<pre>
+						// syntax arrow functions
+						<code>
+							const myFunction = () => { ... } // no parametres
+							item => { ... }, (item) => { ... } 
+							(item, key) => { ... }        
+						</code>
+					</pre>
+			</div>
+		</div>
+	</section>
+	<section class="slide code">
+		<div>
+			<h2>map with arrow functions</h2>
+			<div>
+				<pre>
+					<code>
+						const multiply = (number) => {
+							&nbsp;&nbsp;&nbsp;return number * 2;
+						}
+						const multiply = (number) => number * 2;
+						console.log(multiply(16)); // 32
+
+						// map example
+						...
+					</code>
+				</pre>
+			</div>
 		</div>
 	</section>
 
-	<section class="slide">
+	<section class="slide code-small">
 		<div>
-			<h2>Modules and ng-app</h2>
-			<p>In AngularJS, applications are structured in <mark class="important">modules</mark></p>
-			<p>You can define a new module very easily thanks to the function “module’ and then assign inside html template</p>
-			<pre>
-				<code>var app = angular.module(’myApp’,  [ ] );</code>
-				<code>&lt;html ng-app=“myApp"&gt;</code>
-			</pre>
-	  </div>
+			<h2>Template strings</h2>
+			<div>
+				<pre>
+					<code>
+						
+					</code>
+				</pre>
+			</div>
+		</div>
+	</section>
+	<section class="slide code-small">
+			<div>
+				<h2>Template strings</h2>
+				<div>
+					<pre>
+						<code>
+							const PATH_BASE = 'https://hn.algolia.com/api/v1',
+							PATH_SEARCH = '/search';
+							PARAM_SEARCH = 'query=';
+							DEFAULT_QUERY = 'es6';
+							// concatenation
+							... fetch(`${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${DEFAULT_QUERY}`)
+							// url -> 
+						</code>
+					</pre>
+				</div>
+			</div>
+	</section>
+	<section class="slide code-small">
+		<div>
+			<h2>Template strings: expressions</h2>
+			<div>
+				<pre>
+					<code>
+						let name = 'Julia'; 
+						`Hi ${name}, Did you know that 5 * 3 = ${5*3}?`
+						/* "Hi Julia, Did you know that 5 * 3 = 15?" */
+					</code>
+				</pre>
+			</div>
+		</div>
+	</section>
+	<section class="slide code-small">
+		<div>
+			<h2>Template strings: multiplelines</h2>
+			<div>
+				<pre>
+					<code>
+						
+					</code>
+				</pre>
+			</div>
+		</div>
 	</section>
 
 	<section class="slide ctrl">
@@ -338,13 +377,6 @@
 		</div>
 	</section>
 
-	<section class="slide node">
-		<div>
-			<h2>Node.js</h2>
-			<p><mark class="important">Node.js</mark> a JavaScript runtime environment. </p>
-			<img src="https://openfin.co/wp-content/uploads/2015/05/nodejs_logo.png" alt="">
-		</div>
-	</section>
 	<section class="slide node">
 		<div>
 			<h2>NPM</h2>
