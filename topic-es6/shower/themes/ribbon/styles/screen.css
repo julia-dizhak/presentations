@@ -630,6 +630,9 @@ a {
     margin: 0;
     padding: 0;
 }
+.console {
+    color: blue;
+}
 
 .code-small pre code  {
     margin: -50px 0 0 0;
