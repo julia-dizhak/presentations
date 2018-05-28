@@ -32,16 +32,23 @@
 	
 	<section class="slide agenda">
 		<div>
-		<h2>Overview</h2>
-		<ul>
-			<li> Variables: let and const</li>
-			<li> Functions: arrow functions and (default values)</li>
-			<li> template literals</li>	
-			<li> export and import</li>
-			<li> classes</li>
-			<li> spread operator</li>
-			<li> destructuring</li>
-		</ul>
+			<h2>JS data types: primitives and references</h2>
+			<ul>
+				<li> Primitives: 
+					<ul>
+						<li> Number</li>
+						<li> String</li>
+						<li> Boolean</li>
+						<li> ...</li>
+					</ul>
+				</li>
+				<li> References:
+					<ul>
+						<li> Array</li>
+						<li> Object</li>
+					</ul>
+				</li>
+			</ul>
 		</div>
 	</section>
 
@@ -51,6 +58,28 @@
 		<p><a href="https://babeljs.io/" target="_blank">babel</a> is a JS transpiler</p>
 		<p><a href="https://babeljs.io/repl/" target="_blank">babel playground</a></p>
 		<img style="width:35%; display: inline-block" src="pictures/babel.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide agenda">
+		<div>
+			<h2>JS is compatible</h2>
+			<p><a href="https://kangax.github.io/compat-table/es6/" target="_blank">compatible table</a></p>
+		</div>
+	</section>
+
+	<section class="slide agenda">
+		<div>
+			<h2>Overview</h2>
+			<ul>
+				<li> Variables: let and const</li>
+				<li> Functions: arrow functions and (default values)</li>
+				<li> template literals</li>	
+				<li> export and import</li>
+				<li> classes</li>
+				<li> spread operator</li>
+				<li> destructuring</li>
+			</ul>
 		</div>
 	</section>
 
@@ -104,7 +133,7 @@
 			<div>
 				<pre>
 					<code>
-						// function declaration and function expression
+						<span class="console">// function declaration and function expression</span>
 						function() { ... } 
 						var myFunction = function() { ... } 
 					</code>
@@ -112,9 +141,9 @@
 			</div>
 			<div>
 					<pre>
-						// syntax arrow functions
+						<span class="console">// syntax arrow functions</span>
 						<code>
-							const myFunction = () => { ... } // no parametres
+							const myFunction = () => { ... } <span class="console">// no parametres</span>
 							(item) => { ... } or item => { ... } 
 							(item, key) => { ... }        
 						</code>
@@ -122,9 +151,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="slide code">
+	<section class="slide code-small">
 		<div>
-			<h2>...</h2>
+			<h2> inside => can omit keyword return</h2>
 			<div>
 				<pre>
 					<code>
@@ -132,7 +161,7 @@
 							&nbsp;&nbsp;&nbsp;return number * 2;
 						}
 						const multiply = (number) => number * 2; 
-						console.log(multiply(16)); // 32
+						<span class="console">console.log(multiply(16)); // 32</span>
 					</code>
 				</pre>
 			</div>
@@ -140,17 +169,23 @@
 	</section>
 	<section class="slide code">
 		<div>
-			<h2>.map( ) & =></h2>
+			<h2>.map, .filter & =></h2>
 			<div>
 				<pre>
 					<code>
-						// code example
-						...
+						const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
+						console.log(materials.map(material => material.length)); <span class="console">// --> [8, 6, 7, 9]</span>
+						
+						const filter = [1,2,4] => {
+							&nbsp;&nbsp;&nbsp;return args.filter(el => el === 1)
+						}
+						<span class="console">console.log(filter) —> [1];</span>
+						 
 
-						// example with .map() method and => in React
+						<!-- // example with .map() method and => in React
 						list.map(item =>
 						&nbsp;&nbsp;&nbsp; &lt;li  key={item.id}&gt; {item.title} &lt;/li&gt; 
-						});
+						}); -->
 					</code>
 				</pre>
 			</div>
