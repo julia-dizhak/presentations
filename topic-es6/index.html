@@ -38,12 +38,12 @@
 			<img style="width:35%; display: inline-block" src="pictures/babel.png" alt="">
 		</div>
 	</section>
-	
+
 	<section class="slide agenda">
 		<div>
 			<h2>JS data types: primitives and references</h2>
 			<ul>
-				<li> Primitives: 
+				<li> Primitives:
 					<ul>
 						<li> Number</li>
 						<li> String</li>
@@ -74,12 +74,13 @@
 			<h2>Overview</h2>
 			<ul>
 				<li> Variables: let and const</li>
-				<li> Functions: arrow functions and (default values)</li>
-				<li> template literals</li>	
+				<li> Arrow functions </li>
+				<li> Default values</li>
+				<li> Template literals</li>
 				<li> export and import</li>
-				<li> classes</li>
-				<li> spread operator</li>
-				<li> destructuring</li>
+				<li> Classes</li>
+				<li> Spread operator</li>
+				<li> Destructuring</li>
 			</ul>
 		</div>
 	</section>
@@ -87,22 +88,22 @@
 	<section class="slide code">
 		<div>
 			<h2>let</h2>
-			<p>Forget about <mark class="important">var</mark> - doesn't repsect block scope</p>	
+			<p>Forget about <mark class="important">var</mark> - doesn't repsect block scope</p>
 			<pre>
 				<code>
-					if (true) { 
-					&nbsp;&nbsp;&nbsp;var x = 3; 
-					} 
+					if (true) {
+					&nbsp;&nbsp;&nbsp;var x = 3;
+					}
 					<span class="console">console.log(x); // 3 </span>
 				</code>
-			</pre>	
+			</pre>
 			<p><mark class="important">let</mark> is a block scope</p>
 			<div>
 				<pre>
 					<code>
-						if (true) { 
-						&nbsp;&nbsp;&nbsp;let x = 3; 
-						} 
+						if (true) {
+						&nbsp;&nbsp;&nbsp;let x = 3;
+						}
 						<span class="console">console.log(x); // ReferenceError: x is not defined</span>
 					</code>
 			    </pre>
@@ -117,13 +118,13 @@
 			<div>
 				<pre>
 					<code>
-						const obj = { x: 3 }; 
+						const obj = { x: 3 };
 						obj = 4; <span class="console">// TypeError </span>
 					</code>
 				</pre>
 			</div>
 			<br>
-			<p>The current best practice is to use <mark>const</mark> by default (95%) and 
+			<p>The current best practice is to use <mark>const</mark> by default (95%) and
 				only use <mark>let</mark> when you know a variable’s value needs to change.</p>
 		</div>
 	</section>
@@ -135,8 +136,8 @@
 				<pre>
 					<code>
 						<span class="console">// function declaration and function expression</span>
-						function() { ... } 
-						var myFunction = function() { ... } 
+						function() { ... }
+						var myFunction = function() { ... }
 					</code>
 				</pre>
 			</div>
@@ -145,8 +146,8 @@
 						<span class="console">// syntax arrow functions</span>
 						<code>
 							const myFunction = () => { ... } <span class="console">// no parametres</span>
-							(item) => { ... } or item => { ... } 
-							(item, key) => { ... }        
+							(item) => { ... } or item => { ... }
+							(item, key) => { ... }
 						</code>
 					</pre>
 			</div>
@@ -161,7 +162,7 @@
 						const multiply = fuction(number) {
 							&nbsp;&nbsp;&nbsp;return number * 2;
 						}
-						const multiply = (number) => number * 2; 
+						const multiply = (number) => number * 2;
 						<span class="console">console.log(multiply(16)); // 32</span>
 					</code>
 				</pre>
@@ -176,16 +177,16 @@
 					<code>
 						const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
 						console.log(materials.map(material => material.length)); <span class="console">// --> [8, 6, 7, 9]</span>
-						
+
 						const filter = [1,2,4] => {
 							&nbsp;&nbsp;&nbsp;return args.filter(el => el === 1)
 						}
 						<span class="console">console.log(filter) —> [1];</span>
-						 
+
 
 						<!-- // example with .map() method and => in React
 						list.map(item =>
-						&nbsp;&nbsp;&nbsp; &lt;li  key={item.id}&gt; {item.title} &lt;/li&gt; 
+						&nbsp;&nbsp;&nbsp; &lt;li  key={item.id}&gt; {item.title} &lt;/li&gt;
 						}); -->
 					</code>
 				</pre>
@@ -201,7 +202,7 @@
 						function multiply(a, b = 1) {
 							&nbsp;&nbsp;&nbsp;	return a * b;
 						}
-						  
+
 						console.log(multiply(5)); // 5
 						console.log(multiply(5, 2)); // 10
 					</code>
@@ -218,7 +219,7 @@
 					<code>
 						const str = `string text`; <span class="console">// use back stick</span>
 						// multiline old variant
-						var message = 'Multiline \n string'  + 
+						var message = 'Multiline \n string'  +
 									'Another string';
 
 						// multiline es6
@@ -236,10 +237,10 @@
 				<div>
 					<pre>
 						<code>
-							let name = 'team'; 
+							let name = 'team';
 							`Hi ${name}, Do you know that MoneyPark company age is ${2018-2011} years?`
 							<span class="console">
-							/* 
+							/*
 							  Hi team, Do you know that MoneyPark company age is 7 years?
 							*/
 							</span>
@@ -265,7 +266,7 @@
 				</div>
 			</div>
 	</section>
-	
+
 
 	<section class="slide code-small">
 		<div>
@@ -281,7 +282,7 @@
 			</div>
 			<p>can split code across multiple JS files - modules.</p>
 			<p>To access functionality in another file, you need <mark>export</mark> (to make it available) and <mark>import</mark> (to get access) statements.</p>
-			
+
 		</div>
 	</section>
 	<section class="slide code">
@@ -296,7 +297,7 @@
 						}
 						export default Person;
 
-						// <mark>named</mark> => export const someData ...; 
+						// <mark>named</mark> => export const someData ...;
 						export function setDateSomeTimeAgo() {...}
 						export let date = Date.now();
 					</code>
@@ -349,9 +350,9 @@
 							&nbsp;&nbsp;&nbsp;getName() {
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return name;
 								&nbsp;&nbsp;&nbsp;}
-						}	
-						
-						const dev = new Developer('New is coming'); 
+						}
+
+						const dev = new Developer('New is coming');
 						<span class="console">console.log(dev.getName()); // New is coming </span>
 
 					</code>
@@ -371,7 +372,7 @@
 
 						class Developer extends Human {
 							&nbsp;&nbsp;&nbsp;...
-						}						
+						}
 					</code>
 				</pre>
 			</div>
@@ -383,15 +384,15 @@
 			<div>
 				<pre>
 					<code>
-						class Developer { 
+						class Developer {
 							&nbsp;&nbsp;&nbsp;constructor(lastname) { <span class="console">// executes during initialize</span>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(); <span class="console">// executes parent constructor</span>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.lastname = lastname; 
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.lastname = lastname;
 								&nbsp;&nbsp;&nbsp;}
 								&nbsp;&nbsp;&nbsp;getName() {
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return this.lastname; 
-								&nbsp;&nbsp;&nbsp;} 
-						}								
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return this.lastname;
+								&nbsp;&nbsp;&nbsp;}
+						}
 					</code>
 				</pre>
 			</div>
@@ -413,16 +414,16 @@
 				</pre>
 			</div>
 		</div>
-	</section>	
-	<section class="slide code-small">	
+	</section>
+	<section class="slide code-small">
 		<div>
 			<h2>Objects: spread operator</h2>
 			<div>
 				<pre>
 					<code>
-						const userNames = {first: 'Julia', last: 'Dizhak'}; 
+						const userNames = {first: 'Julia', last: 'Dizhak'};
 						const userAge = { age: 16 };
-						const user = { ...userNames, ...userAge }	
+						const user = { ...userNames, ...userAge }
 						<span class="console">console.log(user) // {first: 'Julia', last: 'Dizhak', age: 16}</span>
 					</code>
 				</pre>
@@ -430,7 +431,7 @@
 		</div>
 	</section>
 
-	<section class="slide code-small">	
+	<section class="slide code-small">
 		<div>
 			<h2>Destructuring</h2>
 			<div>
@@ -439,7 +440,7 @@
 						const array = [1,2,3];
 						const [a,b] = array;
 						<span class="console">console.log(a); // prints 1</span>
-						<span class="console">console.log(b); // prints 2</span>	
+						<span class="console">console.log(b); // prints 2</span>
 					</code>
 				</pre>
 			</div>
@@ -464,7 +465,7 @@
 			</ul>
 		</div>
 	</section>
-		  	
+
 	<section class="slide">
 		<div>
 			<h2>Books</h2>
