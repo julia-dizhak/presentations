@@ -22,176 +22,634 @@
 
 	<section class="slide yarn">
 		<div>
-			<h2>Many thanks and materials</h2>
-			<div class="text">
-				<ol>
+			<h2>Many thanks</h2>
+			<div>
+				<ul>
 					<li> to @Alyona, I based my presentation on her <a href="https://github.com/ned-alyona/presentations/tree/master/reactjs">material</a></li>
-					<li> great docs from https://reactjs.org/</li>
-					<li> many, many resources in a web (for free also!)</li>
-					<li> The Road to learn React by Robin Wieruch, ...</li>
+					<li> official documentation from facebook <a href="https://reactjs.org/">reactjs.org</a></li>
+                    <li> book: The Road to learn React by Robin Wieruch</li>
+                    <li>
+                        egghead 
+                        <a href="https://egghead.io/courses/start-learning-react"> start learning React</a>
+                        /
+                        <a href="https://egghead.io/courses/the-beginner-s-guide-to-react"> the beginner's guide to React</a>
+                    </li>
+                    <li> <a href="https://twitter.com/dan_abramov?lang=en">Dan Abramov: co-author of Redux</a></li>
 				</ol>
 			</div>
 		</div>
-	</section>
-
+    </section>
+    
 	<section class="slide agenda">
 		<div>
 			<h2>Agenda</h2>
 			<div class="text">
 				<ul>
 					<li> The brief history of React</li>
-					<li> Why React?</li>
+                    <li> Why React?</li>
+                    <li> JSX</li>
 					<li> React components</li>
-					<li> Props and state</li>
-					<li> Virtual DOM and Diff algorithm</li>
-					<li> Unidirectional Data flow</li>
-					<li> JSX</li>
+					<li> props and state</li>
+					<li> virtual DOM and Diff algorithm</li>
+					<li> unidirectional Data flow</li>
 					<li> Component lifecycle</li>
 					<li> React synthetic events</li>
 				</ul>
+			</div>
+		</div>
+    </section>
+    
+    <section class="slide intro">
+        <div>
+            <h2>a brief history</h2>
+            <p style="margin: 0 0 15px 0"> <mark class="important">August 26, 2006, 12 years ago</mark> - introduced Jquery by John Resig</p>
+            <p style="margin: 0 0 15px 0;"> <mark class="important">2010, 7 years ago</mark> - Backbone released</p>
+            <p style="margin: 0 0 15px 0;"> <mark class="important">2011-2012</mark> - AngularJS become popular (created by Google)</p>
+            <p style="margin: 0 0 15px 0"> <mark class="important">March 2013; 5 years ago</mark> React realised by Jordan Walke</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>JS frameworks / libraries</h2>
+            <ol>
+                <li> Angular2 (AngularJS === Angular1)</li>
+                <li> ReactJS</li>
+                <li> VueJS</li>
+                <li> EmberJS</li>
+            </ol>
+        </div>
+    </section>
+
+	<section class="slide">
+		<div>
+            <img style="display:block, margin:auto" src="pictures/intro1/slide3.png" alt="comparison">
+            <p>Dan Abramov <a href="https://twitter.com/dan_abramov/status/1007439168400654336?lang=en" target="_blank">tweet</a> about VueJS</p>
+		</div>
+    </section>
+
+    <section class="slide less-space">
+        <div>
+            <h2> Framework & Library</h2>
+            <ul style="margin: 0 0 10px 0;">
+                <li> Framework
+                    <ul>
+                        <li> makes app more structured</li>
+                        <li> provides with instruments you need (and you don’t need)</li>
+                        <li> follows some architecture pattern (MVC, MVVM, MVP…)</li>
+                    </ul>
+                </li>
+                <li> Library
+                    <ul>
+                        <li> gives one instrument to solve specific problem</li>
+                        <li> nothing else =)</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>=> React is a library</h2>
+        </div>
+    </section>
+
+    <section class="slide intro">
+        <div>
+            <h2>React </h2>
+            <p> It's a JS library for building UI created and maintained by Facebook.</p>
+            <p> React current version is 16.5</p>
+            <p style="margin: 0 0 15px 0;"> celebration <a href="https://twitter.com/reactjs/status/1001521260482904064?lang=en" target="_blank">anniversary 5 years</a></p>
+        </div>
+    </section>
+
+    <section class="slide intro">
+        <div>
+            <h2>Facebook has 50,000 React components</h2>
+            <p>How do you manage large project directories with many components?</p>
+        </div>
+    </section>
+    
+    <section class="slide less-space">
+        <div>
+            <h2>Why is React?</h2>
+            <ul>
+                <li> React is modular</li>
+                <li> React makes painless to create interactive UIs</li>
+                <li> Declarative instead on imperative</li>
+                <li> Component-based</li>
+                <li> Learn once, write anywhere</li>
+                <li> React can also render on the server side using Node (Next.js) </li>
+                <li> React Native</li>
+            </ul>    
+        </div>
+    </section>
+
+    <section class="slide less-space">
+            <div>
+                <h2>Potential problems</h2>
+                <ul>
+                    <li> seo</li>
+                    <li> case with disable JS</li>
+                </ul>    
+            </div>
+        </section>
+
+	<section class="slide less-space">
+		<div>
+            <h2>React can be used to:</h2>
+            <ul>
+                <li> build a widget</li>
+                <li> add a reusable component (header, footer, etc.)</li>
+                <li> build the entire frontend experience (like facebook)</li>
+            </ul>    
+		
+			<p style="margin: 0; padding: 0;"> Around it people built whole universe with Redux (Flux implementation).</p>
+			<p style="margin: 5px 0 0 0; padding: 0;"> There’re dozens of libs like: React-boostrap, React material design, React sliders, scrollers, grids, React animations and ...</p>
+		</div>
+    </section>
+    
+	<section class="slide less-space">
+		<div>
+			<h2>Next generation of JS</h2>
+			<ul>
+				<li> variables: let and const</li>
+				<li> arrow functions </li>
+				<li> default values</li>
+				<li> template literals</li>
+				<li> export and import</li>
+				<li> classes</li>
+				<li> spread operator</li>
+				<li> destructuring</li>
+			</ul>
+			<a href="docs/next-gen-js-summary.pdf">summary pdf</a>
+		</div>
+    </section>
+    
+    <!-- React API -->    
+    <section class="slide code">
+        <div>
+            <h2 style="margin: 60px 0 0 0">Okay, let's start with React. </h2>
+            <h2 style="margin: 60px 0 0 0">Do you wanna see code examples?</h2>
+        </div>
+    </section>
+    <section class="slide code">
+		<div>
+            <h2>Create HTML element by vanila JS </h2>
+            <pre style="margin: 30px 0 0 0;">
+                <code>
+                    <span class="console">inside script tag</span>
+                    const rootElement = document.getElementById('mountNode');   
+                    
+                    const element = document.createElement('div');
+                    element.textContent = 'Hi JS! Pure JS!';
+                    element.className = 'container';
+                    rootElement.appendChild(element);
+                </code>
+            </pre>
+            <a href="https://codepen.io/juliadizhak/pen/oPmYRb" target="_blank">codepen example</a>
+		</div>
+    </section>
+    
+    <section class="slide code">
+        <div>
+            <h2>Create HTML element with React's createElement API </h2>
+            <pre style="margin: 15px 0 0 0;">
+                <code>
+                    <span class="console">import react.js, react-dom.js</span>
+                    <span class="console">inside script tag</span>
+                    const mountElement = document.getElementById('mountNode');   
+                    const element = React.createElement(
+                        &nbsp;&nbsp;&nbsp;'div',  {className: 'container'},'I love React'
+                    );
+                    ReactDOM.render(element, mountElement);
+                </code>
+            </pre>
+            <a href="https://codepen.io/juliadizhak/pen/jvdpvo" target="_blank">codepen example</a>
+        </div>
+    </section>
+
+    <!-- JSX -->  
+    <section class="slide code">
+        <div>
+            <h2>How to use React.createElement children parameter</h2>
+            <pre style="margin: 15px 0 0 0;">
+                <code>
+                    const element = React.createElement(
+                        &nbsp;&nbsp;&nbsp;'div',  {className: 'container'},
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;React.createElement('span', {className: 'child'}, 'some text'),
+                        &nbsp;&nbsp;&nbsp;...
+                    );
+                </code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2>Replace React createElement method with JSX</h2>
+            <pre style="margin: 15px 0 0 0;">
+                <code>
+                    <span class="console">import react.js, react-dom.js,</span> <mark class="important">babel!</mark>
+                    <span class="console">inside script tag</span>
+                    const mountElement = document.getElementById('mountNode');   
+                    const element = &lt;div className="wrap"&gt;I love React&lt;/div&gt;
+                    ReactDOM.render(element, mountElement);
+                </code>
+            </pre>
+            <a href="https://codepen.io/juliadizhak/pen/WaNNpe" target="_blank">codepen example</a>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>JSX</h2>
+            <ul>
+                <li> JSX is a JS syntax extension that looks similar to XML</li>
+                <li> XML has the benefit of balanced opening and closing tags. This helps make large trees easier to read than function calls or object literals;</li>
+                <li>JSX it’s a compromise that allows us to write our React components in a syntax similar to HTML, which is a pretty good deal.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide code less-space">
+        <div>
+            <h2>JSX can be used</h2>
+            <div class="double">
+                <div>
+                    <p style="margin: 0;"><i><b>To render HTML tags</b></i></p>
+                    <pre style="margin: 15px 0 0 0;">
+                        <code> 
+                            const element = &lt;div className="wrap"/&gt;
+                            ReactDOM.render(element, document.getElementById('mountNode'));
+                        </code>
+                    </pre>
+                </div>
+                <br />
+                <div style="margin: 0;">
+                    <p style="margin: 0;"><i><b>To render React Component</b></i></p>
+                    <pre style="margin: 15px 0 0 0;">
+                        <code> 
+                            const element = &lt;CustomComponent className="wrap"/&gt;
+                            ReactDOM.render(element, document.getElementById('mountNode'));
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="slide">
+        <div>
+            <h2>A couple of things about JSX</h2>
+            <ol>
+                <li> in HTML, you use class, and in JSX, you use className</li>
+                <li> Expressions {}.</li>
+                <li> You don't have to use JSX with React. You can just use plain JS. However, we recommend using JSX because it is a concise and familiar syntax for defining tree structures with attributes.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide jsx-expressions">
+        <div>
+            <h2>JSX expressions</h2>
+            <img style="width: 90%" src="pictures/intro1/slide15.jpg" alt="JSX expressions">
+        </div>
+    </section>
+
+    <section class="slide code">
+        <div>
+            <h2 style="margin: 60px 0 0 0">Ternary operator in JSX</h2>
+            <pre style="margin: 35px 0 0 0;">
+                <code> 
+                    syntax
+                    condition ? expression1 : expression2 
+                </code>
+            </pre>
+            <p style="margin: 35px 0 0 0">You can’t use a regular if statement, but a ternary expression is ok.</p>
+            <pre style="margin: 35px 0 0 0;">
+                <code> 
+                    const element = &lt;div className={(4 < 2) ? 'customClassName' : 'errorClassName'}&gt;..&lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide code">
+        <div>
+            <h2 style="margin: 60px 0 0 0">React.Fragment</h2>
+            <p style="margin: 35px 0 0 0"> JSX elements must be wrapped in an enclosing tag</p>
+            <p style="margin: 35px 0 0 0"> Or you can use React.Fragment for this purpose</p>
+        </div>
+    </section>
+
+	<!-- Components -->
+	<section class="slide without-text-margins">
+		<div>
+			<h2>React is all about components</h2>
+			<p>React is designed around the concept of reusable components.</p>
+			<p>You define small components and you put them together to form bigger components.</p>
+			<p>All components are reusable, even across different projects.</p>
+			<a href="https://codepen.io/juliadizhak/pen/MqZrJp" target="_blank">codepen example</a>
+		</div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2>React component</h2>
+            <pre style="margin: 15px 0 0 0;">
+                <code> 
+                    function Button(props) {   
+                        &nbsp;&nbsp;&nbsp;return (
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;{props.text}&lt;/button&gt;
+                            &nbsp;&nbsp;&nbsp;);
+                    }
+                    const element = (
+                        &lt;div className="container"&gt;
+                        &nbsp;&nbsp;&nbsp;&lt;Button text="click on me" /&gt;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&lt;Button text="I &hearts; React" /&gt;&nbsp;
+                        &lt;/div> 
+                    )
+                </code>
+            </pre>
+        </div>
+    </section>
+	<section class="slide">
+		<div>
+			<h2>Everything is/can be a component</h2>
+			<figure style="text-align: center;">
+				<img width="600" src="pictures/intro1/slide7.png" alt="React Component">
+			</figure>
+		</div>
+	</section>
+	
+    <section class="slide run-specific-file">
+        <div>
+            <h2>How UI looks like?</h2>
+            <div class="slide-content-left">
+                <p></p>
+                <ul>
+                    <li> HTML</li>
+                    <li> CSS</li>
+                    <li> JS</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="pictures/intro1/slide5.png" alt="JSX vs Html">
+            </figure>
+        </div>
+    </section>   
+    <section class="slide run-specific-file">
+        <div>
+            <h2>How React looks like?</h2>
+            <div class="slide-content-left">
+                        <ul>
+                            <li> JS + JSX</li>
+                            <li> CSS</li>
+                            <li> JS</li>
+                        </ul>
+            </div>
+            <figure>
+                <img src="pictures/intro1/slide6.png" alt="JSX vs Html">
+            </figure>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>React component merges view and logic</h2>
+            <figure style="text-align: left;">
+                <img width="45%" src="pictures/intro1/slide8.png" alt="React Component">
+                <img width="50%" src="pictures/intro1/slide9.png" alt="React Component">
+            </figure>
+        </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2 style="margin: -15px 0 0 0;">Conditionally render a React Component</h2>
+            <a href="https://codepen.io/juliadizhak/pen/wYBLwj" target="_blank">codepen example</a>
+            <pre style="margin: -15px 0 0 0;">
+                <code> 
+                    function DisplayMessage(props) {
+                        return (
+                            &nbsp;&nbsp;&nbsp;&lt;div&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.message ? (
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;{props.message}&lt;/div&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) : (
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;div&gt;No Message&lt;/div&gt;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)}
+                                     &nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                        );
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2>Style inline in React component</h2>
+            <pre style="margin: 15px 0 0 0;">
+                <code> 
+                    function Button(props) {   
+                        const style = {
+                            &nbsp;&nbsp;&nbsp;paddingLeft: '20px',
+                            &nbsp;&nbsp;&nbsp;backgroundColor: 'orange'
+                        }
+                        &nbsp;&nbsp;&nbsp;return (
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button style={style}&gt;{props.text}&lt;/button&gt;
+                            &nbsp;&nbsp;&nbsp;);
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+
+	<!-- Props -->
+	<section class="slide">
+        <div style="text-align: center">
+            <h2 style="margin: 60px 0 0 0">Handling data in React </h2>
+            <h2 style="margin: 60px 0 0 0">Props and state</h2>
+        </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2 style="margin: -15px 0 0 0;">Props</h2>
+            <p>Props are external, and not controlled by the component itself.</p>
+            <p>It’s passed down from components higher up the hierarchy, who also control the data.</p>   
+            <pre style="margin: -15px 0 0 0;">
+                <code>
+                    function TextInput(props) {   
+                        &nbsp;&nbsp;&nbsp;return (
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type={type}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;className={inputClassName}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder={placeholder}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pattern={pattern}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onChange={this.handleChange}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...
+                            /&gt;
+                            &nbsp;&nbsp;&nbsp;);
+                    }
+                    Button.propTypes = {
+                        &nbsp;&nbsp;&nbsp;text: PropTypes.string
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2>Validate custom React component props</h2>
+            <pre style="margin: 15px 0 0 0;">
+                <code>
+                    <span class="console">import additional script prop.types.js</span>
+                    function Button(props) {   
+                        &nbsp;&nbsp;&nbsp;return (
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;{props.text}&lt;/button&gt;
+                            &nbsp;&nbsp;&nbsp;);
+                    }
+                    Button.propTypes = {
+                        &nbsp;&nbsp;&nbsp;text: PropTypes.string
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2>Types of props</h2> 
+            <pre style="margin: 35px 0 0 0;">
+                <code>
+                        &nbsp;&nbsp;&nbsp;PropTypes.string 
+                        &nbsp;&nbsp;&nbsp;PropTypes.bool
+                        &nbsp;&nbsp;&nbsp;PropTypes.number
+                        &nbsp;&nbsp;&nbsp;PropTypes.array
+                        &nbsp;&nbsp;&nbsp;PropTypes.oneOfType({...})
+                        &nbsp;&nbsp;&nbsp;PropTypes.any
+                        &nbsp;&nbsp;&nbsp;...
+                </code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2>PropTypes</h2>
+            <pre style="margin: 15px 0 0 0;">
+                <code>
+                    <span class="console">import script prop.types.js</span>
+                    function Button(props) {   
+                        &nbsp;&nbsp;&nbsp;return (
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type={props.type}&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.text}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+                            &nbsp;&nbsp;&nbsp;);
+                    }
+                    Button.propTypes = {
+                        &nbsp;&nbsp;&nbsp;text: PropTypes.string.<mark>isRequired</mark>
+                    }
+                </code>
+            </pre>
+            </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2>Default props</h2>
+            <pre style="margin: 15px 0 0 0;">
+                <code>
+                    <span class="console">import script prop.types.js</span>
+                    function Button(props) {   
+                        &nbsp;&nbsp;&nbsp;return (
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type={props.type} /&gt;
+                            &nbsp;&nbsp;&nbsp;);
+                    }
+                    Button.defaultProps = {
+                        &nbsp;&nbsp;&nbsp;type: 'submit'
+                    }
+                </code>
+            </pre>
+            </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2 style="margin: 15px 0 0 0;">PropTypes it’s not the same as Typescript or FLow.</h2>
+            <p style="margin: 15px 0 0 0;">PropTypes is a basic type checker which has been patched onto React. It can check only props from Component.</p>
+            <p style="margin: 15px 0 0 0;">If you want more flexible type checking for your entire project then Flow/TypeScript are appropriate choices. </p>    
+        </div>
+    </section>
+
+    <!-- Virtual DOM -->
+    <section class="slide">
+        <div>
+            <h2>Rerender a React app</h2>
+            <a href="https://codepen.io/juliadizhak/pen/ePNJBv" target="_blank">codepen example</a>
+            <div>
+                <img src="https://d2eip9sf3oo6c2.cloudfront.net/asciicasts/The%20Beginner's%20Guide%20to%20ReactJS/original_react-rerender-a-react-application/react-rerender-a-react-application-two-inputs.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="slide run-specific-file">
+        <div>
+            <h2>Where is the magic?</h2>
+            <div class="slide-content-left" style="float:left; width: 45%">
+                React is doing the minimal required DOM operations for the render. It’s only will be rerender the necessary part and this is making React app very fast.
+            </div>
+            <figure style="float:right; width: 40%">
+                <img src="pictures/intro1/slide10.png" alt="virtual dom">
+            </figure>
+        </div>
+    </section>
+    <section class="slide diff-algorithm">
+        <div>
+            <h2>Diff algorithm</h2>
+            <p style="float:left; width: 45%">React diff algorithm is used to compute minimum sets of mutation</p>
+            <figure style="float:right; width: 55%">
+                <img width="90%" src="pictures/intro1/slide11.png" alt="Diff Algorithm">
+            </figure>
+        </div>
+    </section>
+    
+	<!--State and props-->
+	<section class="slide">
+		<div>
+			<h2>State and props</h2>
+			<ul>
+				<li> are <b>plain JS objects</b></li>
+				<li> changes trigger a <b>render update</b></li>
+
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Difference between state and props</h2>
+			<div class="double">
+				<div>
+					<p><b>Props</b></p>
+					<ol>
+						<li> are immutable</li>
+						<li>come to the component from parent component/components</li>
+						<li> are initialization data</li>
+					</ol>
+				</div>
+				<div>
+					<p><b>State</b></p>
+					<ol>
+						<li> is mutable</li>
+						<li> should or can't be accessed from child components</li>
+					</ol>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="slide">
 		<div>
-			<h2>The most popular frameworks / libraries</br> on the market:</h2>
-			<ol>
-				<li> Angular2 (AngularJS = Angular1)</li>
-				<li> React</li>
-				<li> VueJS</li>
-				<li> EmberJS</li>
+			<h2>Should a Component have state?</h2>
+			<p><i>state</i> is optional, state increases complexity and reduces predictability.</p>
+			<p>A Component without state is preferable, <b>avoid having many stateful Components</b></p>
+			<ol><b>Component types</b>
+				<li> <b>stateless</b> — only props, no state. All logic revolves around received props. This makes them very easy to follow and test.</li>
+				<li> <b>stateful</b> — both props and state. Also called state managers. They are in charge of client-server communication, processing data and responding to user events.</li>
 			</ol>
 		</div>
 	</section>
 
-	<section class="slide">
-		<div>
-			<img src="pictures/intro1/slide3.png" alt="comparison">
-		</div>
-	</section>
-
-	<section class="slide">
-		<div>
-			<p>Dan Abramov <a href="https://twitter.com/dan_abramov/status/1007439168400654336?lang=en">tweet</a> about Vuejs</p>
-		</div>
-	</section>
-
-	<section class="slide less-space">
-		<div>
-			<h2>What is React?</h2>
-			<ol>
-				<li> It's a js library for building UI created and maintained by Facebook</li>
-				<li> React can be used to:
-					<ol>
-						<li> build a widget</li>
-						<li> add a reusable component (header, footer, etc.)</li>
-						<li> build the entire front-end experience (like Facebook)</li>
-					</ol>
-				</li>
-				<li> Around it people built whole universe with Redux (the most popular flux implementation)</li>
-				<li> There’re dozens of libs like: React-boostrap, React material design, React sliders, scrollers, grids, React animations and so on.</li>
-			</ol>
-		</div>
-	</section>
-
-	<section class="slide less-space">
-		<div>
-			<h2> Framework & Library</h2>
-			<ul>
-				<li> Framework
-					<ul>
-						<li> makes app more structured</li>
-						<li> provides with instruments you need (and you don’t need)</li>
-						<li> follows some architecture pattern (MVC, MVVM, MVP…)</li>
-					</ul>
-				</li>
-				<li> Library
-					<ul>
-						<li> gives one instrument to solve specific problem</li>
-						<li> nothing else =)</li>
-					</ul>
-				</li>
-			</ul>
-			<h2>React is framework or library?</h2>
-		</div>
-	</section>
-
-
-	<section class="slide less-space">
-		<div>
-			<h2>Next Generation of Javascript</h2>
-			<ul>
-				<li> Variables: let and const</li>
-				<li> Arrow functions </li>
-				<li> Default values</li>
-				<li> Template literals</li>
-				<li> export and import</li>
-				<li> Classes</li>
-				<li> Spread operator</li>
-				<li> Destructuring</li>
-			</ul>
-			<a href="docs/next-gen-js-summary.pdf">summary pdf</a>
-		</div>
-	</section>
-
-	<section class="slide">
-		<div>
-			<h2>Everything is/can be a component</h2>
-			<figure style="text-align: center;">
-				<img width="105%" src="pictures/intro1/slide7.png" alt="React Component">
-			</figure>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>React component merges view and logic</h2>
-			<figure style="text-align: center;">
-				<img src="pictures/intro1/slide8.png" alt="React Component">
-			</figure>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<figure style="text-align: center;">
-				<img src="pictures/intro1/slide9.png" alt="React Component">
-			</figure>
-		</div>
-	</section>
-
-	<section class="slide">
-		<div>
-			<h2>Virtual dom</h2>
-			<figure>
-				<img src="pictures/intro1/slide10.png" alt="virtual dom">
-			</figure>
-		</div>
-	</section>
-	<section class="slide diff-algorithm">
-		<div>
-			<h2>Diff algorithm</h2>
-			<p>React diff algorithm is used to compute minimum sets of mutation:</p>
-			<textarea style="resize:none; width: 100%; height: 250px">
-				1) <div className="first"><span>a span</span></div>
-				2) <div className="second"><p>a paragraph</p></div>
-
-				Change node
-				1) Remount a new: <p className="first"><span>a span</span></p>
-
-				First to second
-				1) Replace attribute: className="first" by className="second"
-				2) Replace node: <span>a span</span> by <p>a paragraph</p>
-
-				Add/remove node:
-				1) Remove node: <div className="second"><p>a paragraph</p></div></textarea>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Diff algorithm</h2>
-			<img src="pictures/intro1/slide11.png" alt="Diff Algorithm">
-		</div>
-	</section>
+	
+	
 	<section class="slide">
 		<div>
 			<h2>Data flow</h2>
@@ -227,79 +685,7 @@
 		</div>
 	</section>
 
-	<section class="slide run-specific-file">
-		<div>
-			<h2>How UI looks like?</h2>
-			<div class="slide-content-left">
-				<p></p>
-				<ol>
-					<li> HTML</li>
-					<li> CSS</li>
-					<li> JS</li>
-				</ol>
-			</div>
-			<figure>
-				<img src="pictures/intro1/slide5.png" alt="JSX vs Html">
-			</figure>
-		</div>
-	</section>
-
-	<section class="slide run-specific-file">
-		<div>
-			<h2>JSX vs Html</h2>
-			<div class="slide-content-left">
-					<p>How React looks like?</p>
-					<ol>
-						<li> JS + JSX</li>
-						<li> CSS</li>
-						<li> JS</li>
-					</ol>
-			</div>
-			<figure>
-				<img src="pictures/intro1/slide6.png" alt="JSX vs Html">
-			</figure>
-		</div>
-	</section>
-
-	<section class="slide">
-		<div>
-			<h2>JSX</h2>
-			<ol>
-				<li> JSX is a js syntax extension that looks similar to XML;</li>
-				<li> XML has the benefit of balanced opening and closing tags. This helps make large trees easier to read than function calls or object literals;</li>
-				<li> After all JSX just makes code more readable and lets define virtualDOM in more convenient way;</li>
-				<li> You don't have to use JSX with React. You can just use plain JS. However, we recommend using JSX because it is a concise and familiar syntax for defining tree structures with attributes.</li>
-			</ol>
-		</div>
-	</section>
-
-	<section class="slide less-space">
-		<div>
-			<h2>JSX can be used:</h2>
-			<div class="double">
-				<div>
-					<p style="margin: 0;"><i><b>To render HTML Tags</b></i></p>
-					<p style="margin: 0;"><img src="pictures/intro1/slide13.png" alt="render HTML"></p>
-				</div>
-				<div style="margin: 0;">
-					<p style="margin: 0;"><i><b>To render React Component</b></i></p>
-					<p><img src="pictures/intro1/slide14.png" alt="render React Component"></p>
-				</div>
-			</div>
-			<h2>JSX to JS</h2>
-			<ol>
-				<li>Browser can't interpret JSX it needs to be transformed to JS</li>
-				<li><b>Popular tools</b>: babelify with react preset, webpack with react preloader</li>
-			</ol>
-		</div>
-	</section>
-
-	<section class="slide jsx-expressions">
-		<div>
-			<h2>JSX expressions</h2>
-			<img style="width: 90%" src="pictures/intro1/slide15.jpg" alt="JSX expressions">
-		</div>
-	</section>
+	
 
 	<section class="slide lifecycles less-space">
 		<div>
@@ -365,13 +751,43 @@
 		</div>
 	</section>
 
-	<section class="slide thank-you">
-		<div>
-			<h2>to be continued ...</h2>
-		</div>
+	<section class="slide">
+		<h2>Router</h2>
+		<ol>
+			<li>React.js itself doesn’t provide any routing utilities, but there’re several free, open-sources libs that works perfectly well</li>
+			<li>We will discuss react-router which has been developed by React.js team: https://github.com/reactjs/react-router</li>
+			<li>React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in</li>
+		</ol>
 	</section>
 
-	...
+	<section class="slide">
+		<h2>Router path</h2>
+		<ol>
+			<li>A route path is a string pattern that is used to match a URL (or part of one)</li>
+			<li>Route paths are interpreted literally, except next special symbols:
+				<ol>
+					<li><i>:paramName</i> – matches a URL segment up to the next /, ?, or #. The matched string is called a param</li>
+					<li><i>()</i> – wraps a portion of the URL that is optional</li>
+					<li><i>*</i> – matches all characters (non-greedy) up to the next character in the pattern, or to the end of the URL if there is none, and creates a splat param</li>
+					<li><i>**</i> - matches all characters (greedy) until the next /, ?, or # and creates a splat param</li>
+				</ol>
+			</li>
+		</ol>
+	</section>
+
+    <section class="slide yarn">
+        <div>
+            <h2>Resources</h2>
+            <div>
+                <ul>
+                    <li> great docs from <a href="https://reactjs.org/">reactjs.org</a></li>
+                    <li> read <a href="https://reactjs.org/blog/">react blog</a></li>
+                    <li> <a href="https://reactpodcast.com/">react podcast</a></li> 
+                    <li> many, many resources (thousend!) in a web (for free also!)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
 	<section class="slide">
 		<div>
@@ -381,7 +797,14 @@
 				<li> <a href="https://www.meetup.com/Web-Zurich/">Web Zurich meetup</a></li>
 		  </ul>
 		</div>
-	</section>
+    </section>
+    
+    <section class="slide thank-you">
+        <div>
+            <h2> Thank you</h2>
+        </div>
+    </section>
+
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
 </body>
