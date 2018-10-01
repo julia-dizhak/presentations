@@ -765,6 +765,16 @@
         </div>
     </section>
 
+    <section class="slide lifecycles less-space">
+		<div>
+			<h2>Use the key prop when rendering a List</h2>
+			<p style="margin:0;">Each child in an array or iterator should have a unique key prop.</p>
+            <p style="margin:0;">Key is one helper to React to embrace its full potential and improve performance.</p>
+            <p style="margin:0;">Key attribute should be stable identifier.</p>
+			<a href="https://codepen.io/juliadizhak/pen/dqLebN" target="_blank">codepen example</a>
+		</div>
+    </section>
+    
 	<section class="slide lifecycles less-space">
 		<div>
 			<h2>Component lifecycles</h2>
@@ -781,33 +791,32 @@
 		</div>
 	</section>
 
-	
-
 	<section class="slide">
         <div>
             <h2>Router</h2>
-            <ol>
-                <li>React.js itself doesn’t provide any routing utilities, but there’re several free, open-sources libs that works perfectly well</li>
-                <li>We will discuss react-router which has been developed by React.js team: https://github.com/reactjs/react-router</li>
-                <li>React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in</li>
-            </ol>
+            <ul>
+                <li> React itself doesn’t provide any routing utilities, but there’re several free, open-sources libs that works perfectly well</li>
+                <li> We will discuss <a href="https://github.com/reactjs/react-router">react-router which has been developed by React team</a></li>
+                <li> React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in</li>
+            </ul>
+            <a href="https://codesandbox.io/s/vVoQVk78">code example</a>
         </div>    
 	</section>
 
 	<section class="slide">
         <div>
-		<h2>Router path</h2>
-            <ol>
-                <li>A route path is a string pattern that is used to match a URL (or part of one)</li>
-                <li>Route paths are interpreted literally, except next special symbols:
-                    <ol>
-                        <li><i>:paramName</i> – matches a URL segment up to the next /, ?, or #. The matched string is called a param</li>
-                        <li><i>()</i> – wraps a portion of the URL that is optional</li>
-                        <li><i>*</i> – matches all characters (non-greedy) up to the next character in the pattern, or to the end of the URL if there is none, and creates a splat param</li>
-                        <li><i>**</i> - matches all characters (greedy) until the next /, ?, or # and creates a splat param</li>
-                    </ol>
+		<h2 style="margin:-15px 0 0 0">Router path</h2>
+            <ul>
+                <li> A route path is a string pattern that is used to match a URL (or part of one)</li>
+                <li> Route paths are interpreted literally, except next special symbols:
+                    <ul>
+                        <li> <i>:paramName</i> – matches a URL segment up to the next /, ?, or #. The matched string is called a param</li>
+                        <li> <i>()</i> – wraps a portion of the URL that is optional</li>
+                        <li> <i>*</i> – matches all characters (non-greedy) up to the next character in the pattern, or to the end of the URL if there is none, and creates a splat param</li>
+                        <li> <i>**</i> - matches all characters (greedy) until the next /, ?, or # and creates a splat param</li>
+                    </ul>
                 </li>
-            </ol>
+            </ul>
         </div>
 	</section>
 
