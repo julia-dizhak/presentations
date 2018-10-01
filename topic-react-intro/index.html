@@ -51,7 +51,7 @@
 					<li> React components</li>
 					<li> props and state</li>
 					<li> virtual DOM and Diff algorithm</li>
-					<li> unidirectional Data flow</li>
+					<li> unidirectional data flow</li>
 					<li> Component lifecycle</li>
 					<li> React synthetic events</li>
 				</ul>
@@ -490,6 +490,7 @@
             </pre>
         </div>
     </section>
+ 
     <section class="slide code">
         <div>
             <h2>Validate custom React component props</h2>
@@ -560,7 +561,7 @@
                     }
                 </code>
             </pre>
-            </div>
+        </div>
     </section>
     <section class="slide code">
         <div>
@@ -601,91 +602,168 @@
         </div>
     </section>
     
-	<!--State and props-->
+    <!-- state -->
+    <section class="slide">
+        <div>
+            <h2>State</h2>
+            <p>The second type of data in React is a state.</p>
+            <p> The state is private data of the component and can be changed from within the component itself.</p>
+            <p> So if we want the component to be able to change its own data, then we have to use state instead props! </p>
+        </div>
+    </section>
 	<section class="slide">
 		<div>
 			<h2>State and props</h2>
 			<ul>
 				<li> are <b>plain JS objects</b></li>
 				<li> changes trigger a <b>render update</b></li>
-
 			</ul>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
-			<h2>Difference between state and props</h2>
+			<h2 style="margin:0 0 5px 0; padding:0">Difference between state and props</h2>
 			<div class="double">
 				<div>
-					<p><b>Props</b></p>
-					<ol>
+					<p style="margin:0; padding:0"><b>Props</b></p>
+					<ul style="margin:0; padding:0">
 						<li> are immutable</li>
 						<li>come to the component from parent component/components</li>
 						<li> are initialization data</li>
-					</ol>
+					</ul>
 				</div>
 				<div>
-					<p><b>State</b></p>
-					<ol>
+					<p style="margin:5px 0 0 0; padding:0"><b>State</b></p>
+					<ul style="margin: 5px 0 0 0; padding:0">
 						<li> is mutable</li>
 						<li> should or can't be accessed from child components</li>
-					</ol>
+					</ul>
 				</div>
 			</div>
 		</div>
-	</section>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Statefull component</h2>
+            <p><b>React component</b> — in its simplest form — <b>is a plain-old JS function.</b></p>
+            <p> 
+                But there is other way to build a component. You can create this component with JS classes syntax.</p>
+            <p>It’s called Statefull component.</p>
+            <a href="https://codepen.io/juliadizhak/pen/VELmbY" target="_blank">codepen example</a>
+        </div>
+    </section>
+    <section class="slide code">
+        <div>
+            <h2 style="margin: -5px 0 0 0;">Changing the state</h2>
+            <p style="margin: 0 0 0 0;">to modify the state, only call this.setState()</p>
+            <pre style="margin: 5px 0 0 0;">
+                <code>
+                    constructor(props) {
+                        &nbsp;&nbsp;&nbsp;super(props);   
+                        &nbsp;&nbsp;&nbsp;this.state = {
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: this.props.value
+                            &nbsp;&nbsp;&nbsp;};
+                        }
+                        handleChange(event) {
+                            &nbsp;&nbsp;&nbsp;this.setState({
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: event.target.value
+                            });
+                        }
+                    }        
+                </code>
+            </pre>
+        </div>
+    </section>
+    
+    <section class="slide">
+        <div>
+            <h2>Unidirectional Data flow</h2>
+            <ul>
+                <li> React implements a one-way data flow. This means that data is passed from the top-down, through props, from the top component to its children, so on and so forth;
+                    <br>
+                </li>
+                <li> Instead of React components talking to each other, React components cooperate through the parent;</li>
+            </ul>
+            <a href="https://codepen.io/juliadizhak/pen/VELmBe" target="_blank">codepen example</a>
+        </div>
+    </section>
+    <section class="slide run-specific-file">
+        <div>
+            <h2>Components hierarchy</h2>
+            <div class="slide-content-left" style="float:left; width:65%">
+                <ul>
+                    <li> Lets say we want to develop something like this:</li>
+                    <li> First of all let separate it to the components: whole widget, Grid, Grid Record, Grid Action cell, Filter</li>
+                    <li> Components hierarchy: Whole widget -> Grid -> Grid Record -> </br>Grid Record Action -> Filter</li>
+                </ul>
+            </div>
+            <figure class="data-flow" style="float:right; width:35%">
+                <img widht="80%" src="pictures/intro1/slide12.png" alt="Data flow">
+            </figure>
+        </div>
+    </section>
 
-	<section class="slide">
-		<div>
-			<h2>Should a Component have state?</h2>
-			<p><i>state</i> is optional, state increases complexity and reduces predictability.</p>
-			<p>A Component without state is preferable, <b>avoid having many stateful Components</b></p>
-			<ol><b>Component types</b>
-				<li> <b>stateless</b> — only props, no state. All logic revolves around received props. This makes them very easy to follow and test.</li>
-				<li> <b>stateful</b> — both props and state. Also called state managers. They are in charge of client-server communication, processing data and responding to user events.</li>
-			</ol>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <h2 style="margin:-15px 0 0 0">Should a Component have state?</h2>
+            <p style="margin:5px 0 0 0"><i>state</i> is optional, state increases complexity and reduces predictability.</p>
+            <p style="margin:5px 0 0 0">A Component without state is preferable, <b>avoid having many stateful Components</b></p>
+            <b>Component types</b>
+            <ul style="margin:5px 0 0 0; padding:0;">
+                <li> <b>stateless</b> — only props, no state. All logic revolves around received props. This makes them very easy to follow and test.</li>
+                <li> <b>stateful</b> — both props and state. Also called state managers. They are in charge of client-server communication, processing data and responding to user events.</li>
+            </ul>
+        </div>
+    </section>
 
-	
-	
-	<section class="slide">
-		<div>
-			<h2>Data flow</h2>
-			<ol>
-				<li> React implements a one-way data flow. This means that data is passed from the top-down, through props, from the top component to its children, so on and so forth;
-					<br>
-					<!--<pre>
-						<code style="margin:0; padding:0;">
-							...
-							// A simple component flowing down the props
-							<Component property1="value" property2=”anotherValue">
-							...
-						</code>
-					</pre>-->
-				</li>
-				<li> Instead of React components talking to each other, React components cooperate through the parent;</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide run-specific-file">
-		<div>
-			<h2>Data flow</h2>
-			<div class="slide-content-left">
-				<ol>
-					<li> Lets say we want to develop something like this:</li>
-					<li> First of all let separate it to the components: whole widget, Grid, Grid Record, Grid Action cell, Filter</li>
-					<li> Components hierarchy: Whole widget -> Grid -> Grid Record -> </br>Grid Record Action -> Filter</li>
-				</ol>
-			</div>
-			<figure class="data-flow">
-				<img src="pictures/intro1/slide12.png" alt="Data flow">
-			</figure>
-		</div>
-	</section>
+    <!-- events -->
+    <section class="slide less-space">
+        <div>
+            <h2>React events</h2>
+            <p style="margin:0;">Two options: events listeners and React synthetic events</p>
+            <div class="double">
+                <div style="margin:0;">
+                    <p style="margin:0;">Add listeners to do something in the dom, which is <b>not under react control</b>:</p>
+                    <p style="margin:0;"><img src="pictures/intro1/slide18.jpg" alt="Events ouside React Component"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="slide less-space">
+        <div>
+            <h2>React Synthetic  events</h2>
+            <div style="margin:0;">
+                <p>Synthetic events: event handler <b>in react elements</b>. It works quite close to pure JavaScript, but with JSX.</p>
+                <p><img src="pictures/intro1/slide19.jpg" alt="Events in React Component"></p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="slide less-space">
+        <div class="double" style="font-size: 13px;">
+            <h2>List of available events:</h2>
+            <ol style="margin: 0 0 10px 0; padding: 0;">
+                <li> onCopy onCut onPaste</li>
+                <li> onCompositionEnd onCompositionStart onCompositionUpdate</li>
+                <li> onKeyDown onKeyPress onKeyUp</li>
+                <li> onFocus onBlur</li>
+                <li> onChange onInput onSubmit</li>
+                <li> onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave onMouseMove onMouseOut onMouseOver onMouseUp</li>
+            </ol>
 
-	
+            <ol style="margin:0;">
+                <li> onSelect</li>
+                <li> onTouchCancel onTouchEnd onTouchMove onTouchStart</li>
+                <li> onScroll</li>
+                <li> onWheel</li>
+                <li> onLoad onError</li>
+                <li> onAnimationStart onAnimationEnd onAnimationIteration</li>
+                <li> onTransitionEnd</li>
+                <li> onAbort onCanPlay onCanPlayThrough onDurationChange onEmptied onEncrypted onEnded onError onLoadedData onLoadedMetadata</li>
+            </ol>
+        </div>
+    </section>
 
 	<section class="slide lifecycles less-space">
 		<div>
@@ -703,53 +781,7 @@
 		</div>
 	</section>
 
-	<section class="slide less-space">
-		<div>
-			<h2>React events</h2>
-			<p style="margin:0;">Two options: events listeners and React synthetic events</p>
-			<div class="double">
-				<div style="margin:0;">
-					<p style="margin:0;">Add listeners to do something in the dom, which is <b>not under react control</b>:</p>
-					<p style="margin:0;"><img src="pictures/intro1/slide18.jpg" alt="Events ouside React Component"></p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="slide less-space">
-		<div>
-			<h2>React Synthetic  events</h2>
-			<div style="margin:0;">
-				<p>Synthetic events: event handler <b>in react elements</b>. It works quite close to pure JavaScript, but with JSX.</p>
-				<p><img src="pictures/intro1/slide19.jpg" alt="Events in React Component"></p>
-			</div>
-		</div>
-	</section>
-
-	<section class="slide less-space">
-		<div class="double" style="font-size: 13px;">
-			<h2>List of available events:</h2>
-			<ol style="margin: 0 0 10px 0; padding: 0;">
-				<li> onCopy onCut onPaste</li>
-				<li> onCompositionEnd onCompositionStart onCompositionUpdate</li>
-				<li> onKeyDown onKeyPress onKeyUp</li>
-				<li> onFocus onBlur</li>
-				<li> onChange onInput onSubmit</li>
-				<li> onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave onMouseMove onMouseOut onMouseOver onMouseUp</li>
-			</ol>
-
-			<ol style="margin:0;">
-				<li> onSelect</li>
-				<li> onTouchCancel onTouchEnd onTouchMove onTouchStart</li>
-				<li> onScroll</li>
-				<li> onWheel</li>
-				<li> onLoad onError</li>
-				<li> onAnimationStart onAnimationEnd onAnimationIteration</li>
-				<li> onTransitionEnd</li>
-				<li> onAbort onCanPlay onCanPlayThrough onDurationChange onEmptied onEncrypted onEnded onError onLoadedData onLoadedMetadata</li>
-			</ol>
-		</div>
-	</section>
+	
 
 	<section class="slide">
 		<h2>Router</h2>
