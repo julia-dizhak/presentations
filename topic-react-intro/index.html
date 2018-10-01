@@ -784,27 +784,31 @@
 	
 
 	<section class="slide">
-		<h2>Router</h2>
-		<ol>
-			<li>React.js itself doesn’t provide any routing utilities, but there’re several free, open-sources libs that works perfectly well</li>
-			<li>We will discuss react-router which has been developed by React.js team: https://github.com/reactjs/react-router</li>
-			<li>React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in</li>
-		</ol>
+        <div>
+            <h2>Router</h2>
+            <ol>
+                <li>React.js itself doesn’t provide any routing utilities, but there’re several free, open-sources libs that works perfectly well</li>
+                <li>We will discuss react-router which has been developed by React.js team: https://github.com/reactjs/react-router</li>
+                <li>React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in</li>
+            </ol>
+        </div>    
 	</section>
 
 	<section class="slide">
+        <div>
 		<h2>Router path</h2>
-		<ol>
-			<li>A route path is a string pattern that is used to match a URL (or part of one)</li>
-			<li>Route paths are interpreted literally, except next special symbols:
-				<ol>
-					<li><i>:paramName</i> – matches a URL segment up to the next /, ?, or #. The matched string is called a param</li>
-					<li><i>()</i> – wraps a portion of the URL that is optional</li>
-					<li><i>*</i> – matches all characters (non-greedy) up to the next character in the pattern, or to the end of the URL if there is none, and creates a splat param</li>
-					<li><i>**</i> - matches all characters (greedy) until the next /, ?, or # and creates a splat param</li>
-				</ol>
-			</li>
-		</ol>
+            <ol>
+                <li>A route path is a string pattern that is used to match a URL (or part of one)</li>
+                <li>Route paths are interpreted literally, except next special symbols:
+                    <ol>
+                        <li><i>:paramName</i> – matches a URL segment up to the next /, ?, or #. The matched string is called a param</li>
+                        <li><i>()</i> – wraps a portion of the URL that is optional</li>
+                        <li><i>*</i> – matches all characters (non-greedy) up to the next character in the pattern, or to the end of the URL if there is none, and creates a splat param</li>
+                        <li><i>**</i> - matches all characters (greedy) until the next /, ?, or # and creates a splat param</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
 	</section>
 
     <section class="slide yarn">
